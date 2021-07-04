@@ -27,13 +27,13 @@ class windsView extends WatchUi.View {
     // Update the view
     function onUpdate(dc as Dc) as Void {
     
-        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
-    
-        // Call the parent onUpdate function to redraw the layout				    
-			    
+        	    
+	    dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
+        dc.clear();
 	    if(windAPIResult != null){	    	
 	    	drawRequestedData(dc);
 	    }
+	    
     }
     
     // Called when this View is removed from the screen. Save the
@@ -64,20 +64,22 @@ class windsView extends WatchUi.View {
 		
 	//Drawing UI element
 	function drawRequestedData(dc) as Void {
-	
-			System.println(windAPIResult);
-			
+				
 			var windAvg as Float;
 			var windMax as Float;
 			windAvg = windAPIResult["last"]["w-avg"];
 			windMax = windAPIResult["last"]["w-max"];
-				
+			var sector as String = Utils.orientation(windAPIResult["last"]["w-dir"]);
+			var offSet = sector.length() * 5;
 				
 				
 			dc.drawText(dc.getWidth() / 2, 50, Gfx.FONT_SMALL, windAPIResult["name"], (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));		
-			dc.drawText(dc.getWidth() / 2, 110, Gfx.FONT_MEDIUM, windAvg.format("%.2f") + " km/h", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));		
-			dc.drawText(dc.getWidth() / 2, 140, Gfx.FONT_GLANCE_NUMBER, windMax.format("%.2f") + " km/h (max)", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));	
-			dc.drawText(dc.getWidth() / 2, 180, Gfx.FONT_MEDIUM, "Direction " + windAPIResult["last"]["w-dir"] + "°", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));		
+			dc.drawText(dc.getWidth() / 2, 100, Gfx.FONT_MEDIUM, windAvg.format("%.1f") + " km/h", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));		
+			dc.drawText(dc.getWidth() / 2, 130, Gfx.FONT_GLANCE_NUMBER, windMax.format("%.1f") + " km/h (max)", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));	
+			
+			dc.drawText((dc.getWidth() / 2) - offSet - 12, 170, Gfx.FONT_LARGE, sector, (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));		
+			dc.drawText((dc.getWidth() / 2) + offSet + 12, 170, Gfx.FONT_GLANCE_NUMBER, windAPIResult["last"]["w-dir"] + "°", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));		
+				
 				
 	}
 	

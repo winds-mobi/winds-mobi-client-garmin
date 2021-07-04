@@ -16,51 +16,58 @@
         <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="10" lineNum="16" pc="268435600" symbol="onLayout"/>
         <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="11" lineNum="24" pc="268435605" symbol="onShow"/>
         <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="12" lineNum="28" pc="268435610" symbol="onUpdate"/>
-        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="12" lineNum="30" pc="268435614" symbol="onUpdate"/>
-        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="12" lineNum="34" pc="268435650" symbol="onUpdate"/>
-        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="12" lineNum="35" pc="268435663" symbol="onUpdate"/>
-        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="13" lineNum="42" pc="268435681" symbol="onHide"/>
-        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="14" lineNum="46" pc="268435686" symbol="requestWindInformationByCode"/>
-        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="14" lineNum="48" pc="268435690" symbol="requestWindInformationByCode"/>
-        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="15" lineNum="60" pc="268435767" symbol="setStationInfo"/>
-        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="15" lineNum="61" pc="268435771" symbol="setStationInfo"/>
-        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="15" lineNum="62" pc="268435781" symbol="setStationInfo"/>
-        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="16" lineNum="66" pc="268435798" symbol="drawRequestedData"/>
-        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="16" lineNum="68" pc="268435802" symbol="drawRequestedData"/>
-        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="16" lineNum="70" pc="268435828" symbol="drawRequestedData"/>
-        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="16" lineNum="71" pc="268435828" symbol="drawRequestedData"/>
-        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="16" lineNum="72" pc="268435828" symbol="drawRequestedData"/>
-        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="16" lineNum="73" pc="268435850" symbol="drawRequestedData"/>
-        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="16" lineNum="77" pc="268435872" symbol="drawRequestedData"/>
-        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="16" lineNum="78" pc="268435957" symbol="drawRequestedData"/>
-        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="16" lineNum="79" pc="268436050" symbol="drawRequestedData"/>
-        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="16" lineNum="80" pc="268436143" symbol="drawRequestedData"/>
-        <entry filename="Rez" id="22" lineNum="18" pc="268436247" symbol="MainLayout"/>
-        <entry filename="Rez" id="22" lineNum="20" pc="268436259" symbol="MainLayout"/>
-        <entry filename="Rez" id="22" lineNum="21" pc="268436378" symbol="MainLayout"/>
-        <entry filename="Rez" id="22" lineNum="23" pc="268436430" symbol="MainLayout"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="12" lineNum="31" pc="268435614" symbol="onUpdate"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="12" lineNum="32" pc="268435650" symbol="onUpdate"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="12" lineNum="33" pc="268435662" symbol="onUpdate"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="12" lineNum="34" pc="268435675" symbol="onUpdate"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="13" lineNum="42" pc="268435693" symbol="onHide"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="14" lineNum="46" pc="268435698" symbol="requestWindInformationByCode"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="14" lineNum="48" pc="268435702" symbol="requestWindInformationByCode"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="15" lineNum="60" pc="268435779" symbol="setStationInfo"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="15" lineNum="61" pc="268435783" symbol="setStationInfo"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="15" lineNum="62" pc="268435793" symbol="setStationInfo"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="16" lineNum="66" pc="268435810" symbol="drawRequestedData"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="16" lineNum="68" pc="268435814" symbol="drawRequestedData"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="16" lineNum="69" pc="268435814" symbol="drawRequestedData"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="16" lineNum="70" pc="268435814" symbol="drawRequestedData"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="16" lineNum="71" pc="268435836" symbol="drawRequestedData"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="16" lineNum="72" pc="268435858" symbol="drawRequestedData"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="16" lineNum="73" pc="268435897" symbol="drawRequestedData"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="16" lineNum="76" pc="268435916" symbol="drawRequestedData"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="16" lineNum="77" pc="268436001" symbol="drawRequestedData"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="16" lineNum="78" pc="268436094" symbol="drawRequestedData"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="16" lineNum="80" pc="268436187" symbol="drawRequestedData"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="16" lineNum="81" pc="268436269" symbol="drawRequestedData"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\Utils.mc" id="18" lineNum="3" pc="268436376" symbol="orientation"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\Utils.mc" id="18" lineNum="5" pc="268436380" symbol="orientation"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\Utils.mc" id="18" lineNum="6" pc="268436609" symbol="orientation"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\Utils.mc" id="18" lineNum="8" pc="268436628" symbol="orientation"/>
+        <entry filename="Rez" id="25" lineNum="18" pc="268436638" symbol="MainLayout"/>
+        <entry filename="Rez" id="25" lineNum="20" pc="268436650" symbol="MainLayout"/>
+        <entry filename="Rez" id="25" lineNum="21" pc="268436769" symbol="MainLayout"/>
+        <entry filename="Rez" id="25" lineNum="23" pc="268436821" symbol="MainLayout"/>
     </pcToLineNum>
     <symbolTable>
-        <entry id="10" object="true" symbol="windsView"/>
+        <entry id="11" object="true" symbol="windsView"/>
         <entry id="8388639" module="true" symbol="Graphics"/>
-        <entry id="19" method="true" symbol="setStationInfo"/>
+        <entry id="21" method="true" symbol="setStationInfo"/>
         <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
-        <entry id="18" method="true" symbol="requestWindInformationByCode"/>
+        <entry id="20" method="true" symbol="requestWindInformationByCode"/>
         <entry id="4" module="true" symbol="globals/Rez/Menus"/>
-        <entry id="15" method="true" symbol="MainLayout"/>
+        <entry id="17" method="true" symbol="MainLayout"/>
         <entry field="true" id="8388611" module="true" symbol="Toybox"/>
-        <entry field="true" id="16" symbol="AppName"/>
+        <entry field="true" id="18" symbol="AppName"/>
         <entry id="8" module="true" symbol="globals/Rez/Strings"/>
         <entry id="8388772" module="true" object="true" symbol="Fonts"/>
         <entry id="8389345" symbol="rezId"/>
         <entry id="8388648" module="true" symbol="WatchUi"/>
         <entry id="2" module="true" symbol="globals/Rez"/>
-        <entry field="true" id="13" symbol="id_monkey"/>
+        <entry field="true" id="15" symbol="id_monkey"/>
         <entry id="8389124" method="true" symbol="onUpdate"/>
         <entry field="true" id="8389065" symbol="locY"/>
         <entry field="true" id="8389064" symbol="locX"/>
         <entry id="8388771" module="true" object="true" symbol="Drawables"/>
-        <entry id="12" module="true" symbol="Menus"/>
+        <entry id="14" module="true" symbol="Menus"/>
         <entry id="8389275" method="true" symbol="getApp"/>
         <entry id="6" module="true" symbol="globals/Rez/Layouts"/>
         <entry id="8389122" method="true" symbol="onLayout"/>
@@ -68,38 +75,46 @@
         <entry id="7" module="true" symbol="globals/Rez/JsonData"/>
         <entry id="3" module="true" symbol="globals/Rez/Drawables"/>
         <entry id="8388769" module="true" object="true" symbol="Rez"/>
+        <entry field="true" id="8390270" method="true" symbol="orientation"/>
         <entry id="8388640" module="true" symbol="Lang"/>
         <entry id="8390088" module="true" object="true" symbol="JsonData"/>
-        <entry field="true" id="14" symbol="LauncherIcon"/>
+        <entry field="true" id="16" symbol="LauncherIcon"/>
         <entry id="8388610" symbol="statics"/>
         <entry id="8389123" method="true" symbol="onShow"/>
         <entry id="8389350" module="true" symbol="globals"/>
         <entry id="8388770" module="true" object="true" symbol="Strings"/>
         <entry id="8388702" method="true" symbol="initialize"/>
         <entry id="8389279" method="true" symbol="onStart"/>
-        <entry id="9" object="true" symbol="windsApp"/>
+        <entry id="10" object="true" symbol="windsApp"/>
+        <entry id="12" object="true" symbol="Utils"/>
+        <entry id="9" module="true" symbol="globals/Utils"/>
         <entry id="8389280" method="true" symbol="getInitialView"/>
         <entry id="8389281" method="true" symbol="onStop"/>
-        <entry id="11" module="true" symbol="Layouts"/>
+        <entry id="13" module="true" symbol="Layouts"/>
         <entry id="5" module="true" symbol="globals/Rez/Fonts"/>
         <entry id="8389125" method="true" symbol="onHide"/>
-        <entry id="20" method="true" symbol="drawRequestedData"/>
+        <entry id="22" method="true" symbol="drawRequestedData"/>
         <entry id="8388635" module="true" symbol="Application"/>
-        <entry field="true" id="17" symbol="windAPIResult"/>
+        <entry field="true" id="19" symbol="windAPIResult"/>
     </symbolTable>
     <localVars>
         <entry arg="true" endPc="268435484" name="state" stackId="1" startPc="268435479"/>
         <entry arg="true" endPc="268435489" name="state" stackId="1" startPc="268435484"/>
         <entry arg="true" endPc="268435605" name="dc" stackId="1" startPc="268435600"/>
-        <entry arg="true" endPc="268435681" name="dc" stackId="1" startPc="268435610"/>
-        <entry arg="true" endPc="268435767" name="code" stackId="1" startPc="268435686"/>
-        <entry arg="true" endPc="268435798" name="responseCode" stackId="1" startPc="268435767"/>
-        <entry arg="true" endPc="268435798" name="data" stackId="2" startPc="268435767"/>
-        <entry endPc="268436246" name="windAvg" stackId="2" startPc="268435802"/>
-        <entry endPc="268436246" name="windMax" stackId="3" startPc="268435802"/>
-        <entry arg="true" endPc="268436247" name="dc" stackId="1" startPc="268435798"/>
-        <entry endPc="268436447" name="rez_cmp_local_bitmap_id_monkey" stackId="2" startPc="268436259"/>
-        <entry arg="true" endPc="268436448" name="dc" stackId="1" startPc="268436247"/>
+        <entry arg="true" endPc="268435693" name="dc" stackId="1" startPc="268435610"/>
+        <entry arg="true" endPc="268435779" name="code" stackId="1" startPc="268435698"/>
+        <entry arg="true" endPc="268435810" name="responseCode" stackId="1" startPc="268435779"/>
+        <entry arg="true" endPc="268435810" name="data" stackId="2" startPc="268435779"/>
+        <entry endPc="268436375" name="windAvg" stackId="2" startPc="268435814"/>
+        <entry endPc="268436375" name="sector" stackId="4" startPc="268435814"/>
+        <entry endPc="268436375" name="offSet" stackId="5" startPc="268435814"/>
+        <entry endPc="268436375" name="windMax" stackId="3" startPc="268435814"/>
+        <entry arg="true" endPc="268436376" name="dc" stackId="1" startPc="268435810"/>
+        <entry endPc="268436634" name="index" stackId="3" startPc="268436380"/>
+        <entry endPc="268436634" name="sector" stackId="2" startPc="268436380"/>
+        <entry arg="true" endPc="268436635" name="degres" stackId="1" startPc="268436376"/>
+        <entry endPc="268436838" name="rez_cmp_local_bitmap_id_monkey" stackId="2" startPc="268436650"/>
+        <entry arg="true" endPc="268436839" name="dc" stackId="1" startPc="268436638"/>
     </localVars>
     <annotations>
         <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="id_monkey"/>
@@ -107,16 +122,18 @@
         <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
     </annotations>
     <dataEntryOffsetMappings>
-        <dataEntry label="globals" offset="87" parentId="" symbolId="globals" type="module"/>
-        <dataEntry label="globals/Rez" offset="158" parentId="globals" symbolId="Rez" type="module"/>
-        <dataEntry label="globals/Rez/Drawables" offset="237" parentId="Rez" symbolId="Drawables" type="module"/>
-        <dataEntry label="globals/Rez/Menus" offset="284" parentId="Rez" symbolId="Menus" type="module"/>
-        <dataEntry label="globals/Rez/Fonts" offset="315" parentId="Rez" symbolId="Fonts" type="module"/>
-        <dataEntry label="globals/Rez/Layouts" offset="346" parentId="Rez" symbolId="Layouts" type="module"/>
-        <dataEntry label="globals/Rez/JsonData" offset="385" parentId="Rez" symbolId="JsonData" type="module"/>
-        <dataEntry label="globals/Rez/Strings" offset="416" parentId="Rez" symbolId="Strings" type="module"/>
-        <dataEntry label="globals/windsApp" offset="455" parentId="globals" symbolId="windsApp" type="class"/>
-        <dataEntry label="globals/windsView" offset="526" parentId="globals" symbolId="windsView" type="class"/>
+        <dataEntry label="globals" offset="95" parentId="" symbolId="globals" type="module"/>
+        <dataEntry label="globals/Rez" offset="174" parentId="globals" symbolId="Rez" type="module"/>
+        <dataEntry label="globals/Rez/Drawables" offset="253" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry label="globals/Rez/Menus" offset="300" parentId="Rez" symbolId="Menus" type="module"/>
+        <dataEntry label="globals/Rez/Fonts" offset="331" parentId="Rez" symbolId="Fonts" type="module"/>
+        <dataEntry label="globals/Rez/Layouts" offset="362" parentId="Rez" symbolId="Layouts" type="module"/>
+        <dataEntry label="globals/Rez/JsonData" offset="401" parentId="Rez" symbolId="JsonData" type="module"/>
+        <dataEntry label="globals/Rez/Strings" offset="432" parentId="Rez" symbolId="Strings" type="module"/>
+        <dataEntry label="globals/Utils" offset="471" parentId="globals" symbolId="Utils" type="class"/>
+        <dataEntry label="globals/Utils/statics" offset="518" parentId="globals" symbolId="globals/Utils" type="class"/>
+        <dataEntry label="globals/windsApp" offset="557" parentId="globals" symbolId="windsApp" type="class"/>
+        <dataEntry label="globals/windsView" offset="628" parentId="globals" symbolId="windsView" type="class"/>
     </dataEntryOffsetMappings>
     <functions>
         <functionEntry accessMode="public" name="initialize" parent="windsApp">
@@ -164,6 +181,10 @@
         </functionEntry>
         <functionEntry accessMode="public" name="drawRequestedData" parent="windsView">
             <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="orientation" parent="Utils">
+            <param id="degres"/>
             <documentation/>
         </functionEntry>
         <functionEntry accessMode="public" name="MainLayout" parent="Layouts">
