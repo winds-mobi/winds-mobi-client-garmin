@@ -13,6 +13,7 @@ class windsView extends WatchUi.View {
 	
     function initialize(codeBalise) {
         View.initialize();
+               
         var size = 2;
         var selected = Graphics.COLOR_DK_GRAY;
         var notSelected = Graphics.COLOR_LT_GRAY;
@@ -118,34 +119,23 @@ class WindsViewDelegate extends WatchUi.BehaviorDelegate {
 
     //! Handle going to the next view
     //! @return true if handled, false otherwise
-    public function onNextPage() as Boolean {
-    	    	System.print("onNextPage" + itemMemu.size());
-    	
+    public function onNextPage() as Boolean {    	
     	if(selectedItem < itemMemu.size() - 1) {
     		selectedItem = selectedItem + 1;
-    		System.print("hi" + selectedItem);
     	}else{
     		selectedItem = 0;
     	}
-        	System.print("onNextPage" +selectedItem);
-    
         WatchUi.switchToView(new $.windsView(selectedItem), new $.WindsViewDelegate(selectedItem), WatchUi.SLIDE_LEFT);
         return true;
     }
-
-    //! Handle going to the previous view
-    //! @return true if handled, false otherwise
-    public function onPreviousPage() as Boolean {
     
-    	if(selectedItem > 0) {
-    		selectedItem = selectedItem - 1;
-    	}else{
-    		selectedItem = itemMemu.size() - 1;
-    	}
+    public function onKey(evt as KeyEvent) as Boolean {
+    	if (evt.getKey() == WatchUi.KEY_ENTER) {
+            return onNextPage();
+        }
+    	    		
     	
-    	
-        WatchUi.switchToView(new $.windsView(selectedItem), new $.WindsViewDelegate(selectedItem), WatchUi.SLIDE_RIGHT);
-        return true;
+    
     }
 	
 }
