@@ -2,19 +2,29 @@ import Toybox.Graphics;
 import Toybox.WatchUi;
 using Toybox.Graphics as Gfx;
 
+var itemMemu = ["pioupiou-384", "pioupiou-1021", "pioupiou-230"];
+
 class windsView extends WatchUi.View {
 
+    private var _indicator as PageIndicator;
+	private var codeBalise as String;
+	
 	var windAPIResult = null;
-		
-    function initialize() {
+	
+    function initialize(codeBalise) {
         View.initialize();
-	 	requestWindInformationByCode("pioupiou-384");
-
+        var size = 2;
+        var selected = Graphics.COLOR_DK_GRAY;
+        var notSelected = Graphics.COLOR_LT_GRAY;
+        var alignment = $.ALIGN_TOP_RIGHT;
+        var margin = 3;
+        _indicator = new $.PageIndicator(size, selected, notSelected, alignment, margin);
+        
+	 	requestWindInformationByCode(itemMemu[codeBalise]); // "pioupiou-384"
     }
 	
     // Load your resources here
     function onLayout(dc as Dc) as Void {
-        //setLayout(Rez.Layouts.MainLayout(dc));        
 
     }
 	
@@ -34,6 +44,7 @@ class windsView extends WatchUi.View {
 	    	drawRequestedData(dc);
 	    }
 	    
+	    _indicator.draw(dc, 1);
     }
     
     // Called when this View is removed from the screen. Save the
@@ -73,12 +84,15 @@ class windsView extends WatchUi.View {
 			var offSet = sector.length() * 5;
 				
 				
-			dc.drawText(dc.getWidth() / 2, 50, Gfx.FONT_SMALL, windAPIResult["name"], (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));		
-			dc.drawText(dc.getWidth() / 2, 100, Gfx.FONT_MEDIUM, windAvg.format("%.1f") + " km/h", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));		
-			dc.drawText(dc.getWidth() / 2, 130, Gfx.FONT_GLANCE_NUMBER, windMax.format("%.1f") + " km/h (max)", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));	
+			dc.drawText(dc.getWidth() / 2, 50, Gfx.FONT_SMALL, windAPIResult["name"], (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
+			dc.drawText(dc.getWidth() / 2, 80, Gfx.FONT_GLANCE_NUMBER, "Alt " + windAPIResult["alt"] + " m", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
 			
-			dc.drawText((dc.getWidth() / 2) - offSet - 12, 170, Gfx.FONT_LARGE, sector, (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));		
-			dc.drawText((dc.getWidth() / 2) + offSet + 12, 170, Gfx.FONT_GLANCE_NUMBER, windAPIResult["last"]["w-dir"] + "°", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));		
+					
+			dc.drawText(dc.getWidth() / 2, 120, Gfx.FONT_MEDIUM, windAvg.format("%.1f") + " km/h", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));		
+			dc.drawText(dc.getWidth() / 2, 150, Gfx.FONT_GLANCE_NUMBER, windMax.format("%.1f") + " km/h (max)", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));	
+			
+			dc.drawText((dc.getWidth() / 2) - offSet - 12, 190, Gfx.FONT_LARGE, sector, (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));		
+			dc.drawText((dc.getWidth() / 2) + offSet + 12, 190, Gfx.FONT_GLANCE_NUMBER, windAPIResult["last"]["w-dir"] + "°", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));		
 				
 				
 	}
@@ -86,3 +100,66 @@ class windsView extends WatchUi.View {
 		
 	
 }
+
+
+
+//! Handle input on the object store view
+class WindsViewDelegate extends WatchUi.BehaviorDelegate {
+	
+	
+	var selectedItem;
+	
+	
+    //! Constructor
+    public function initialize(selectedItem) {
+    	self.selectedItem = selectedItem;
+        BehaviorDelegate.initialize();
+    }
+
+    //! Handle going to the next view
+    //! @return true if handled, false otherwise
+    public function onNextPage() as Boolean {
+    	    	System.print("onNextPage" + itemMemu.size());
+    	
+    	if(selectedItem < itemMemu.size() - 1) {
+    		selectedItem = selectedItem + 1;
+    		System.print("hi" + selectedItem);
+    	}else{
+    		selectedItem = 0;
+    	}
+        	System.print("onNextPage" +selectedItem);
+    
+        WatchUi.switchToView(new $.windsView(selectedItem), new $.WindsViewDelegate(selectedItem), WatchUi.SLIDE_LEFT);
+        return true;
+    }
+
+    //! Handle going to the previous view
+    //! @return true if handled, false otherwise
+    public function onPreviousPage() as Boolean {
+        	System.print("onPreviousPage" + selectedItem);
+    
+    	if(selectedItem > 0) {
+    		selectedItem = selectedItem - 1;
+    	}
+    	
+    	System.print("onPreviousPage" + selectedItem);
+    	
+        WatchUi.switchToView(new $.windsView(selectedItem), new $.WindsViewDelegate(selectedItem), WatchUi.SLIDE_RIGHT);
+        return true;
+    }
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -21,7 +21,7 @@ class windsApp extends Application.AppBase {
 
     // Return the initial view of your application here
     function getInitialView() as Array<Views or InputDelegates>? {
-        return [ new windsView() ] as Array<Views or InputDelegates>;
+        return [new $.windsView(0), new $.WindsViewDelegate(0)] as Array<Views or InputDelegates>;
     }
 
 }
