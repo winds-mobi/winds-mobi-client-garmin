@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+    <manifest filename="C:\dev\workspace\winds\manifest.xml"/>
+    <pcToLineNum>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsApp.mc" id="3" lineNum="9" pc="268435456" symbol="initialize"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsApp.mc" id="3" lineNum="10" pc="268435460" symbol="initialize"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsApp.mc" id="4" lineNum="14" pc="268435479" symbol="onStart"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsApp.mc" id="5" lineNum="19" pc="268435484" symbol="onStop"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsApp.mc" id="6" lineNum="23" pc="268435489" symbol="getInitialView"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsApp.mc" id="6" lineNum="24" pc="268435493" symbol="getInitialView"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsApp.mc" id="7" lineNum="29" pc="268435531" symbol="getApp"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsApp.mc" id="7" lineNum="30" pc="268435543" symbol="getApp"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="9" lineNum="9" pc="268435560" symbol="initialize"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="9" lineNum="10" pc="268435564" symbol="initialize"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="9" lineNum="11" pc="268435582" symbol="initialize"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="10" lineNum="16" pc="268435600" symbol="onLayout"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="11" lineNum="24" pc="268435605" symbol="onShow"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="12" lineNum="28" pc="268435610" symbol="onUpdate"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="12" lineNum="30" pc="268435614" symbol="onUpdate"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="12" lineNum="34" pc="268435650" symbol="onUpdate"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="12" lineNum="35" pc="268435663" symbol="onUpdate"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="13" lineNum="42" pc="268435681" symbol="onHide"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="14" lineNum="46" pc="268435686" symbol="requestWindInformationByCode"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="14" lineNum="48" pc="268435690" symbol="requestWindInformationByCode"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="15" lineNum="60" pc="268435767" symbol="setStationInfo"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="15" lineNum="61" pc="268435771" symbol="setStationInfo"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="15" lineNum="62" pc="268435781" symbol="setStationInfo"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="16" lineNum="66" pc="268435798" symbol="drawRequestedData"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="16" lineNum="68" pc="268435802" symbol="drawRequestedData"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="16" lineNum="70" pc="268435828" symbol="drawRequestedData"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="16" lineNum="71" pc="268435828" symbol="drawRequestedData"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="16" lineNum="72" pc="268435828" symbol="drawRequestedData"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="16" lineNum="73" pc="268435850" symbol="drawRequestedData"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="16" lineNum="77" pc="268435872" symbol="drawRequestedData"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="16" lineNum="78" pc="268435957" symbol="drawRequestedData"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="16" lineNum="79" pc="268436050" symbol="drawRequestedData"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="16" lineNum="80" pc="268436143" symbol="drawRequestedData"/>
+        <entry filename="Rez" id="22" lineNum="18" pc="268436247" symbol="MainLayout"/>
+        <entry filename="Rez" id="22" lineNum="20" pc="268436259" symbol="MainLayout"/>
+        <entry filename="Rez" id="22" lineNum="21" pc="268436378" symbol="MainLayout"/>
+        <entry filename="Rez" id="22" lineNum="23" pc="268436430" symbol="MainLayout"/>
+    </pcToLineNum>
+    <symbolTable>
+        <entry id="10" object="true" symbol="windsView"/>
+        <entry id="8388639" module="true" symbol="Graphics"/>
+        <entry id="19" method="true" symbol="setStationInfo"/>
+        <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+        <entry id="18" method="true" symbol="requestWindInformationByCode"/>
+        <entry id="4" module="true" symbol="globals/Rez/Menus"/>
+        <entry id="15" method="true" symbol="MainLayout"/>
+        <entry field="true" id="8388611" module="true" symbol="Toybox"/>
+        <entry field="true" id="16" symbol="AppName"/>
+        <entry id="8" module="true" symbol="globals/Rez/Strings"/>
+        <entry id="8388772" module="true" object="true" symbol="Fonts"/>
+        <entry id="8389345" symbol="rezId"/>
+        <entry id="8388648" module="true" symbol="WatchUi"/>
+        <entry id="2" module="true" symbol="globals/Rez"/>
+        <entry field="true" id="13" symbol="id_monkey"/>
+        <entry id="8389124" method="true" symbol="onUpdate"/>
+        <entry field="true" id="8389065" symbol="locY"/>
+        <entry field="true" id="8389064" symbol="locX"/>
+        <entry id="8388771" module="true" object="true" symbol="Drawables"/>
+        <entry id="12" module="true" symbol="Menus"/>
+        <entry id="8389275" method="true" symbol="getApp"/>
+        <entry id="6" module="true" symbol="globals/Rez/Layouts"/>
+        <entry id="8389122" method="true" symbol="onLayout"/>
+        <entry field="true" id="8389063" symbol="identifier"/>
+        <entry id="7" module="true" symbol="globals/Rez/JsonData"/>
+        <entry id="3" module="true" symbol="globals/Rez/Drawables"/>
+        <entry id="8388769" module="true" object="true" symbol="Rez"/>
+        <entry id="8388640" module="true" symbol="Lang"/>
+        <entry id="8390088" module="true" object="true" symbol="JsonData"/>
+        <entry field="true" id="14" symbol="LauncherIcon"/>
+        <entry id="8388610" symbol="statics"/>
+        <entry id="8389123" method="true" symbol="onShow"/>
+        <entry id="8389350" module="true" symbol="globals"/>
+        <entry id="8388770" module="true" object="true" symbol="Strings"/>
+        <entry id="8388702" method="true" symbol="initialize"/>
+        <entry id="8389279" method="true" symbol="onStart"/>
+        <entry id="9" object="true" symbol="windsApp"/>
+        <entry id="8389280" method="true" symbol="getInitialView"/>
+        <entry id="8389281" method="true" symbol="onStop"/>
+        <entry id="11" module="true" symbol="Layouts"/>
+        <entry id="5" module="true" symbol="globals/Rez/Fonts"/>
+        <entry id="8389125" method="true" symbol="onHide"/>
+        <entry id="20" method="true" symbol="drawRequestedData"/>
+        <entry id="8388635" module="true" symbol="Application"/>
+        <entry field="true" id="17" symbol="windAPIResult"/>
+    </symbolTable>
+    <localVars>
+        <entry arg="true" endPc="268435484" name="state" stackId="1" startPc="268435479"/>
+        <entry arg="true" endPc="268435489" name="state" stackId="1" startPc="268435484"/>
+        <entry arg="true" endPc="268435605" name="dc" stackId="1" startPc="268435600"/>
+        <entry arg="true" endPc="268435681" name="dc" stackId="1" startPc="268435610"/>
+        <entry arg="true" endPc="268435767" name="code" stackId="1" startPc="268435686"/>
+        <entry arg="true" endPc="268435798" name="responseCode" stackId="1" startPc="268435767"/>
+        <entry arg="true" endPc="268435798" name="data" stackId="2" startPc="268435767"/>
+        <entry endPc="268436246" name="windAvg" stackId="2" startPc="268435802"/>
+        <entry endPc="268436246" name="windMax" stackId="3" startPc="268435802"/>
+        <entry arg="true" endPc="268436247" name="dc" stackId="1" startPc="268435798"/>
+        <entry endPc="268436447" name="rez_cmp_local_bitmap_id_monkey" stackId="2" startPc="268436259"/>
+        <entry arg="true" endPc="268436448" name="dc" stackId="1" startPc="268436247"/>
+    </localVars>
+    <annotations>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="id_monkey"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+    </annotations>
+    <dataEntryOffsetMappings>
+        <dataEntry label="globals" offset="87" parentId="" symbolId="globals" type="module"/>
+        <dataEntry label="globals/Rez" offset="158" parentId="globals" symbolId="Rez" type="module"/>
+        <dataEntry label="globals/Rez/Drawables" offset="237" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry label="globals/Rez/Menus" offset="284" parentId="Rez" symbolId="Menus" type="module"/>
+        <dataEntry label="globals/Rez/Fonts" offset="315" parentId="Rez" symbolId="Fonts" type="module"/>
+        <dataEntry label="globals/Rez/Layouts" offset="346" parentId="Rez" symbolId="Layouts" type="module"/>
+        <dataEntry label="globals/Rez/JsonData" offset="385" parentId="Rez" symbolId="JsonData" type="module"/>
+        <dataEntry label="globals/Rez/Strings" offset="416" parentId="Rez" symbolId="Strings" type="module"/>
+        <dataEntry label="globals/windsApp" offset="455" parentId="globals" symbolId="windsApp" type="class"/>
+        <dataEntry label="globals/windsView" offset="526" parentId="globals" symbolId="windsView" type="class"/>
+    </dataEntryOffsetMappings>
+    <functions>
+        <functionEntry accessMode="public" name="initialize" parent="windsApp">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onStart" parent="windsApp">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onStop" parent="windsApp">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="getInitialView" parent="windsApp">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="getApp">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="windsView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onLayout" parent="windsView">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onShow" parent="windsView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onUpdate" parent="windsView">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onHide" parent="windsView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="requestWindInformationByCode" parent="windsView">
+            <param id="code"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="setStationInfo" parent="windsView">
+            <param id="responseCode"/>
+            <param id="data"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="drawRequestedData" parent="windsView">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="MainLayout" parent="Layouts">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+    </functions>
+</debugInfo>
