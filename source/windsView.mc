@@ -136,13 +136,13 @@ class WindsViewDelegate extends WatchUi.BehaviorDelegate {
     //! Handle going to the previous view
     //! @return true if handled, false otherwise
     public function onPreviousPage() as Boolean {
-        	System.print("onPreviousPage" + selectedItem);
     
     	if(selectedItem > 0) {
     		selectedItem = selectedItem - 1;
+    	}else{
+    		selectedItem = itemMemu.size() - 1;
     	}
     	
-    	System.print("onPreviousPage" + selectedItem);
     	
         WatchUi.switchToView(new $.windsView(selectedItem), new $.WindsViewDelegate(selectedItem), WatchUi.SLIDE_RIGHT);
         return true;
