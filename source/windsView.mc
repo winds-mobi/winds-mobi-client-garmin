@@ -2,7 +2,7 @@ import Toybox.Graphics;
 import Toybox.WatchUi;
 using Toybox.Graphics as Gfx;
 
-var itemMemu = ["pioupiou-384", "pioupiou-1021", "pioupiou-230"];
+var itemMemu = [];
 
 class windsView extends WatchUi.View {
 
@@ -10,6 +10,7 @@ class windsView extends WatchUi.View {
 	private var codeBalise as String;
 	
 	var windAPIResult = null;
+	var windAPIResultHist = null;
 	
     function initialize(codeBalise) {
         View.initialize();
@@ -18,10 +19,21 @@ class windsView extends WatchUi.View {
         var selected = Graphics.COLOR_DK_GRAY;
         var notSelected = Graphics.COLOR_LT_GRAY;
         var alignment = $.ALIGN_TOP_RIGHT;
-        var margin = 3;
+        var margin = 10;
         _indicator = new $.PageIndicator(size, selected, notSelected, alignment, margin);
         
-	 	requestWindInformationByCode(itemMemu[codeBalise]); // "pioupiou-384"
+        if(itemMemu.size() == 0){
+	        var app = Application.getApp();
+	      	for(var i = 8; i >= 1; i--){
+	      		var balise = app.getProperty("balise_" + i);
+		      	if(balise != null && !balise.equals("")){
+				   itemMemu.add(balise);
+				}	
+	      	}
+      	}
+        
+        
+	 	requestWindInformationByCode(itemMemu[codeBalise]);
     }
 	
     // Load your resources here
@@ -43,6 +55,8 @@ class windsView extends WatchUi.View {
         dc.clear();
 	    if(windAPIResult != null){	    	
 	    	drawRequestedData(dc);
+	    }else{
+	    	dc.drawText(dc.getWidth() / 2, dc.getHeight() / 2, Gfx.FONT_MEDIUM, "Chargement ...", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));		
 	    }
 	    
 	    _indicator.draw(dc, 1);
@@ -66,24 +80,68 @@ class windsView extends WatchUi.View {
 		},
 		method(:setStationInfo)
 		);		
+	}
 	
+	function requestWindHistoryByCode(code) as Void {
+					
+		
+		Communications.makeJsonRequest(
+		"https://winds.mobi/api/2/stations/" + code + "/historic/?duration=3600",
+		{
+		},
+		{
+		"Content-Type" => Communications.REQUEST_CONTENT_TYPE_URL_ENCODED
+		},
+		method(:setStationHistory)
+		);		
 	}
 	
 	function setStationInfo(responseCode, data) {
-		self.windAPIResult = data;		
+		self.windAPIResult = data;	
+		requestWindHistoryByCode(data["_id"]);
+	}
+	
+	function setStationHistory(responseCode, data) {
+		self.windAPIResultHist = data;		
 		WatchUi.requestUpdate();		
 	}
+	
+	
 		
 	//Drawing UI element
 	function drawRequestedData(dc) as Void {
 				
 			var windAvg as Float;
 			var windMax as Float;
+			
+			var windMaxHist as Float = 0;
+			var windMinHist as Float = 999;
+			var windAvgHist as Float = 0;	
+										
 			windAvg = windAPIResult["last"]["w-avg"];
 			windMax = windAPIResult["last"]["w-max"];
 			var sector as String = Utils.orientation(windAPIResult["last"]["w-dir"]);
 			var offSet = sector.length() * 5;
+			System.println(windAPIResultHist);
+			
+			
+			var avgHistTmp as Float = 0;
+			for(var i = 0; i < windAPIResultHist.size(); i ++){
 				
+				if(windAPIResultHist[i]["w-max"] > windMaxHist){
+					windMaxHist = windAPIResultHist[i]["w-max"];
+				}
+				
+				if(windAPIResultHist[i]["w-avg"] < windMinHist){
+					windMinHist = windAPIResultHist[i]["w-avg"];
+				}
+				
+				avgHistTmp += windAPIResultHist[i]["w-avg"];
+				
+			}
+			
+			windAvgHist = avgHistTmp / windAPIResultHist.size();
+						
 				
 			dc.drawText(dc.getWidth() / 2, 50, Gfx.FONT_SMALL, windAPIResult["name"], (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
 			dc.drawText(dc.getWidth() / 2, 80, Gfx.FONT_GLANCE_NUMBER, "Alt " + windAPIResult["alt"] + " m", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
@@ -92,13 +150,15 @@ class windsView extends WatchUi.View {
 			dc.drawText(dc.getWidth() / 2, 120, Gfx.FONT_MEDIUM, windAvg.format("%.1f") + " km/h", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));		
 			dc.drawText(dc.getWidth() / 2, 150, Gfx.FONT_GLANCE_NUMBER, windMax.format("%.1f") + " km/h (max)", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));	
 			
-			dc.drawText((dc.getWidth() / 2) - offSet - 12, 190, Gfx.FONT_LARGE, sector, (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));		
-			dc.drawText((dc.getWidth() / 2) + offSet + 12, 190, Gfx.FONT_GLANCE_NUMBER, windAPIResult["last"]["w-dir"] + "°", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));		
-				
-				
-	}
-	
-		
+			
+			dc.drawText(dc.getWidth() / 2, 180, Gfx.FONT_GLANCE_NUMBER, "1h " + windMinHist.format("%.1f") + "/" + windAvgHist.format("%.1f") + "/" + windMaxHist.format("%.1f"), (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
+			
+			
+			dc.drawText((dc.getWidth() / 2) - offSet - 12, 210, Gfx.FONT_LARGE, sector, (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));		
+			dc.drawText((dc.getWidth() / 2) + offSet + 12, 210, Gfx.FONT_GLANCE_NUMBER, windAPIResult["last"]["w-dir"] + "°", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));		
+					
+	}	
+			
 	
 }
 
