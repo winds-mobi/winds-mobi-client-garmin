@@ -89,15 +89,15 @@
         <entry filename="C:\\dev\\workspace\\winds\\source\\Utils.mc" id="25" lineNum="6" pc="268437770" symbol="orientation"/>
         <entry filename="C:\\dev\\workspace\\winds\\source\\Utils.mc" id="25" lineNum="8" pc="268437789" symbol="orientation"/>
         <entry filename="Rez" id="32" lineNum="17" pc="268437799" symbol="SettingsLayout"/>
-        <entry filename="Rez" id="32" lineNum="20" pc="268437811" symbol="SettingsLayout"/>
-        <entry filename="Rez" id="32" lineNum="21" pc="268437957" symbol="SettingsLayout"/>
-        <entry filename="Rez" id="32" lineNum="22" pc="268438103" symbol="SettingsLayout"/>
-        <entry filename="Rez" id="32" lineNum="23" pc="268438249" symbol="SettingsLayout"/>
-        <entry filename="Rez" id="32" lineNum="24" pc="268438395" symbol="SettingsLayout"/>
-        <entry filename="Rez" id="32" lineNum="25" pc="268438508" symbol="SettingsLayout"/>
-        <entry filename="Rez" id="32" lineNum="26" pc="268438621" symbol="SettingsLayout"/>
-        <entry filename="Rez" id="32" lineNum="27" pc="268438734" symbol="SettingsLayout"/>
-        <entry filename="Rez" id="32" lineNum="29" pc="268438847" symbol="SettingsLayout"/>
+        <entry filename="Rez" id="32" lineNum="19" pc="268437811" symbol="SettingsLayout"/>
+        <entry filename="Rez" id="32" lineNum="20" pc="268437957" symbol="SettingsLayout"/>
+        <entry filename="Rez" id="32" lineNum="21" pc="268438103" symbol="SettingsLayout"/>
+        <entry filename="Rez" id="32" lineNum="22" pc="268438249" symbol="SettingsLayout"/>
+        <entry filename="Rez" id="32" lineNum="23" pc="268438395" symbol="SettingsLayout"/>
+        <entry filename="Rez" id="32" lineNum="24" pc="268438508" symbol="SettingsLayout"/>
+        <entry filename="Rez" id="32" lineNum="25" pc="268438621" symbol="SettingsLayout"/>
+        <entry filename="Rez" id="32" lineNum="26" pc="268438734" symbol="SettingsLayout"/>
+        <entry filename="Rez" id="32" lineNum="28" pc="268438847" symbol="SettingsLayout"/>
     </pcToLineNum>
     <symbolTable>
         <entry id="12" object="true" symbol="windsView"/>
