@@ -15,6 +15,9 @@ The app should appear in the list of Connect IQ apps or activities menu. If you 
 
 # To Do
 Display status of weather station (red, orange, green).
+
 Display last hour information (min, max, average).
+
 Manage your favorite weather station.
+
 Locate and display the closest weather stations.
