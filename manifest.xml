@@ -10,23 +10,11 @@
             <iq:product id="fr645"/>
             <iq:product id="fr645m"/>
             <iq:product id="fr935"/>
-            <iq:product id="fr945"/>
-            <iq:product id="fr945lte"/>
-            <iq:product id="marqadventurer"/>
-            <iq:product id="marqathlete"/>
-            <iq:product id="marqaviator"/>
-            <iq:product id="marqcaptain"/>
-            <iq:product id="marqcommander"/>
-            <iq:product id="marqdriver"/>
-            <iq:product id="marqexpedition"/>
-            <iq:product id="marqgolfer"/>
-            <iq:product id="montana7xx"/>
         </iq:products>
         <iq:permissions>
             <iq:uses-permission id="BluetoothLowEnergy"/>
             <iq:uses-permission id="Communications"/>
             <iq:uses-permission id="PersistedContent"/>
-            <iq:uses-permission id="Positioning"/>
         </iq:permissions>
         <iq:languages/>
         <iq:barrels/>

@@ -14,12 +14,7 @@ class windsView extends WatchUi.View {
 	
     function initialize(codeBalise) {
         View.initialize();
-               
-        var size = 2;
-        var selected = Graphics.COLOR_DK_GRAY;
-        var notSelected = Graphics.COLOR_LT_GRAY;
-        var margin = 10;
-        
+                       
         if(itemMemu.size() == 0){
 	        var app = Application.getApp();
 	      	for(var i = 8; i >= 1; i--){
@@ -103,6 +98,22 @@ class windsView extends WatchUi.View {
 		WatchUi.requestUpdate();		
 	}
 	
+	function drawStatus(dc, color) as Void {
+	
+		var cx = dc.getWidth() / 2;
+		var cy = dc.getHeight() / 2;
+		
+		if(color.equals("green")) {
+			dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_GREEN);
+			dc.fillCircle(cx, 20, 12);	
+		}else if (color.equals("orange")){
+			dc.setColor(Gfx.COLOR_ORANGE, Gfx.COLOR_ORANGE);
+			dc.fillCircle(cx, 20, 12);	
+		} else if (color.equals("red")){
+			dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_RED);
+			dc.fillCircle(cx, 20, 12);			
+		}
+	}
 	
 		
 	//Drawing UI element
@@ -130,6 +141,7 @@ class windsView extends WatchUi.View {
 			dc.drawText(dc.getWidth() / 2, 50, Gfx.FONT_SMALL, baliseName, (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
 			dc.drawText(dc.getWidth() / 2, 80, Gfx.FONT_GLANCE_NUMBER, "Alt " + windAPIResult["alt"] + " m", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
 			
+			
 					
 			dc.drawText(dc.getWidth() / 2, 120, Gfx.FONT_MEDIUM, windAvg.format("%.1f") + " km/h", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));		
 			dc.drawText(dc.getWidth() / 2, 150, Gfx.FONT_GLANCE_NUMBER, windMax.format("%.1f") + " km/h (max)", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));	
@@ -137,7 +149,7 @@ class windsView extends WatchUi.View {
 			
 			dc.drawText((dc.getWidth() / 2) - offSet - 12, 190, Gfx.FONT_LARGE, sector, (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));		
 			dc.drawText((dc.getWidth() / 2) + offSet + 12, 190, Gfx.FONT_GLANCE_NUMBER, windAPIResult["last"]["w-dir"] + "°", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));		
-					
+			drawStatus(dc, windAPIResult["status"]);
 	}	
 			
 	
