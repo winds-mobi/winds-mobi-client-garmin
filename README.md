@@ -16,8 +16,6 @@ To manually install Windx in your device, do the following:
 The app should appear in the list of Connect IQ apps or activities menu. If you can't find your device in the releases, you can either compile it yourself using the Garmin IQ SDK or submit an issue.
 
 # To Do
-Display status of weather station (red, orange, green).
-
 Display last hour information (min, max, average).
 
 Manage your favorite weather station.
