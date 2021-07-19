@@ -110,6 +110,7 @@ class windsView extends WatchUi.View {
 				
 			var windAvg as Float;
 			var windMax as Float;
+			var baliseName as String;
 			
 			var windMaxHist as Float = 0;
 			var windMinHist as Float = 999;
@@ -120,8 +121,13 @@ class windsView extends WatchUi.View {
 			var sector as String = Utils.orientation(windAPIResult["last"]["w-dir"]);
 			var offSet = sector.length() * 5;
 								
+			baliseName = windAPIResult["name"];
+			
+			if(baliseName.length() > 16) {
+				baliseName = baliseName.substring(0, 16) + "...";
+			}
 				
-			dc.drawText(dc.getWidth() / 2, 50, Gfx.FONT_SMALL, windAPIResult["name"], (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
+			dc.drawText(dc.getWidth() / 2, 50, Gfx.FONT_SMALL, baliseName, (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
 			dc.drawText(dc.getWidth() / 2, 80, Gfx.FONT_GLANCE_NUMBER, "Alt " + windAPIResult["alt"] + " m", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
 			
 					
