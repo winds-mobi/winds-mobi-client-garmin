@@ -1,0 +1,59 @@
+<resources>
+
+    <properties>
+        <property id="balise_1" type="string">pioupiou-384</property>
+        <property id="balise_2" type="string">iweathar-542</property>
+        <property id="balise_3" type="string"></property>
+        <property id="balise_4" type="string"></property>
+        <property id="balise_5" type="string"></property>
+        <property id="balise_6" type="string"></property>
+        <property id="balise_7" type="string"></property>
+        <property id="balise_8" type="string"></property>
+    </properties>
+	
+    <strings>
+       <string id="balise_1">Balise 1</string>
+       <string id="balise_2">Balise 2</string>
+       <string id="balise_3">Balise 3</string>
+       <string id="balise_4">Balise 4</string>
+       <string id="balise_5">Balise 5</string>
+       <string id="balise_6">Balise 6</string>
+       <string id="balise_7">Balise 7</string>
+       <string id="balise_8">Balise 8</string>
+    </strings>
+
+    <settings>
+        <setting propertyKey="@Properties.balise_1" title="@Strings.balise_1">
+            <settingConfig type="alphaNumeric" />
+        </setting>
+
+        <setting propertyKey="@Properties.balise_2" title="@Strings.balise_2">
+            <settingConfig type="alphaNumeric" />
+        </setting>
+
+        <setting propertyKey="@Properties.balise_3" title="@Strings.balise_3">
+            <settingConfig type="alphaNumeric" />
+        </setting>
+		
+        <setting propertyKey="@Properties.balise_4" title="@Strings.balise_4">
+            <settingConfig type="alphaNumeric" />
+        </setting>
+        
+        <setting propertyKey="@Properties.balise_5" title="@Strings.balise_5">
+            <settingConfig type="alphaNumeric" />
+        </setting>
+        
+        <setting propertyKey="@Properties.balise_6" title="@Strings.balise_6">
+            <settingConfig type="alphaNumeric" />
+        </setting>
+        
+        <setting propertyKey="@Properties.balise_7" title="@Strings.balise_7">
+            <settingConfig type="alphaNumeric" />
+        </setting>
+        
+        <setting propertyKey="@Properties.balise_8" title="@Strings.balise_8">
+            <settingConfig type="alphaNumeric" />
+        </setting>
+
+    </settings>
+</resources>
