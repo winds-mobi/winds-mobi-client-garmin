@@ -130,25 +130,23 @@ class windsView extends WatchUi.View {
 			windAvg = windAPIResult["last"]["w-avg"];
 			windMax = windAPIResult["last"]["w-max"];
 			var sector as String = Utils.orientation(windAPIResult["last"]["w-dir"]);
-			var offSet = sector.length() * 5;
 								
 			baliseName = windAPIResult["name"];
 			
 			if(baliseName.length() > 16) {
 				baliseName = baliseName.substring(0, 16) + "...";
 			}
+			
+			
+			var altitude = "Alt " + windAPIResult["alt"] + " m";
 				
 			dc.drawText(dc.getWidth() / 2, 50, Gfx.FONT_SMALL, baliseName, (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
-			dc.drawText(dc.getWidth() / 2, 80, Gfx.FONT_GLANCE_NUMBER, "Alt " + windAPIResult["alt"] + " m", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
-			
-			
-					
+			dc.drawText(dc.getWidth() / 2, 80, Gfx.FONT_SMALL, altitude, (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
+								
 			dc.drawText(dc.getWidth() / 2, 120, Gfx.FONT_MEDIUM, windAvg.format("%.1f") + " km/h", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));		
-			dc.drawText(dc.getWidth() / 2, 150, Gfx.FONT_GLANCE_NUMBER, windMax.format("%.1f") + " km/h (max)", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));	
-				
-			
-			dc.drawText((dc.getWidth() / 2) - offSet - 12, 190, Gfx.FONT_LARGE, sector, (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));		
-			dc.drawText((dc.getWidth() / 2) + offSet + 12, 190, Gfx.FONT_GLANCE_NUMBER, windAPIResult["last"]["w-dir"] + "°", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));		
+			dc.drawText(dc.getWidth() / 2, 150, Gfx.FONT_SMALL, windMax.format("%.1f") + " km/h (max)", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));	
+							
+			dc.drawText(dc.getWidth() / 2, 190, Gfx.FONT_LARGE, sector + " " + windAPIResult["last"]["w-dir"] + "°", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));		
 			drawStatus(dc, windAPIResult["status"]);
 	}	
 			
