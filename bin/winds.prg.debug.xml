@@ -58,45 +58,51 @@
         <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="19" lineNum="127" pc="268436523" symbol="drawRequestedData"/>
         <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="19" lineNum="128" pc="268436530" symbol="drawRequestedData"/>
         <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="19" lineNum="130" pc="268436537" symbol="drawRequestedData"/>
-        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="19" lineNum="131" pc="268436559" symbol="drawRequestedData"/>
-        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="19" lineNum="132" pc="268436581" symbol="drawRequestedData"/>
-        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="19" lineNum="134" pc="268436620" symbol="drawRequestedData"/>
-        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="19" lineNum="136" pc="268436636" symbol="drawRequestedData"/>
-        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="19" lineNum="137" pc="268436656" symbol="drawRequestedData"/>
-        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="19" lineNum="141" pc="268436688" symbol="drawRequestedData"/>
-        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="19" lineNum="143" pc="268436716" symbol="drawRequestedData"/>
-        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="19" lineNum="144" pc="268436789" symbol="drawRequestedData"/>
-        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="19" lineNum="146" pc="268436862" symbol="drawRequestedData"/>
-        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="19" lineNum="147" pc="268436955" symbol="drawRequestedData"/>
-        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="19" lineNum="149" pc="268437048" symbol="drawRequestedData"/>
-        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="19" lineNum="150" pc="268437154" symbol="drawRequestedData"/>
-        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="21" lineNum="166" pc="268437183" symbol="initialize"/>
-        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="21" lineNum="167" pc="268437187" symbol="initialize"/>
-        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="21" lineNum="168" pc="268437197" symbol="initialize"/>
-        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="22" lineNum="173" pc="268437216" symbol="onNextPage"/>
-        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="22" lineNum="174" pc="268437220" symbol="onNextPage"/>
-        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="22" lineNum="175" pc="268437255" symbol="onNextPage"/>
-        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="22" lineNum="177" pc="268437280" symbol="onNextPage"/>
-        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="22" lineNum="179" pc="268437293" symbol="onNextPage"/>
-        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="22" lineNum="180" pc="268437389" symbol="onNextPage"/>
-        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="23" lineNum="183" pc="268437393" symbol="onKey"/>
-        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="23" lineNum="184" pc="268437397" symbol="onKey"/>
-        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="23" lineNum="185" pc="268437424" symbol="onKey"/>
-        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="23" lineNum="5" pc="268438852" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\dev\\workspace\\winds\\source\\Utils.mc" id="25" lineNum="3" pc="268437440" symbol="orientation"/>
-        <entry filename="C:\\dev\\workspace\\winds\\source\\Utils.mc" id="25" lineNum="5" pc="268437444" symbol="orientation"/>
-        <entry filename="C:\\dev\\workspace\\winds\\source\\Utils.mc" id="25" lineNum="6" pc="268437673" symbol="orientation"/>
-        <entry filename="C:\\dev\\workspace\\winds\\source\\Utils.mc" id="25" lineNum="8" pc="268437692" symbol="orientation"/>
-        <entry filename="Rez" id="32" lineNum="17" pc="268437702" symbol="SettingsLayout"/>
-        <entry filename="Rez" id="32" lineNum="19" pc="268437714" symbol="SettingsLayout"/>
-        <entry filename="Rez" id="32" lineNum="20" pc="268437860" symbol="SettingsLayout"/>
-        <entry filename="Rez" id="32" lineNum="21" pc="268438006" symbol="SettingsLayout"/>
-        <entry filename="Rez" id="32" lineNum="22" pc="268438152" symbol="SettingsLayout"/>
-        <entry filename="Rez" id="32" lineNum="23" pc="268438298" symbol="SettingsLayout"/>
-        <entry filename="Rez" id="32" lineNum="24" pc="268438411" symbol="SettingsLayout"/>
-        <entry filename="Rez" id="32" lineNum="25" pc="268438524" symbol="SettingsLayout"/>
-        <entry filename="Rez" id="32" lineNum="26" pc="268438637" symbol="SettingsLayout"/>
-        <entry filename="Rez" id="32" lineNum="28" pc="268438750" symbol="SettingsLayout"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="19" lineNum="131" pc="268436562" symbol="drawRequestedData"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="19" lineNum="133" pc="268436596" symbol="drawRequestedData"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="19" lineNum="134" pc="268436618" symbol="drawRequestedData"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="19" lineNum="135" pc="268436640" symbol="drawRequestedData"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="19" lineNum="137" pc="268436679" symbol="drawRequestedData"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="19" lineNum="139" pc="268436695" symbol="drawRequestedData"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="19" lineNum="140" pc="268436715" symbol="drawRequestedData"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="19" lineNum="143" pc="268436747" symbol="drawRequestedData"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="19" lineNum="147" pc="268436775" symbol="drawRequestedData"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="19" lineNum="148" pc="268436845" symbol="drawRequestedData"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="19" lineNum="149" pc="268436852" symbol="drawRequestedData"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="19" lineNum="150" pc="268436922" symbol="drawRequestedData"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="19" lineNum="151" pc="268436935" symbol="drawRequestedData"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="19" lineNum="152" pc="268437040" symbol="drawRequestedData"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="19" lineNum="153" pc="268437053" symbol="drawRequestedData"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="19" lineNum="154" pc="268437143" symbol="drawRequestedData"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="19" lineNum="155" pc="268437156" symbol="drawRequestedData"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="19" lineNum="156" pc="268437259" symbol="drawRequestedData"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="21" lineNum="172" pc="268437288" symbol="initialize"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="21" lineNum="173" pc="268437292" symbol="initialize"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="21" lineNum="174" pc="268437302" symbol="initialize"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="22" lineNum="179" pc="268437321" symbol="onNextPage"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="22" lineNum="180" pc="268437325" symbol="onNextPage"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="22" lineNum="181" pc="268437360" symbol="onNextPage"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="22" lineNum="183" pc="268437385" symbol="onNextPage"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="22" lineNum="185" pc="268437398" symbol="onNextPage"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="22" lineNum="186" pc="268437494" symbol="onNextPage"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="23" lineNum="189" pc="268437498" symbol="onKey"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="23" lineNum="190" pc="268437502" symbol="onKey"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="23" lineNum="191" pc="268437529" symbol="onKey"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="23" lineNum="5" pc="268438957" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\Utils.mc" id="25" lineNum="3" pc="268437545" symbol="orientation"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\Utils.mc" id="25" lineNum="5" pc="268437549" symbol="orientation"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\Utils.mc" id="25" lineNum="6" pc="268437778" symbol="orientation"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\Utils.mc" id="25" lineNum="8" pc="268437797" symbol="orientation"/>
+        <entry filename="Rez" id="32" lineNum="17" pc="268437807" symbol="SettingsLayout"/>
+        <entry filename="Rez" id="32" lineNum="19" pc="268437819" symbol="SettingsLayout"/>
+        <entry filename="Rez" id="32" lineNum="20" pc="268437965" symbol="SettingsLayout"/>
+        <entry filename="Rez" id="32" lineNum="21" pc="268438111" symbol="SettingsLayout"/>
+        <entry filename="Rez" id="32" lineNum="22" pc="268438257" symbol="SettingsLayout"/>
+        <entry filename="Rez" id="32" lineNum="23" pc="268438403" symbol="SettingsLayout"/>
+        <entry filename="Rez" id="32" lineNum="24" pc="268438516" symbol="SettingsLayout"/>
+        <entry filename="Rez" id="32" lineNum="25" pc="268438629" symbol="SettingsLayout"/>
+        <entry filename="Rez" id="32" lineNum="26" pc="268438742" symbol="SettingsLayout"/>
+        <entry filename="Rez" id="32" lineNum="28" pc="268438855" symbol="SettingsLayout"/>
     </pcToLineNum>
     <symbolTable>
         <entry id="12" object="true" symbol="windsView"/>
@@ -188,29 +194,31 @@
         <entry endPc="268436511" name="cy" stackId="4" startPc="268436227"/>
         <entry arg="true" endPc="268436512" name="dc" stackId="1" startPc="268436223"/>
         <entry arg="true" endPc="268436512" name="color" stackId="2" startPc="268436223"/>
-        <entry endPc="268437182" name="altitude" stackId="9" startPc="268436516"/>
-        <entry endPc="268437182" name="windAvgHist" stackId="7" startPc="268436516"/>
-        <entry endPc="268437182" name="windAvg" stackId="2" startPc="268436516"/>
-        <entry endPc="268437182" name="sector" stackId="8" startPc="268436516"/>
-        <entry endPc="268437182" name="windMinHist" stackId="6" startPc="268436516"/>
-        <entry endPc="268437182" name="baliseName" stackId="4" startPc="268436516"/>
-        <entry endPc="268437182" name="windMaxHist" stackId="5" startPc="268436516"/>
-        <entry endPc="268437182" name="windMax" stackId="3" startPc="268436516"/>
-        <entry arg="true" endPc="268437183" name="dc" stackId="1" startPc="268436512"/>
-        <entry arg="true" endPc="268437216" name="selectedItem" stackId="1" startPc="268437183"/>
-        <entry arg="true" endPc="268437440" name="evt" stackId="1" startPc="268437393"/>
-        <entry endPc="268437698" name="index" stackId="3" startPc="268437444"/>
-        <entry endPc="268437698" name="sector" stackId="2" startPc="268437444"/>
-        <entry arg="true" endPc="268437699" name="degres" stackId="1" startPc="268437440"/>
-        <entry endPc="268438837" name="rez_cmp_local_text_BoolLabel" stackId="9" startPc="268437714"/>
-        <entry endPc="268438837" name="rez_cmp_local_text_StringLabel" stackId="8" startPc="268437714"/>
-        <entry endPc="268438837" name="rez_cmp_local_text_FloatLabel" stackId="7" startPc="268437714"/>
-        <entry endPc="268438837" name="rez_cmp_local_text_Info4" stackId="5" startPc="268437714"/>
-        <entry endPc="268438837" name="rez_cmp_local_text_Info3" stackId="4" startPc="268437714"/>
-        <entry endPc="268438837" name="rez_cmp_local_text_IntLabel" stackId="6" startPc="268437714"/>
-        <entry endPc="268438837" name="rez_cmp_local_text_Info2" stackId="3" startPc="268437714"/>
-        <entry endPc="268438837" name="rez_cmp_local_text_Info1" stackId="2" startPc="268437714"/>
-        <entry arg="true" endPc="268438838" name="dc" stackId="1" startPc="268437702"/>
+        <entry endPc="268437287" name="windAvgHist" stackId="7" startPc="268436516"/>
+        <entry endPc="268437287" name="currentHeight" stackId="9" startPc="268436516"/>
+        <entry endPc="268437287" name="sector" stackId="10" startPc="268436516"/>
+        <entry endPc="268437287" name="altitude" stackId="11" startPc="268436516"/>
+        <entry endPc="268437287" name="fontH" stackId="8" startPc="268436516"/>
+        <entry endPc="268437287" name="windMaxHist" stackId="5" startPc="268436516"/>
+        <entry endPc="268437287" name="windAvg" stackId="2" startPc="268436516"/>
+        <entry endPc="268437287" name="windMax" stackId="3" startPc="268436516"/>
+        <entry endPc="268437287" name="baliseName" stackId="4" startPc="268436516"/>
+        <entry endPc="268437287" name="windMinHist" stackId="6" startPc="268436516"/>
+        <entry arg="true" endPc="268437288" name="dc" stackId="1" startPc="268436512"/>
+        <entry arg="true" endPc="268437321" name="selectedItem" stackId="1" startPc="268437288"/>
+        <entry arg="true" endPc="268437545" name="evt" stackId="1" startPc="268437498"/>
+        <entry endPc="268437803" name="index" stackId="3" startPc="268437549"/>
+        <entry endPc="268437803" name="sector" stackId="2" startPc="268437549"/>
+        <entry arg="true" endPc="268437804" name="degres" stackId="1" startPc="268437545"/>
+        <entry endPc="268438942" name="rez_cmp_local_text_BoolLabel" stackId="9" startPc="268437819"/>
+        <entry endPc="268438942" name="rez_cmp_local_text_StringLabel" stackId="8" startPc="268437819"/>
+        <entry endPc="268438942" name="rez_cmp_local_text_FloatLabel" stackId="7" startPc="268437819"/>
+        <entry endPc="268438942" name="rez_cmp_local_text_Info4" stackId="5" startPc="268437819"/>
+        <entry endPc="268438942" name="rez_cmp_local_text_Info3" stackId="4" startPc="268437819"/>
+        <entry endPc="268438942" name="rez_cmp_local_text_IntLabel" stackId="6" startPc="268437819"/>
+        <entry endPc="268438942" name="rez_cmp_local_text_Info2" stackId="3" startPc="268437819"/>
+        <entry endPc="268438942" name="rez_cmp_local_text_Info1" stackId="2" startPc="268437819"/>
+        <entry arg="true" endPc="268438943" name="dc" stackId="1" startPc="268437807"/>
     </localVars>
     <annotations>
         <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>

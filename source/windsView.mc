@@ -127,6 +127,9 @@ class windsView extends WatchUi.View {
 			var windMinHist as Float = 999;
 			var windAvgHist as Float = 0;	
 										
+			var fontH = dc.getFontHeight(Gfx.FONT_SMALL);
+			var currentHeight = (dc.getHeight() / 2) - ((fontH + 5) * 2);
+			
 			windAvg = windAPIResult["last"]["w-avg"];
 			windMax = windAPIResult["last"]["w-max"];
 			var sector as String = Utils.orientation(windAPIResult["last"]["w-dir"]);
@@ -137,16 +140,19 @@ class windsView extends WatchUi.View {
 				baliseName = baliseName.substring(0, 16) + "...";
 			}
 			
-			
 			var altitude = "Alt " + windAPIResult["alt"] + " m";
+			
+			
 				
-			dc.drawText(dc.getWidth() / 2, 50, Gfx.FONT_SMALL, baliseName, (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
-			dc.drawText(dc.getWidth() / 2, 80, Gfx.FONT_SMALL, altitude, (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
-								
-			dc.drawText(dc.getWidth() / 2, 120, Gfx.FONT_MEDIUM, windAvg.format("%.1f") + " km/h", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));		
-			dc.drawText(dc.getWidth() / 2, 150, Gfx.FONT_SMALL, windMax.format("%.1f") + " km/h (max)", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));	
-							
-			dc.drawText(dc.getWidth() / 2, 190, Gfx.FONT_LARGE, sector + " " + windAPIResult["last"]["w-dir"] + "°", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));		
+			dc.drawText(dc.getWidth() / 2, currentHeight, Gfx.FONT_SMALL, baliseName, (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
+			currentHeight = currentHeight + fontH;
+			dc.drawText(dc.getWidth() / 2,  currentHeight, Gfx.FONT_SMALL, altitude, (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
+			currentHeight = currentHeight + fontH + 5;
+			dc.drawText(dc.getWidth() / 2, dc.getHeight() / 2, Gfx.FONT_SMALL, windAvg.format("%.1f") + " km/h", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));		
+			currentHeight = currentHeight + fontH + 5;
+			dc.drawText(dc.getWidth() / 2, currentHeight, Gfx.FONT_SMALL, windMax.format("%.1f") + " km/h (max)", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));	
+			currentHeight = currentHeight + fontH + 5;
+			dc.drawText(dc.getWidth() / 2, currentHeight, Gfx.FONT_SMALL, sector + " " + windAPIResult["last"]["w-dir"] + "°", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));		
 			drawStatus(dc, windAPIResult["status"]);
 	}	
 			
