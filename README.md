@@ -7,7 +7,6 @@ Garmin Connect IQ app for Powered Windx. Windx connect and display wind informat
 
 
 # Installation
-The app was originally developed for personal use so it is not yet submitted to the Garmin IQ app store. This app is still being tested and should not be used as the primary flight instrument!
 
 To manually install Windx in your device, do the following:
 
