@@ -1,5 +1,5 @@
 # Windx
-Garmin Connect IQ app for Powered Windx. Windx connect and display wind information using [winds.mobi API](https://winds.mobi/api/2/doc).
+Real-time weather observations: Garmin client
 
 ## Screenshot
 
