@@ -49,7 +49,7 @@ class windsView extends WatchUi.View {
 	    if(windAPIResult != null){	    	
 	    	drawRequestedData(dc);
 	    }else{
-	    	dc.drawText(dc.getWidth() / 2, dc.getHeight() / 2, Gfx.FONT_MEDIUM, "Chargement ...", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));		
+	    	dc.drawText(dc.getWidth() / 2, dc.getHeight() / 2, Gfx.FONT_MEDIUM, "Loading ...", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));		
 	    }
 	    
     }
@@ -62,7 +62,7 @@ class windsView extends WatchUi.View {
 
 		
 	function requestWindInformationByCode(code) as Void {
-		
+			
 		Communications.makeJsonRequest(
 		"https://winds.mobi/api/2.2/stations/" + code,
 		{

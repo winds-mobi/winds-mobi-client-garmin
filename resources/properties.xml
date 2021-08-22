@@ -12,14 +12,14 @@
     </properties>
 	
     <strings>
-       <string id="balise_1">Balise 1</string>
-       <string id="balise_2">Balise 2</string>
-       <string id="balise_3">Balise 3</string>
-       <string id="balise_4">Balise 4</string>
-       <string id="balise_5">Balise 5</string>
-       <string id="balise_6">Balise 6</string>
-       <string id="balise_7">Balise 7</string>
-       <string id="balise_8">Balise 8</string>
+       <string id="balise_1">Station 1</string>
+       <string id="balise_2">Station 2</string>
+       <string id="balise_3">Station 3</string>
+       <string id="balise_4">Station 4</string>
+       <string id="balise_5">Station 5</string>
+       <string id="balise_6">Station 6</string>
+       <string id="balise_7">Station 7</string>
+       <string id="balise_8">Station 8</string>
     </strings>
 
     <settings>
