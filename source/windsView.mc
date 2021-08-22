@@ -187,12 +187,14 @@ class WindsViewDelegate extends WatchUi.BehaviorDelegate {
     }
     
     public function onKey(evt as KeyEvent) as Boolean {
-    	if (evt.getKey() == WatchUi.KEY_ENTER) {
+    	if (evt.getKey() == WatchUi.KEY_ENTER) {    		
             return onNextPage();
-        }
-    	    		
-    	
+        }   	    		
+    }
     
+    function onTap(clickEvent) {
+        return onNextPage();
+        return true;
     }
 	
 }
