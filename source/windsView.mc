@@ -194,7 +194,6 @@ class WindsViewDelegate extends WatchUi.BehaviorDelegate {
     
     function onTap(clickEvent) {
         return onNextPage();
-        return true;
     }
 	
 }

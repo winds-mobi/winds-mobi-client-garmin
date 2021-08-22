@@ -90,22 +90,21 @@
         <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="23" lineNum="191" pc="268437529" symbol="onKey"/>
         <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="24" lineNum="195" pc="268437545" symbol="onTap"/>
         <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="24" lineNum="196" pc="268437549" symbol="onTap"/>
-        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="24" lineNum="197" pc="268437561" symbol="onTap"/>
-        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="24" lineNum="5" pc="268438977" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\dev\\workspace\\winds\\source\\Utils.mc" id="26" lineNum="3" pc="268437565" symbol="orientation"/>
-        <entry filename="C:\\dev\\workspace\\winds\\source\\Utils.mc" id="26" lineNum="5" pc="268437569" symbol="orientation"/>
-        <entry filename="C:\\dev\\workspace\\winds\\source\\Utils.mc" id="26" lineNum="6" pc="268437798" symbol="orientation"/>
-        <entry filename="C:\\dev\\workspace\\winds\\source\\Utils.mc" id="26" lineNum="8" pc="268437817" symbol="orientation"/>
-        <entry filename="Rez" id="33" lineNum="17" pc="268437827" symbol="SettingsLayout"/>
-        <entry filename="Rez" id="33" lineNum="19" pc="268437839" symbol="SettingsLayout"/>
-        <entry filename="Rez" id="33" lineNum="20" pc="268437985" symbol="SettingsLayout"/>
-        <entry filename="Rez" id="33" lineNum="21" pc="268438131" symbol="SettingsLayout"/>
-        <entry filename="Rez" id="33" lineNum="22" pc="268438277" symbol="SettingsLayout"/>
-        <entry filename="Rez" id="33" lineNum="23" pc="268438423" symbol="SettingsLayout"/>
-        <entry filename="Rez" id="33" lineNum="24" pc="268438536" symbol="SettingsLayout"/>
-        <entry filename="Rez" id="33" lineNum="25" pc="268438649" symbol="SettingsLayout"/>
-        <entry filename="Rez" id="33" lineNum="26" pc="268438762" symbol="SettingsLayout"/>
-        <entry filename="Rez" id="33" lineNum="28" pc="268438875" symbol="SettingsLayout"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\windsView.mc" id="24" lineNum="5" pc="268438974" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\Utils.mc" id="26" lineNum="3" pc="268437562" symbol="orientation"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\Utils.mc" id="26" lineNum="5" pc="268437566" symbol="orientation"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\Utils.mc" id="26" lineNum="6" pc="268437795" symbol="orientation"/>
+        <entry filename="C:\\dev\\workspace\\winds\\source\\Utils.mc" id="26" lineNum="8" pc="268437814" symbol="orientation"/>
+        <entry filename="Rez" id="33" lineNum="17" pc="268437824" symbol="SettingsLayout"/>
+        <entry filename="Rez" id="33" lineNum="20" pc="268437836" symbol="SettingsLayout"/>
+        <entry filename="Rez" id="33" lineNum="21" pc="268437982" symbol="SettingsLayout"/>
+        <entry filename="Rez" id="33" lineNum="22" pc="268438128" symbol="SettingsLayout"/>
+        <entry filename="Rez" id="33" lineNum="23" pc="268438274" symbol="SettingsLayout"/>
+        <entry filename="Rez" id="33" lineNum="24" pc="268438420" symbol="SettingsLayout"/>
+        <entry filename="Rez" id="33" lineNum="25" pc="268438533" symbol="SettingsLayout"/>
+        <entry filename="Rez" id="33" lineNum="26" pc="268438646" symbol="SettingsLayout"/>
+        <entry filename="Rez" id="33" lineNum="27" pc="268438759" symbol="SettingsLayout"/>
+        <entry filename="Rez" id="33" lineNum="29" pc="268438872" symbol="SettingsLayout"/>
     </pcToLineNum>
     <symbolTable>
         <entry id="12" object="true" symbol="windsView"/>
@@ -211,19 +210,19 @@
         <entry arg="true" endPc="268437288" name="dc" stackId="1" startPc="268436512"/>
         <entry arg="true" endPc="268437321" name="selectedItem" stackId="1" startPc="268437288"/>
         <entry arg="true" endPc="268437545" name="evt" stackId="1" startPc="268437498"/>
-        <entry arg="true" endPc="268437565" name="clickEvent" stackId="1" startPc="268437545"/>
-        <entry endPc="268437823" name="index" stackId="3" startPc="268437569"/>
-        <entry endPc="268437823" name="sector" stackId="2" startPc="268437569"/>
-        <entry arg="true" endPc="268437824" name="degres" stackId="1" startPc="268437565"/>
-        <entry endPc="268438962" name="rez_cmp_local_text_BoolLabel" stackId="9" startPc="268437839"/>
-        <entry endPc="268438962" name="rez_cmp_local_text_StringLabel" stackId="8" startPc="268437839"/>
-        <entry endPc="268438962" name="rez_cmp_local_text_FloatLabel" stackId="7" startPc="268437839"/>
-        <entry endPc="268438962" name="rez_cmp_local_text_Info4" stackId="5" startPc="268437839"/>
-        <entry endPc="268438962" name="rez_cmp_local_text_Info3" stackId="4" startPc="268437839"/>
-        <entry endPc="268438962" name="rez_cmp_local_text_IntLabel" stackId="6" startPc="268437839"/>
-        <entry endPc="268438962" name="rez_cmp_local_text_Info2" stackId="3" startPc="268437839"/>
-        <entry endPc="268438962" name="rez_cmp_local_text_Info1" stackId="2" startPc="268437839"/>
-        <entry arg="true" endPc="268438963" name="dc" stackId="1" startPc="268437827"/>
+        <entry arg="true" endPc="268437562" name="clickEvent" stackId="1" startPc="268437545"/>
+        <entry endPc="268437820" name="index" stackId="3" startPc="268437566"/>
+        <entry endPc="268437820" name="sector" stackId="2" startPc="268437566"/>
+        <entry arg="true" endPc="268437821" name="degres" stackId="1" startPc="268437562"/>
+        <entry endPc="268438959" name="rez_cmp_local_text_BoolLabel" stackId="9" startPc="268437836"/>
+        <entry endPc="268438959" name="rez_cmp_local_text_StringLabel" stackId="8" startPc="268437836"/>
+        <entry endPc="268438959" name="rez_cmp_local_text_FloatLabel" stackId="7" startPc="268437836"/>
+        <entry endPc="268438959" name="rez_cmp_local_text_Info4" stackId="5" startPc="268437836"/>
+        <entry endPc="268438959" name="rez_cmp_local_text_Info3" stackId="4" startPc="268437836"/>
+        <entry endPc="268438959" name="rez_cmp_local_text_IntLabel" stackId="6" startPc="268437836"/>
+        <entry endPc="268438959" name="rez_cmp_local_text_Info2" stackId="3" startPc="268437836"/>
+        <entry endPc="268438959" name="rez_cmp_local_text_Info1" stackId="2" startPc="268437836"/>
+        <entry arg="true" endPc="268438960" name="dc" stackId="1" startPc="268437824"/>
     </localVars>
     <annotations>
         <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
