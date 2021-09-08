@@ -1,6 +1,7 @@
 import Toybox.Graphics;
 import Toybox.WatchUi;
 using Toybox.Graphics as Gfx;
+using Toybox.Time.Gregorian as Gregorian;
 
 var itemMemu = [];
 
@@ -98,21 +99,27 @@ class windsView extends WatchUi.View {
 		WatchUi.requestUpdate();		
 	}
 	
-	function drawStatus(dc, color) as Void {
+	function drawStatus(dc, status, info) as Void {
 	
+		
 		var cx = dc.getWidth() / 2;
 		var cy = dc.getHeight() / 2;
 		
-		if(color.equals("green")) {
-			dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_GREEN);
-			dc.fillCircle(cx, 20, 12);	
-		}else if (color.equals("orange")){
-			dc.setColor(Gfx.COLOR_ORANGE, Gfx.COLOR_ORANGE);
-			dc.fillCircle(cx, 20, 12);	
-		} else if (color.equals("red")){
-			dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_RED);
-			dc.fillCircle(cx, 20, 12);			
-		}
+		if(status == 2) {
+			dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_BLACK);
+			//dc.fillCircle(cx, 20, 12);	
+			var hourLast = Lang.format("$1$:$2$",[info.hour, info.min.format("%02d")]);
+			dc.drawText(dc.getWidth() / 2, 20, Gfx.FONT_SMALL, hourLast, (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
+		}else if (status == 1){
+			dc.setColor(Gfx.COLOR_ORANGE, Gfx.COLOR_BLACK);
+			//dc.fillCircle(cx, 20, 12);
+			var hourLast = Lang.format("$1$:$2$",[info.hour, info.min.format("%02d")]);
+			dc.drawText(dc.getWidth() / 2, 20, Gfx.FONT_SMALL, hourLast, (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
+		} else if (status == 0){
+			dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_BLACK);
+			//dc.fillCircle(cx, 20, 12);			
+			dc.drawText(dc.getWidth() / 2, 20, Gfx.FONT_SMALL, "!!!!", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
+		}		
 	}
 	
 		
@@ -126,23 +133,25 @@ class windsView extends WatchUi.View {
 			var windMaxHist as Float = 0;
 			var windMinHist as Float = 999;
 			var windAvgHist as Float = 0;	
+			var lastTime as Number = 0;
 										
 			var fontH = dc.getFontHeight(Gfx.FONT_SMALL);
 			var currentHeight = (dc.getHeight() / 2) - ((fontH + 5) * 2);
 			
 			windAvg = windAPIResult["last"]["w-avg"];
 			windMax = windAPIResult["last"]["w-max"];
+			lastTime = windAPIResult["last"]["_id"];
+			
 			var sector as String = Utils.orientation(windAPIResult["last"]["w-dir"]);
 								
 			baliseName = windAPIResult["name"];
 			
-			if(baliseName.length() > 16) {
-				baliseName = baliseName.substring(0, 16) + "...";
+			if(baliseName.length() > 15) {
+				baliseName = baliseName.substring(0, 15) + "...";
 			}
 			
 			var altitude = "Alt " + windAPIResult["alt"] + " m";
-			
-			
+						
 				
 			dc.drawText(dc.getWidth() / 2, currentHeight, Gfx.FONT_SMALL, baliseName, (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
 			currentHeight = currentHeight + fontH;
@@ -153,8 +162,55 @@ class windsView extends WatchUi.View {
 			dc.drawText(dc.getWidth() / 2, currentHeight, Gfx.FONT_SMALL, windMax.format("%.1f") + " km/h (max)", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));	
 			currentHeight = currentHeight + fontH + 5;
 			dc.drawText(dc.getWidth() / 2, currentHeight, Gfx.FONT_SMALL, sector + " " + windAPIResult["last"]["w-dir"] + "°", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));		
-			drawStatus(dc, windAPIResult["status"]);
+			
+			var now = new Toybox.Time.Moment(Time.now().value());
+			
+			var time = new Toybox.Time.Moment(lastTime);	
+			var info = Gregorian.info(time, Time.FORMAT_SHORT);		
+			drawStatus(dc, getStationStatus(windAPIResult), info);
+						
 	}	
+	
+	
+	//Retrieve station status
+	function getStationStatus(station) as Number {
+	
+		var stationValue as Number;
+        if (station["status"].equals("green")) {
+            stationValue = 2;
+        } else {
+            if (station["status"].equals("orange")) {
+                stationValue = 1;
+            } else {
+                stationValue = 0;
+            }
+        }
+        		
+		var lastValue as Number;
+        if (station["last"]) {
+            var last = new Toybox.Time.Moment(station["last"]["_id"]);
+            var now = new Toybox.Time.Moment(Time.now().value());
+            
+            var nowSub2h = now.subtract(new Time.Duration(7200));
+            var nowLess1h = now.subtract(new Time.Duration(3600));
+            var nowAdd5min = now.add(new Time.Duration(300));
+            
+            if (last.lessThan(nowSub2h)) {
+                lastValue = 0;
+            } else if (last.lessThan(nowLess1h)) {
+                lastValue = 1;
+            } else if (last.greaterThan(nowAdd5min)) {
+                lastValue = 0;
+            } else {
+                lastValue = 2;
+            }
+        } else {
+            lastValue = 0;
+        }
+		
+        return lastValue < stationValue ? lastValue : stationValue;
+	}
+	
 			
 	
 }
