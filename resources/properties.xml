@@ -25,7 +25,7 @@
        <string id="balise_7">Station 7</string>
        <string id="balise_8">Station 8</string>
        
-       <string id="enable_gps">Display closest stations (GPS)</string>
+       <string id="enable_gps">Display nearest stations (GPS)</string>
        <string id="gps_distance">Distance (km)</string>     
        
     </strings>
