@@ -5,8 +5,6 @@ import Toybox.WatchUi;
 
 class windsApp extends Application.AppBase {
 
-
-
     function initialize() {
         AppBase.initialize();
     }
@@ -22,7 +20,13 @@ class windsApp extends Application.AppBase {
 
     // Return the initial view of your application here
     function getInitialView() as Array<Views or InputDelegates>? {
-        return [new $.windsView(0), new $.WindsViewDelegate(0)] as Array<Views or InputDelegates>;
+    
+    	var isBTConnected= System.getDeviceSettings().phoneConnected;
+    	if(isBTConnected) {
+        	return [new $.windsView(0), new $.WindsViewDelegate(0)] as Array<Views or InputDelegates>;
+        } else{
+        	return [new $.notConnectedView()] as Array<Views or InputDelegates>;
+        }
     }
 
 }

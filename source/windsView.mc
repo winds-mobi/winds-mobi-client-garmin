@@ -1,33 +1,43 @@
 import Toybox.Graphics;
 import Toybox.WatchUi;
 using Toybox.Graphics as Gfx;
+import Toybox.Position;
 using Toybox.Time.Gregorian as Gregorian;
 
 var itemMemu = [];
+var nearestStationsFound as Boolean = false;
 
 class windsView extends WatchUi.View {
-
-    private var _indicator as PageIndicator;
-	private var codeBalise as String;
+	
+	private var currentStation;
+	private var lat as String;
+	private var lon as String;
+	private var distance as String;
+	var app = Application.getApp();
 	
 	var windAPIResult = null;
 	var windAPIResultHist = null;
 	
     function initialize(codeBalise) {
         View.initialize();
-                       
-        if(itemMemu.size() == 0){
-	        var app = Application.getApp();
+        currentStation = codeBalise;
+        
+        if(app.getProperty("enable_gps") && !nearestStationsFound){
+        	Position.enableLocationEvents(Position.LOCATION_ONE_SHOT, method(:onPosition));
+        }
+        
+        if(itemMemu.size() == 0){	        
 	      	for(var i = 8; i >= 1; i--){
 	      		var balise = app.getProperty("balise_" + i);
 		      	if(balise != null && !balise.equals("")){
 				   itemMemu.add(balise);
-				}	
+				}
 	      	}
       	}
         
-        
-	 	requestWindInformationByCode(itemMemu[codeBalise]);
+        if(itemMemu.size() > 0){
+	 		requestWindInformationByCode(itemMemu[codeBalise]);
+	 	}
     }
 	
     // Load your resources here
@@ -43,16 +53,21 @@ class windsView extends WatchUi.View {
 
     // Update the view
     function onUpdate(dc as Dc) as Void {
-    
-        	    
 	    dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
         dc.clear();
 	    if(windAPIResult != null){	    	
 	    	drawRequestedData(dc);
 	    }else{
-	    	dc.drawText(dc.getWidth() / 2, dc.getHeight() / 2, Gfx.FONT_MEDIUM, "Loading ...", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));		
-	    }
-	    
+	    	if(itemMemu.size() > 0){	    
+	    		dc.drawText(dc.getWidth() / 2, dc.getHeight() / 2, Gfx.FONT_MEDIUM, "Loading ...", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
+	    	}else {
+	    		if(app.getProperty("enable_gps") && !nearestStationsFound){
+	    			dc.drawText(dc.getWidth() / 2, dc.getHeight() / 2, Gfx.FONT_MEDIUM, "Waiting GPS ...", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
+	    		} else {
+	    			dc.drawText(dc.getWidth() / 2, dc.getHeight() / 2, Gfx.FONT_SMALL, "No station found", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
+	    		}
+	    	}
+	    }	    
     }
     
     // Called when this View is removed from the screen. Save the
@@ -75,30 +90,45 @@ class windsView extends WatchUi.View {
 		);		
 	}
 	
-	function requestWindHistoryByCode(code) as Void {
-					
-		
+	function requestWindsNearestStationsFromPositionAndDistance(lat, lon, distance) as Void {			
 		Communications.makeJsonRequest(
-		"https://winds.mobi/api/2/stations/" + code + "/historic/?duration=3600",
+		"https://winds.mobi/api/2/stations/?near-lat=" + lat + "&near-lon=" + lon + "&near-distance=" + distance,
 		{
 		},
 		{
 		"Content-Type" => Communications.REQUEST_CONTENT_TYPE_URL_ENCODED
 		},
-		method(:setStationHistory)
+		method(:setNearestStations)
 		);		
 	}
-	
+		
 	function setStationInfo(responseCode, data) {
 		self.windAPIResult = data;	
 		WatchUi.requestUpdate();	
 	}
 	
-	function setStationHistory(responseCode, data) {
-		self.windAPIResultHist = data;		
-		WatchUi.requestUpdate();		
+	function setNearestStations(responseCode, data) {
+		for (var i = 0; i < data.size(); ++i) {
+			itemMemu.add(data[i]["_id"]);
+		}
+		nearestStationsFound = true;
+		WatchUi.switchToView(new $.windsView(currentStation), new $.WindsViewDelegate(currentStation), WatchUi.SLIDE_LEFT);
 	}
 	
+	function onPosition(info) {
+	    var myLocation = info.position.toDegrees();
+	    lat = myLocation[0];
+	    lon = myLocation[1];	    
+	    var app = Application.getApp();
+	    var distance = app.getProperty("gps_distance");
+	    
+	    if(distance == null || distance == 0){
+	    	distance = 1;
+	    }
+	    
+	    requestWindsNearestStationsFromPositionAndDistance(lat, lon, distance * 1000);
+	}
+			
 	function drawStatus(dc, status, info) as Void {
 	
 		
@@ -122,7 +152,20 @@ class windsView extends WatchUi.View {
 		}		
 	}
 	
-		
+	function drawGpsStatus(dc){
+		if(nearestStationsFound){
+			dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_BLACK);
+		}else{
+			dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_BLACK);
+		}
+		dc.drawText(dc.getWidth() / 2, dc.getHeight() - 15, Gfx.FONT_XTINY, "GPS", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
+	}
+	
+	function drawWaitingSignalGPS(dc) as Void {
+		dc.drawText(dc.getWidth() / 2, dc.getHeight() / 2, Gfx.FONT_MEDIUM, "Waiting GPS ...", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));	
+	}
+	
+	
 	//Drawing UI element
 	function drawRequestedData(dc) as Void {
 				
@@ -155,9 +198,9 @@ class windsView extends WatchUi.View {
 				
 			dc.drawText(dc.getWidth() / 2, currentHeight, Gfx.FONT_SMALL, baliseName, (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
 			currentHeight = currentHeight + fontH;
-			dc.drawText(dc.getWidth() / 2,  currentHeight, Gfx.FONT_SMALL, altitude, (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
+			dc.drawText(dc.getWidth() / 2,  currentHeight, Gfx.FONT_XTINY, altitude, (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
 			currentHeight = currentHeight + fontH + 5;
-			dc.drawText(dc.getWidth() / 2, dc.getHeight() / 2, Gfx.FONT_SMALL, windAvg.format("%.1f") + " km/h", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));		
+			dc.drawText(dc.getWidth() / 2, currentHeight, Gfx.FONT_SMALL, windAvg.format("%.1f") + " km/h", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));		
 			currentHeight = currentHeight + fontH + 5;
 			dc.drawText(dc.getWidth() / 2, currentHeight, Gfx.FONT_SMALL, windMax.format("%.1f") + " km/h (max)", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));	
 			currentHeight = currentHeight + fontH + 5;
@@ -167,13 +210,12 @@ class windsView extends WatchUi.View {
 			
 			var time = new Toybox.Time.Moment(lastTime);	
 			var info = Gregorian.info(time, Time.FORMAT_SHORT);		
-			drawStatus(dc, getStationStatus(windAPIResult), info);
-						
+			drawStatus(dc, retrieveStationStatus(windAPIResult), info);
+			drawGpsStatus(dc);			
 	}	
 	
 	
-	//Retrieve station status
-	function getStationStatus(station) as Number {
+	function retrieveStationStatus(station) as Number {
 	
 		var stationValue as Number;
         if (station["status"].equals("green")) {
@@ -209,11 +251,10 @@ class windsView extends WatchUi.View {
         }
 		
         return lastValue < stationValue ? lastValue : stationValue;
-	}
+	}	
+}	
 	
-			
-	
-}
+
 
 
 

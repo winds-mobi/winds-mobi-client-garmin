@@ -9,6 +9,10 @@
         <property id="balise_6" type="string"></property>
         <property id="balise_7" type="string"></property>
         <property id="balise_8" type="string"></property>
+        
+        <property id="enable_gps" type="boolean">true</property>
+        <property id="gps_distance" type="Number">10</property>
+        
     </properties>
 	
     <strings>
@@ -20,9 +24,22 @@
        <string id="balise_6">Station 6</string>
        <string id="balise_7">Station 7</string>
        <string id="balise_8">Station 8</string>
+       
+       <string id="enable_gps">Display closest stations (GPS)</string>
+       <string id="gps_distance">Distance (km)</string>     
+       
     </strings>
 
     <settings>
+    
+    	<setting propertyKey="@Properties.enable_gps" title="@Strings.enable_gps">
+            <settingConfig type="boolean" />
+        </setting>
+        
+        <setting propertyKey="@Properties.gps_distance" title="@Strings.gps_distance">
+            <settingConfig type="numeric" />
+        </setting>
+    
         <setting propertyKey="@Properties.balise_1" title="@Strings.balise_1">
             <settingConfig type="alphaNumeric" />
         </setting>
@@ -55,5 +72,7 @@
             <settingConfig type="alphaNumeric" />
         </setting>
 
+
+		
     </settings>
 </resources>
