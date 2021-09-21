@@ -153,12 +153,16 @@ class windsView extends WatchUi.View {
 	}
 	
 	function drawGpsStatus(dc){
-		if(nearestStationsFound){
-			dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_BLACK);
-		}else{
-			dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_BLACK);
+	
+		if(app.getProperty("enable_gps")) {	
+			if(nearestStationsFound){
+				dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_BLACK);
+			}else{
+				dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_BLACK);
+			}
+			dc.drawText(dc.getWidth() / 2, dc.getHeight() - 15, Gfx.FONT_XTINY, "GPS", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
 		}
-		dc.drawText(dc.getWidth() / 2, dc.getHeight() - 15, Gfx.FONT_XTINY, "GPS", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
+		
 	}
 	
 	function drawWaitingSignalGPS(dc) as Void {
