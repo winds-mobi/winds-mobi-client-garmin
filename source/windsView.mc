@@ -42,8 +42,8 @@ class windsView extends WatchUi.View {
 	
     // Load your resources here
     function onLayout(dc as Dc) as Void {
-
-    }
+ 
+     }
 	
     // Called when this View is brought to the foreground. Restore
     // the state of this View and prepare it to be shown. This includes
@@ -55,9 +55,14 @@ class windsView extends WatchUi.View {
     function onUpdate(dc as Dc) as Void {
 	    dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
         dc.clear();
-	    if(windAPIResult != null){	    	
+	    if(windAPIResult != null && windAPIResult["last"] != null){	    	
 	    	drawRequestedData(dc);
-	    }else{
+	    }
+	    else if (windAPIResult != null && windAPIResult["last"] == null) {
+	    	dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_BLACK);
+    		dc.drawText(dc.getWidth() / 2, dc.getHeight() / 2, Gfx.FONT_MEDIUM, "STATION ERROR ...", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
+	    }
+	    else{
 	    	if(itemMemu.size() > 0){	    
 	    		dc.drawText(dc.getWidth() / 2, dc.getHeight() / 2, Gfx.FONT_MEDIUM, "Loading ...", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
 	    	}else {
@@ -184,7 +189,7 @@ class windsView extends WatchUi.View {
 										
 			var fontH = dc.getFontHeight(Gfx.FONT_SMALL);
 			var currentHeight = (dc.getHeight() / 2) - ((fontH + 5) * 2);
-			
+						
 			windAvg = windAPIResult["last"]["w-avg"];
 			windMax = windAPIResult["last"]["w-max"];
 			lastTime = windAPIResult["last"]["_id"];
