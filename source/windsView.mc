@@ -215,11 +215,15 @@ class windsView extends WatchUi.View {
 			currentHeight = currentHeight + fontH + 5;
 			dc.drawText(dc.getWidth() / 2, currentHeight, Gfx.FONT_SMALL, sector + " " + windAPIResult["last"]["w-dir"] + "°", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));		
 			
-			var now = new Toybox.Time.Moment(Time.now().value());
-			
-			var time = new Toybox.Time.Moment(lastTime);	
-			var info = Gregorian.info(time, Time.FORMAT_SHORT);		
-			drawStatus(dc, retrieveStationStatus(windAPIResult), info);
+			try {
+				var now = new Toybox.Time.Moment(Time.now().value());
+				var time = new Toybox.Time.Moment(lastTime);	
+				var info = Gregorian.info(time, Time.FORMAT_SHORT);	
+				drawStatus(dc, retrieveStationStatus(windAPIResult), info);	
+			} catch (e) {
+        		
+        	}
+						
 			drawGpsStatus(dc);			
 	}	
 	
@@ -258,6 +262,7 @@ class windsView extends WatchUi.View {
         } else {
             lastValue = 0;
         }
+
 		
         return lastValue < stationValue ? lastValue : stationValue;
 	}	
