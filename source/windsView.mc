@@ -3,6 +3,7 @@ import Toybox.WatchUi;
 using Toybox.Graphics as Gfx;
 import Toybox.Position;
 using Toybox.Time.Gregorian as Gregorian;
+import Toybox.Time;
 
 var itemMemu = [];
 var nearestStationsFound as Boolean = false;
@@ -303,7 +304,8 @@ class WindsViewDelegate extends WatchUi.BehaviorDelegate {
     public function onKey(evt as KeyEvent) as Boolean {
     	if (evt.getKey() == WatchUi.KEY_ENTER) {    		
             return onNextPage();
-        }   	    		
+        }
+		return false;
     }
     
     function onTap(clickEvent) {
