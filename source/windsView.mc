@@ -83,27 +83,30 @@ class windsView extends WatchUi.View {
 
 		
 	function requestWindInformationByCode(code) as Void {
-			
-		Communications.makeJsonRequest(
-		"https://winds.mobi/api/2.2/stations/" + code,
-		{
-		},
-		{
-		"Content-Type" => Communications.REQUEST_CONTENT_TYPE_URL_ENCODED
-		},
-		method(:setStationInfo)
+		Communications.makeWebRequest(
+			Utils.WINDS_API_ENDPOINT + "/stations/" + code,
+			null,
+			{
+          		:method => Communications.HTTP_REQUEST_METHOD_GET,
+           		:responseType => Communications.HTTP_RESPONSE_CONTENT_TYPE_JSON
+			},
+			method(:setStationInfo)
 		);		
 	}
 	
 	function requestWindsNearestStationsFromPositionAndDistance(lat, lon, distance) as Void {			
-		Communications.makeJsonRequest(
-		"https://winds.mobi/api/2/stations/?near-lat=" + lat + "&near-lon=" + lon + "&near-distance=" + distance,
-		{
-		},
-		{
-		"Content-Type" => Communications.REQUEST_CONTENT_TYPE_URL_ENCODED
-		},
-		method(:setNearestStations)
+		Communications.makeWebRequest(
+			Utils.WINDS_API_ENDPOINT + "/stations/",
+			{
+				"near-lat" => lat,
+				"near-lon" => lon,
+				"near-distance" => distance
+			},
+			{
+          		:method => Communications.HTTP_REQUEST_METHOD_GET,
+           		:responseType => Communications.HTTP_RESPONSE_CONTENT_TYPE_JSON
+			},
+			method(:setNearestStations)
 		);		
 	}
 		
