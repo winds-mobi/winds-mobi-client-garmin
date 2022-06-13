@@ -6,9 +6,11 @@
         <property id="balise_3" type="string">windline-4108</property>
         <property id="balise_4" type="string">holfuy-690</property>
         <property id="balise_5" type="string">slf-ILI1</property>
-        <property id="balise_6" type="string">pioupiou-384</property>
+        <property id="balise_6" type="string">iweathar-542</property>
         <property id="balise_7" type="string"></property>
         <property id="balise_8" type="string"></property>
+
+        <property id="mesure_unit" type="Number">0</property>
         <property id="enable_gps" type="boolean">true</property>
         <property id="gps_distance" type="Number">10</property>
         
@@ -24,6 +26,8 @@
        <string id="balise_7">Station 7</string>
        <string id="balise_8">Station 8</string>
        
+       <string id="mesure_unit">Measurement Units</string>
+
        <string id="enable_gps">Display nearest stations (GPS)</string>
        <string id="gps_distance">Distance (km)</string>     
        
@@ -31,6 +35,13 @@
 
     <settings>
     
+        <setting propertyKey="@Properties.mesure_unit" title="@Strings.mesure_unit" prompt="@Strings.mesure_unit">
+            <settingConfig type="list">
+                <listEntry value="0">@Strings.kmh</listEntry>
+                <listEntry value="1">@Strings.kts</listEntry>
+            </settingConfig>
+        </setting>
+
     	<setting propertyKey="@Properties.enable_gps" title="@Strings.enable_gps">
             <settingConfig type="boolean" />
         </setting>

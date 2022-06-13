@@ -9,4 +9,21 @@ class Utils {
 				
 		return sector[index];
 	}
+
+	static function convertKmhToKts(speed as Float) {
+		if(speed > 0) {
+			return speed * 0.539957;
+		}else{
+			return 0;
+		}
+	}
+
+	static function convertMetersToFeet(meters as Float) {
+		if(meters > 0) {
+			return (meters * 3.28084).toNumber();
+		}else{
+			return 0;
+		}
+	}
+
 }

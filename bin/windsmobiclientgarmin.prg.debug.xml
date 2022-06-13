@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+<manifest filename="C:\data\garmin\winds-mobi-client-garmin\manifest.xml"/>
+<pcToLineNum>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsApp.mc" id="1" lineNum="8" parent="globals/windsApp" pc="268435456" symbol="initialize"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsApp.mc" id="1" lineNum="9" parent="globals/windsApp" pc="268435460" symbol="initialize"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsApp.mc" id="2" lineNum="13" parent="globals/windsApp" pc="268435479" symbol="onStart"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsApp.mc" id="3" lineNum="18" parent="globals/windsApp" pc="268435484" symbol="onStop"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsApp.mc" id="4" lineNum="22" parent="globals/windsApp" pc="268435489" symbol="getInitialView"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsApp.mc" id="4" lineNum="24" parent="globals/windsApp" pc="268435493" symbol="getInitialView"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsApp.mc" id="4" lineNum="25" parent="globals/windsApp" pc="268435518" symbol="getInitialView"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsApp.mc" id="4" lineNum="26" parent="globals/windsApp" pc="268435523" symbol="getInitialView"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsApp.mc" id="4" lineNum="28" parent="globals/windsApp" pc="268435611" symbol="getInitialView"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsApp.mc" id="5" lineNum="6" parent="globals/windsApp" pc="268440647" symbol="&lt;init&gt;"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsApp.mc" id="5" lineNum="6" parent="globals/windsApp" pc="268440647" symbol="&lt;init&gt;"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsApp.mc" id="6" lineNum="34" parent="globals" pc="268435653" symbol="getApp"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsApp.mc" id="6" lineNum="35" parent="globals" pc="268435665" symbol="getApp"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="8" lineNum="22" parent="globals/windsView" pc="268435682" symbol="initialize"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="8" lineNum="23" parent="globals/windsView" pc="268435686" symbol="initialize"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="8" lineNum="24" parent="globals/windsView" pc="268435704" symbol="initialize"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="8" lineNum="26" parent="globals/windsView" pc="268435714" symbol="initialize"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="8" lineNum="27" parent="globals/windsView" pc="268435754" symbol="initialize"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="8" lineNum="30" parent="globals/windsView" pc="268435801" symbol="initialize"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="8" lineNum="31" parent="globals/windsView" pc="268435827" symbol="initialize"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="8" lineNum="32" parent="globals/windsView" pc="268435845" symbol="initialize"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="8" lineNum="33" parent="globals/windsView" pc="268435872" symbol="initialize"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="8" lineNum="34" parent="globals/windsView" pc="268435902" symbol="initialize"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="8" lineNum="39" parent="globals/windsView" pc="268435941" symbol="initialize"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="8" lineNum="40" parent="globals/windsView" pc="268435967" symbol="initialize"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="9" lineNum="45" parent="globals/windsView" pc="268435994" symbol="onLayout"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="10" lineNum="52" parent="globals/windsView" pc="268435999" symbol="onShow"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="11" lineNum="56" parent="globals/windsView" pc="268436004" symbol="onUpdate"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="11" lineNum="57" parent="globals/windsView" pc="268436008" symbol="onUpdate"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="11" lineNum="58" parent="globals/windsView" pc="268436044" symbol="onUpdate"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="11" lineNum="59" parent="globals/windsView" pc="268436056" symbol="onUpdate"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="11" lineNum="60" parent="globals/windsView" pc="268436091" symbol="onUpdate"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="11" lineNum="62" parent="globals/windsView" pc="268436108" symbol="onUpdate"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="11" lineNum="63" parent="globals/windsView" pc="268436143" symbol="onUpdate"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="11" lineNum="64" parent="globals/windsView" pc="268436179" symbol="onUpdate"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="11" lineNum="67" parent="globals/windsView" pc="268436270" symbol="onUpdate"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="11" lineNum="68" parent="globals/windsView" pc="268436296" symbol="onUpdate"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="11" lineNum="70" parent="globals/windsView" pc="268436387" symbol="onUpdate"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="11" lineNum="71" parent="globals/windsView" pc="268436427" symbol="onUpdate"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="11" lineNum="73" parent="globals/windsView" pc="268436518" symbol="onUpdate"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="12" lineNum="82" parent="globals/windsView" pc="268436607" symbol="onHide"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="13" lineNum="86" parent="globals/windsView" pc="268436612" symbol="requestWindInformationByCode"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="13" lineNum="87" parent="globals/windsView" pc="268436616" symbol="requestWindInformationByCode"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="14" lineNum="98" parent="globals/windsView" pc="268436725" symbol="requestWindsNearestStationsFromPositionAndDistance"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="14" lineNum="99" parent="globals/windsView" pc="268436729" symbol="requestWindsNearestStationsFromPositionAndDistance"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="15" lineNum="114" parent="globals/windsView" pc="268436870" symbol="setStationInfo"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="15" lineNum="115" parent="globals/windsView" pc="268436874" symbol="setStationInfo"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="15" lineNum="116" parent="globals/windsView" pc="268436884" symbol="setStationInfo"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="16" lineNum="119" parent="globals/windsView" pc="268436901" symbol="setNearestStations"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="16" lineNum="120" parent="globals/windsView" pc="268436905" symbol="setNearestStations"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="16" lineNum="121" parent="globals/windsView" pc="268436929" symbol="setNearestStations"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="16" lineNum="123" parent="globals/windsView" pc="268436971" symbol="setNearestStations"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="16" lineNum="124" parent="globals/windsView" pc="268436981" symbol="setNearestStations"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="17" lineNum="127" parent="globals/windsView" pc="268437078" symbol="onPosition"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="17" lineNum="128" parent="globals/windsView" pc="268437082" symbol="onPosition"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="17" lineNum="129" parent="globals/windsView" pc="268437101" symbol="onPosition"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="17" lineNum="130" parent="globals/windsView" pc="268437117" symbol="onPosition"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="17" lineNum="131" parent="globals/windsView" pc="268437133" symbol="onPosition"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="17" lineNum="132" parent="globals/windsView" pc="268437152" symbol="onPosition"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="17" lineNum="134" parent="globals/windsView" pc="268437170" symbol="onPosition"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="17" lineNum="135" parent="globals/windsView" pc="268437191" symbol="onPosition"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="17" lineNum="138" parent="globals/windsView" pc="268437201" symbol="onPosition"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="18" lineNum="141" parent="globals/windsView" pc="268437238" symbol="drawStatus"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="18" lineNum="144" parent="globals/windsView" pc="268437242" symbol="drawStatus"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="18" lineNum="145" parent="globals/windsView" pc="268437261" symbol="drawStatus"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="18" lineNum="147" parent="globals/windsView" pc="268437280" symbol="drawStatus"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="18" lineNum="148" parent="globals/windsView" pc="268437291" symbol="drawStatus"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="18" lineNum="150" parent="globals/windsView" pc="268437327" symbol="drawStatus"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="18" lineNum="151" parent="globals/windsView" pc="268437403" symbol="drawStatus"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="18" lineNum="152" parent="globals/windsView" pc="268437479" symbol="drawStatus"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="18" lineNum="153" parent="globals/windsView" pc="268437490" symbol="drawStatus"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="18" lineNum="155" parent="globals/windsView" pc="268437526" symbol="drawStatus"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="18" lineNum="156" parent="globals/windsView" pc="268437602" symbol="drawStatus"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="18" lineNum="157" parent="globals/windsView" pc="268437678" symbol="drawStatus"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="18" lineNum="158" parent="globals/windsView" pc="268437689" symbol="drawStatus"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="18" lineNum="160" parent="globals/windsView" pc="268437725" symbol="drawStatus"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="19" lineNum="164" parent="globals/windsView" pc="268437805" symbol="drawGpsStatus"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="19" lineNum="166" parent="globals/windsView" pc="268437809" symbol="drawGpsStatus"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="19" lineNum="167" parent="globals/windsView" pc="268437834" symbol="drawGpsStatus"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="19" lineNum="168" parent="globals/windsView" pc="268437845" symbol="drawGpsStatus"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="19" lineNum="170" parent="globals/windsView" pc="268437884" symbol="drawGpsStatus"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="19" lineNum="172" parent="globals/windsView" pc="268437920" symbol="drawGpsStatus"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="20" lineNum="177" parent="globals/windsView" pc="268438012" symbol="drawWaitingSignalGPS"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="20" lineNum="178" parent="globals/windsView" pc="268438016" symbol="drawWaitingSignalGPS"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="21" lineNum="183" parent="globals/windsView" pc="268438105" symbol="drawRequestedData"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="21" lineNum="185" parent="globals/windsView" pc="268438109" symbol="drawRequestedData"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="21" lineNum="186" parent="globals/windsView" pc="268438109" symbol="drawRequestedData"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="21" lineNum="187" parent="globals/windsView" pc="268438109" symbol="drawRequestedData"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="21" lineNum="189" parent="globals/windsView" pc="268438109" symbol="drawRequestedData"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="21" lineNum="190" parent="globals/windsView" pc="268438116" symbol="drawRequestedData"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="21" lineNum="191" parent="globals/windsView" pc="268438123" symbol="drawRequestedData"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="21" lineNum="192" parent="globals/windsView" pc="268438130" symbol="drawRequestedData"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="21" lineNum="193" parent="globals/windsView" pc="268438137" symbol="drawRequestedData"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="21" lineNum="195" parent="globals/windsView" pc="268438144" symbol="drawRequestedData"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="21" lineNum="196" parent="globals/windsView" pc="268438169" symbol="drawRequestedData"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="21" lineNum="198" parent="globals/windsView" pc="268438203" symbol="drawRequestedData"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="21" lineNum="199" parent="globals/windsView" pc="268438225" symbol="drawRequestedData"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="21" lineNum="200" parent="globals/windsView" pc="268438247" symbol="drawRequestedData"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="21" lineNum="201" parent="globals/windsView" pc="268438269" symbol="drawRequestedData"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="21" lineNum="202" parent="globals/windsView" pc="268438285" symbol="drawRequestedData"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="21" lineNum="203" parent="globals/windsView" pc="268438292" symbol="drawRequestedData"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="21" lineNum="205" parent="globals/windsView" pc="268438299" symbol="drawRequestedData"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="21" lineNum="206" parent="globals/windsView" pc="268438330" symbol="drawRequestedData"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="21" lineNum="207" parent="globals/windsView" pc="268438351" symbol="drawRequestedData"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="21" lineNum="208" parent="globals/windsView" pc="268438372" symbol="drawRequestedData"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="21" lineNum="209" parent="globals/windsView" pc="268438393" symbol="drawRequestedData"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="21" lineNum="210" parent="globals/windsView" pc="268438400" symbol="drawRequestedData"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="21" lineNum="214" parent="globals/windsView" pc="268438410" symbol="drawRequestedData"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="21" lineNum="216" parent="globals/windsView" pc="268438449" symbol="drawRequestedData"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="21" lineNum="218" parent="globals/windsView" pc="268438465" symbol="drawRequestedData"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="21" lineNum="219" parent="globals/windsView" pc="268438485" symbol="drawRequestedData"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="21" lineNum="222" parent="globals/windsView" pc="268438517" symbol="drawRequestedData"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="21" lineNum="225" parent="globals/windsView" pc="268438536" symbol="drawRequestedData"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="21" lineNum="226" parent="globals/windsView" pc="268438606" symbol="drawRequestedData"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="21" lineNum="227" parent="globals/windsView" pc="268438613" symbol="drawRequestedData"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="21" lineNum="228" parent="globals/windsView" pc="268438683" symbol="drawRequestedData"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="21" lineNum="229" parent="globals/windsView" pc="268438696" symbol="drawRequestedData"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="21" lineNum="230" parent="globals/windsView" pc="268438789" symbol="drawRequestedData"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="21" lineNum="231" parent="globals/windsView" pc="268438802" symbol="drawRequestedData"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="21" lineNum="232" parent="globals/windsView" pc="268438901" symbol="drawRequestedData"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="21" lineNum="233" parent="globals/windsView" pc="268438914" symbol="drawRequestedData"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="21" lineNum="235" parent="globals/windsView" pc="268439017" symbol="drawRequestedData"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="21" lineNum="236" parent="globals/windsView" pc="268439017" symbol="drawRequestedData"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="21" lineNum="237" parent="globals/windsView" pc="268439077" symbol="drawRequestedData"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="21" lineNum="238" parent="globals/windsView" pc="268439115" symbol="drawRequestedData"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="21" lineNum="239" parent="globals/windsView" pc="268439146" symbol="drawRequestedData"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="21" lineNum="244" parent="globals/windsView" pc="268439203" symbol="drawRequestedData"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="22" lineNum="248" parent="globals/windsView" pc="268439218" symbol="retrieveStationStatus"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="22" lineNum="250" parent="globals/windsView" pc="268439222" symbol="retrieveStationStatus"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="22" lineNum="251" parent="globals/windsView" pc="268439222" symbol="retrieveStationStatus"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="22" lineNum="252" parent="globals/windsView" pc="268439247" symbol="retrieveStationStatus"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="22" lineNum="254" parent="globals/windsView" pc="268439257" symbol="retrieveStationStatus"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="22" lineNum="255" parent="globals/windsView" pc="268439282" symbol="retrieveStationStatus"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="22" lineNum="257" parent="globals/windsView" pc="268439292" symbol="retrieveStationStatus"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="22" lineNum="261" parent="globals/windsView" pc="268439299" symbol="retrieveStationStatus"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="22" lineNum="262" parent="globals/windsView" pc="268439299" symbol="retrieveStationStatus"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="22" lineNum="263" parent="globals/windsView" pc="268439310" symbol="retrieveStationStatus"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="22" lineNum="264" parent="globals/windsView" pc="268439360" symbol="retrieveStationStatus"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="22" lineNum="266" parent="globals/windsView" pc="268439420" symbol="retrieveStationStatus"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="22" lineNum="267" parent="globals/windsView" pc="268439464" symbol="retrieveStationStatus"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="22" lineNum="268" parent="globals/windsView" pc="268439508" symbol="retrieveStationStatus"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="22" lineNum="270" parent="globals/windsView" pc="268439552" symbol="retrieveStationStatus"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="22" lineNum="271" parent="globals/windsView" pc="268439568" symbol="retrieveStationStatus"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="22" lineNum="272" parent="globals/windsView" pc="268439578" symbol="retrieveStationStatus"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="22" lineNum="273" parent="globals/windsView" pc="268439594" symbol="retrieveStationStatus"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="22" lineNum="274" parent="globals/windsView" pc="268439604" symbol="retrieveStationStatus"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="22" lineNum="275" parent="globals/windsView" pc="268439620" symbol="retrieveStationStatus"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="22" lineNum="277" parent="globals/windsView" pc="268439630" symbol="retrieveStationStatus"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="22" lineNum="280" parent="globals/windsView" pc="268439640" symbol="retrieveStationStatus"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="22" lineNum="284" parent="globals/windsView" pc="268439647" symbol="retrieveStationStatus"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="23" lineNum="11" parent="globals/windsView" pc="268440666" symbol="&lt;init&gt;"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="23" lineNum="17" parent="globals/windsView" pc="268440684" symbol="&lt;init&gt;"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="23" lineNum="11" parent="globals/windsView" pc="268440666" symbol="&lt;init&gt;"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="24" lineNum="300" parent="globals/WindsViewDelegate" pc="268439664" symbol="initialize"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="24" lineNum="301" parent="globals/WindsViewDelegate" pc="268439668" symbol="initialize"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="24" lineNum="302" parent="globals/WindsViewDelegate" pc="268439678" symbol="initialize"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="25" lineNum="307" parent="globals/WindsViewDelegate" pc="268439697" symbol="onNextPage"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="25" lineNum="308" parent="globals/WindsViewDelegate" pc="268439701" symbol="onNextPage"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="25" lineNum="309" parent="globals/WindsViewDelegate" pc="268439736" symbol="onNextPage"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="25" lineNum="311" parent="globals/WindsViewDelegate" pc="268439761" symbol="onNextPage"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="25" lineNum="313" parent="globals/WindsViewDelegate" pc="268439774" symbol="onNextPage"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="25" lineNum="314" parent="globals/WindsViewDelegate" pc="268439870" symbol="onNextPage"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="26" lineNum="317" parent="globals/WindsViewDelegate" pc="268439874" symbol="onKey"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="26" lineNum="318" parent="globals/WindsViewDelegate" pc="268439878" symbol="onKey"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="26" lineNum="319" parent="globals/WindsViewDelegate" pc="268439905" symbol="onKey"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="26" lineNum="321" parent="globals/WindsViewDelegate" pc="268439920" symbol="onKey"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="27" lineNum="324" parent="globals/WindsViewDelegate" pc="268439924" symbol="onTap"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="27" lineNum="325" parent="globals/WindsViewDelegate" pc="268439928" symbol="onTap"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="28" lineNum="293" parent="globals/WindsViewDelegate" pc="268440710" symbol="&lt;init&gt;"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="28" lineNum="293" parent="globals/WindsViewDelegate" pc="268440710" symbol="&lt;init&gt;"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\windsView.mc" id="29" lineNum="8" parent="globals" pc="268440581" symbol="&lt;init&gt;"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\Utils.mc" id="30" lineNum="5" parent="globals/Utils" pc="268439941" symbol="orientation"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\Utils.mc" id="30" lineNum="7" parent="globals/Utils" pc="268439945" symbol="orientation"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\Utils.mc" id="30" lineNum="8" parent="globals/Utils" pc="268440174" symbol="orientation"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\Utils.mc" id="30" lineNum="10" parent="globals/Utils" pc="268440193" symbol="orientation"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\Utils.mc" id="31" lineNum="13" parent="globals/Utils" pc="268440200" symbol="convertKmhToKts"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\Utils.mc" id="31" lineNum="14" parent="globals/Utils" pc="268440204" symbol="convertKmhToKts"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\Utils.mc" id="31" lineNum="15" parent="globals/Utils" pc="268440215" symbol="convertKmhToKts"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\Utils.mc" id="31" lineNum="17" parent="globals/Utils" pc="268440227" symbol="convertKmhToKts"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\Utils.mc" id="32" lineNum="21" parent="globals/Utils" pc="268440234" symbol="convertMetersToFeet"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\Utils.mc" id="32" lineNum="22" parent="globals/Utils" pc="268440238" symbol="convertMetersToFeet"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\Utils.mc" id="32" lineNum="23" parent="globals/Utils" pc="268440249" symbol="convertMetersToFeet"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\Utils.mc" id="32" lineNum="25" parent="globals/Utils" pc="268440270" symbol="convertMetersToFeet"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\Utils.mc" id="34" lineNum="1" parent="globals/Utils/statics" pc="268440646" symbol="&lt;init&gt;"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\Utils.mc" id="34" lineNum="1" parent="globals/Utils" pc="268440645" symbol="&lt;init&gt;"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\Utils.mc" id="35" lineNum="1" parent="globals/Utils" pc="268440277" symbol="initialize"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\notconnectedView.mc" id="37" lineNum="6" parent="globals/notConnectedView" pc="268440280" symbol="initialize"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\notconnectedView.mc" id="37" lineNum="7" parent="globals/notConnectedView" pc="268440284" symbol="initialize"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\notconnectedView.mc" id="38" lineNum="11" parent="globals/notConnectedView" pc="268440303" symbol="onLayout"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\notconnectedView.mc" id="38" lineNum="12" parent="globals/notConnectedView" pc="268440307" symbol="onLayout"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\notconnectedView.mc" id="39" lineNum="18" parent="globals/notConnectedView" pc="268440345" symbol="onShow"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\notconnectedView.mc" id="40" lineNum="22" parent="globals/notConnectedView" pc="268440350" symbol="onUpdate"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\notconnectedView.mc" id="40" lineNum="24" parent="globals/notConnectedView" pc="268440354" symbol="onUpdate"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\notconnectedView.mc" id="41" lineNum="30" parent="globals/notConnectedView" pc="268440375" symbol="onHide"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\notconnectedView.mc" id="42" lineNum="4" parent="globals/notConnectedView" pc="268440626" symbol="&lt;init&gt;"/>
+<entry filename="C:\\data\\garmin\\winds-mobi-client-garmin\\source\\notconnectedView.mc" id="42" lineNum="4" parent="globals/notConnectedView" pc="268440626" symbol="&lt;init&gt;"/>
+<entry filename="Rez" id="44" lineNum="2" parent="globals/Rez/Drawables" pc="268440620" symbol="&lt;init&gt;"/>
+<entry filename="Rez" id="45" lineNum="7" parent="globals/Rez/Fonts" pc="268440622" symbol="&lt;init&gt;"/>
+<entry filename="Rez" id="46" lineNum="9" parent="globals/Rez/JsonData" pc="268440624" symbol="&lt;init&gt;"/>
+<entry filename="Rez" id="47" lineNum="18" parent="globals/Rez/Layouts" pc="268440380" symbol="NotConnectedLayout"/>
+<entry filename="Rez" id="47" lineNum="20" parent="globals/Rez/Layouts" pc="268440392" symbol="NotConnectedLayout"/>
+<entry filename="Rez" id="47" lineNum="21" parent="globals/Rez/Layouts" pc="268440511" symbol="NotConnectedLayout"/>
+<entry filename="Rez" id="47" lineNum="23" parent="globals/Rez/Layouts" pc="268440563" symbol="NotConnectedLayout"/>
+<entry filename="Rez" id="48" lineNum="11" parent="globals/Rez/Layouts" pc="268440623" symbol="&lt;init&gt;"/>
+<entry filename="Rez" id="49" lineNum="28" parent="globals/Rez/Menus" pc="268440621" symbol="&lt;init&gt;"/>
+<entry filename="Rez" id="50" lineNum="30" parent="globals/Rez/Strings" pc="268440625" symbol="&lt;init&gt;"/>
+<entry filename="Rez" id="51" lineNum="1" parent="globals/Rez" pc="268440596" symbol="&lt;init&gt;"/>
+<entry filename="Rez" id="51" lineNum="1" parent="globals/Rez" pc="268440596" symbol="&lt;init&gt;"/>
+</pcToLineNum>
+<symbolTable>
+<entry id="13" object="true" symbol="windsView"/>
+<entry field="true" id="40" symbol="&lt;globals/windsView/&lt;&gt;lat&gt;"/>
+<entry id="8388639" module="true" symbol="Graphics"/>
+<entry id="48" method="true" symbol="setStationInfo"/>
+<entry field="true" id="11" symbol="itemMemu"/>
+<entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+<entry id="46" method="true" symbol="requestWindInformationByCode"/>
+<entry id="4" module="true" symbol="globals/Rez/Menus"/>
+<entry field="true" id="42" symbol="&lt;globals/windsView/&lt;&gt;distance&gt;"/>
+<entry id="50" method="true" symbol="onPosition"/>
+<entry id="8388924" module="true" symbol="Gregorian"/>
+<entry id="51" method="true" symbol="drawStatus"/>
+<entry field="true" id="8388611" module="true" symbol="Toybox"/>
+<entry field="true" id="43" symbol="app"/>
+<entry field="true" id="25" symbol="AppName"/>
+<entry id="8" module="true" symbol="globals/Rez/Strings"/>
+<entry id="49" method="true" symbol="setNearestStations"/>
+<entry id="8388772" module="true" object="true" symbol="Fonts"/>
+<entry id="8389345" symbol="rezId"/>
+<entry id="47" method="true" symbol="requestWindsNearestStationsFromPositionAndDistance"/>
+<entry id="8388648" module="true" symbol="WatchUi"/>
+<entry id="2" module="true" symbol="globals/Rez"/>
+<entry field="true" id="26" symbol="enable_gps"/>
+<entry id="16" object="true" symbol="notConnectedView"/>
+<entry field="true" id="45" symbol="windAPIResultHist"/>
+<entry field="true" id="27" symbol="gps_distance"/>
+<entry id="8389124" method="true" symbol="onUpdate"/>
+<entry field="true" id="8389065" symbol="locY"/>
+<entry field="true" id="8389064" symbol="locX"/>
+<entry id="8388771" module="true" object="true" symbol="Drawables"/>
+<entry id="18" module="true" symbol="Menus"/>
+<entry field="true" id="36" symbol="WINDS_API_ENDPOINT"/>
+<entry id="8389275" method="true" symbol="getApp"/>
+<entry id="6" module="true" symbol="globals/Rez/Layouts"/>
+<entry id="8389122" method="true" symbol="onLayout"/>
+<entry field="true" id="8389063" symbol="identifier"/>
+<entry id="8389098" method="true" symbol="onTap"/>
+<entry field="true" id="22" symbol="mesure_unit"/>
+<entry id="52" method="true" symbol="drawGpsStatus"/>
+<entry field="true" id="19" symbol="id_icon"/>
+<entry id="7" module="true" symbol="globals/Rez/JsonData"/>
+<entry id="37" method="true" symbol="convertKmhToKts"/>
+<entry id="38" method="true" symbol="convertMetersToFeet"/>
+<entry id="3" module="true" symbol="globals/Rez/Drawables"/>
+<entry id="8389844" symbol="responseType"/>
+<entry id="14" object="true" symbol="WindsViewDelegate"/>
+<entry id="8388786" method="true" symbol="method"/>
+<entry id="53" method="true" symbol="drawWaitingSignalGPS"/>
+<entry id="8388645" module="true" symbol="Time"/>
+<entry id="8388769" module="true" object="true" symbol="Rez"/>
+<entry field="true" id="24" symbol="kts"/>
+<entry field="true" id="8390270" method="true" symbol="orientation"/>
+<entry field="true" id="35" symbol="balise_8"/>
+<entry field="true" id="34" symbol="balise_7"/>
+<entry field="true" id="33" symbol="balise_6"/>
+<entry field="true" id="32" symbol="balise_5"/>
+<entry field="true" id="31" symbol="balise_4"/>
+<entry field="true" id="30" symbol="balise_3"/>
+<entry field="true" id="29" symbol="balise_2"/>
+<entry field="true" id="28" symbol="balise_1"/>
+<entry id="8388640" module="true" symbol="Lang"/>
+<entry id="8390088" module="true" object="true" symbol="JsonData"/>
+<entry field="true" id="23" symbol="kmh"/>
+<entry field="true" id="20" symbol="LauncherIcon"/>
+<entry id="8388610" symbol="statics"/>
+<entry id="8389123" method="true" symbol="onShow"/>
+<entry id="21" method="true" symbol="NotConnectedLayout"/>
+<entry id="8389350" module="true" symbol="globals"/>
+<entry field="true" id="56" symbol="selectedItem"/>
+<entry id="8388770" module="true" object="true" symbol="Strings"/>
+<entry id="8388702" method="true" symbol="initialize"/>
+<entry id="8389279" method="true" symbol="onStart"/>
+<entry id="10" object="true" symbol="windsApp"/>
+<entry id="15" object="true" symbol="Utils"/>
+<entry id="55" method="true" symbol="retrieveStationStatus"/>
+<entry id="9" module="true" symbol="globals/Utils"/>
+<entry field="true" id="39" symbol="&lt;globals/windsView/&lt;&gt;currentStation&gt;"/>
+<entry id="8389280" method="true" symbol="getInitialView"/>
+<entry id="8389281" method="true" symbol="onStop"/>
+<entry field="true" id="41" symbol="&lt;globals/windsView/&lt;&gt;lon&gt;"/>
+<entry id="8389097" method="true" symbol="onKey"/>
+<entry field="true" id="12" symbol="nearestStationsFound"/>
+<entry id="17" module="true" symbol="Layouts"/>
+<entry id="8388642" module="true" symbol="Position"/>
+<entry id="5" module="true" symbol="globals/Rez/Fonts"/>
+<entry id="8389125" method="true" symbol="onHide"/>
+<entry id="54" method="true" symbol="drawRequestedData"/>
+<entry id="8389078" method="true" symbol="onNextPage"/>
+<entry id="8388635" module="true" symbol="Application"/>
+<entry field="true" id="44" symbol="windAPIResult"/>
+</symbolTable>
+<localVars>
+<entry arg="true" endPc="268435483" name="state" stackId="1" startPc="268435479"/>
+<entry arg="true" endPc="268435488" name="state" stackId="1" startPc="268435484"/>
+<entry endPc="268435651" name="isBTConnected" stackId="1" startPc="268435493"/>
+<entry endPc="268435924" name="balise" stackId="3" startPc="268435845"/>
+<entry endPc="268435937" name="i" stackId="2" startPc="268435845"/>
+<entry arg="true" endPc="268435993" name="codeBalise" stackId="1" startPc="268435682"/>
+<entry arg="true" endPc="268435998" name="dc" stackId="1" startPc="268435994"/>
+<entry arg="true" endPc="268436606" name="dc" stackId="1" startPc="268436004"/>
+<entry arg="true" endPc="268436724" name="code" stackId="1" startPc="268436612"/>
+<entry arg="true" endPc="268436869" name="lat" stackId="1" startPc="268436725"/>
+<entry arg="true" endPc="268436869" name="lon" stackId="2" startPc="268436725"/>
+<entry arg="true" endPc="268436869" name="distance" stackId="3" startPc="268436725"/>
+<entry arg="true" endPc="268436900" name="responseCode" stackId="1" startPc="268436870"/>
+<entry arg="true" endPc="268436900" name="data" stackId="2" startPc="268436870"/>
+<entry endPc="268436970" name="i" stackId="3" startPc="268436929"/>
+<entry arg="true" endPc="268437077" name="responseCode" stackId="1" startPc="268436901"/>
+<entry arg="true" endPc="268437077" name="data" stackId="2" startPc="268436901"/>
+<entry endPc="268437236" name="app" stackId="3" startPc="268437082"/>
+<entry endPc="268437236" name="distance" stackId="4" startPc="268437082"/>
+<entry endPc="268437236" name="myLocation" stackId="2" startPc="268437082"/>
+<entry arg="true" endPc="268437237" name="info" stackId="1" startPc="268437078"/>
+<entry endPc="268437475" name="hourLast" stackId="6" startPc="268437291"/>
+<entry endPc="268437674" name="hourLast" stackId="7" startPc="268437490"/>
+<entry endPc="268437803" name="cx" stackId="4" startPc="268437242"/>
+<entry endPc="268437803" name="cy" stackId="5" startPc="268437242"/>
+<entry arg="true" endPc="268437804" name="status" stackId="2" startPc="268437238"/>
+<entry arg="true" endPc="268437804" name="dc" stackId="1" startPc="268437238"/>
+<entry arg="true" endPc="268437804" name="info" stackId="3" startPc="268437238"/>
+<entry arg="true" endPc="268438011" name="dc" stackId="1" startPc="268437805"/>
+<entry arg="true" endPc="268438104" name="dc" stackId="1" startPc="268438012"/>
+<entry endPc="268439180" name="now" stackId="16" startPc="268439017"/>
+<entry endPc="268439180" name="info" stackId="18" startPc="268439017"/>
+<entry endPc="268439180" name="time" stackId="17" startPc="268439017"/>
+<entry endPc="268439216" name="windAvgHist" stackId="7" startPc="268438109"/>
+<entry endPc="268439216" name="lastTime" stackId="8" startPc="268438109"/>
+<entry endPc="268439216" name="currentHeight" stackId="11" startPc="268438109"/>
+<entry endPc="268439216" name="sector" stackId="14" startPc="268438109"/>
+<entry endPc="268439216" name="altiLabel" stackId="13" startPc="268438109"/>
+<entry endPc="268439216" name="altiValue" stackId="9" startPc="268438109"/>
+<entry endPc="268439216" name="altitude" stackId="15" startPc="268438109"/>
+<entry endPc="268439216" name="fontH" stackId="10" startPc="268438109"/>
+<entry endPc="268439216" name="speedLabel" stackId="12" startPc="268438109"/>
+<entry endPc="268439216" name="windMaxHist" stackId="5" startPc="268438109"/>
+<entry endPc="268439216" name="windAvg" stackId="2" startPc="268438109"/>
+<entry endPc="268439216" name="windMax" stackId="3" startPc="268438109"/>
+<entry endPc="268439216" name="baliseName" stackId="4" startPc="268438109"/>
+<entry endPc="268439216" name="windMinHist" stackId="6" startPc="268438109"/>
+<entry arg="true" endPc="268439217" name="dc" stackId="1" startPc="268438105"/>
+<entry endPc="268439636" name="now" stackId="5" startPc="268439310"/>
+<entry endPc="268439636" name="nowLess1h" stackId="7" startPc="268439310"/>
+<entry endPc="268439636" name="nowSub2h" stackId="6" startPc="268439310"/>
+<entry endPc="268439636" name="nowAdd5min" stackId="8" startPc="268439310"/>
+<entry endPc="268439636" name="last" stackId="4" startPc="268439310"/>
+<entry endPc="268439662" name="lastValue" stackId="3" startPc="268439222"/>
+<entry endPc="268439662" name="stationValue" stackId="2" startPc="268439222"/>
+<entry arg="true" endPc="268439663" name="station" stackId="1" startPc="268439218"/>
+<entry arg="true" endPc="268439696" name="selectedItem" stackId="1" startPc="268439664"/>
+<entry arg="true" endPc="268439923" name="evt" stackId="1" startPc="268439874"/>
+<entry arg="true" endPc="268439940" name="clickEvent" stackId="1" startPc="268439924"/>
+<entry endPc="268440198" name="index" stackId="3" startPc="268439945"/>
+<entry endPc="268440198" name="sector" stackId="2" startPc="268439945"/>
+<entry arg="true" endPc="268440199" name="degres" stackId="1" startPc="268439941"/>
+<entry arg="true" endPc="268440233" name="speed" stackId="1" startPc="268440200"/>
+<entry arg="true" endPc="268440276" name="meters" stackId="1" startPc="268440234"/>
+<entry arg="true" endPc="268440344" name="dc" stackId="1" startPc="268440303"/>
+<entry arg="true" endPc="268440374" name="dc" stackId="1" startPc="268440350"/>
+<entry endPc="268440579" name="rez_cmp_local_bitmap_id_icon" stackId="2" startPc="268440392"/>
+<entry arg="true" endPc="268440580" name="dc" stackId="1" startPc="268440380"/>
+</localVars>
+<annotations>
+<annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="id_icon"/>
+<annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="mesure_unit"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="kmh"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="kts"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="enable_gps"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="gps_distance"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="balise_1"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="balise_2"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="balise_3"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="balise_4"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="balise_5"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="balise_6"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="balise_7"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="balise_8"/>
+</annotations>
+<dataEntryOffsetMappings>
+<dataEntry label="globals" offset="95" parentId="" symbolId="globals" type="module"/>
+<dataEntry label="globals/Rez" offset="206" parentId="globals" symbolId="Rez" type="module"/>
+<dataEntry label="globals/Rez/Drawables" offset="285" parentId="Rez" symbolId="Drawables" type="module"/>
+<dataEntry label="globals/Rez/Menus" offset="332" parentId="Rez" symbolId="Menus" type="module"/>
+<dataEntry label="globals/Rez/Fonts" offset="363" parentId="Rez" symbolId="Fonts" type="module"/>
+<dataEntry label="globals/Rez/Layouts" offset="394" parentId="Rez" symbolId="Layouts" type="module"/>
+<dataEntry label="globals/Rez/JsonData" offset="433" parentId="Rez" symbolId="JsonData" type="module"/>
+<dataEntry label="globals/Rez/Strings" offset="464" parentId="Rez" symbolId="Strings" type="module"/>
+<dataEntry label="globals/notConnectedView" offset="607" parentId="globals" symbolId="notConnectedView" type="class"/>
+<dataEntry label="globals/Utils" offset="686" parentId="globals" symbolId="Utils" type="class"/>
+<dataEntry label="globals/Utils/statics" offset="733" parentId="globals" symbolId="globals/Utils" type="class"/>
+<dataEntry label="globals/windsApp" offset="796" parentId="globals" symbolId="windsApp" type="class"/>
+<dataEntry label="globals/windsView" offset="867" parentId="globals" symbolId="windsView" type="class"/>
+<dataEntry label="globals/WindsViewDelegate" offset="1082" parentId="globals" symbolId="WindsViewDelegate" type="class"/>
+</dataEntryOffsetMappings>
+<functions>
+<functionEntry accessMode="public" endPc="268435478" name="initialize" parent="windsApp" startPc="268435456">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435483" name="onStart" parent="windsApp" startPc="268435479">
+<param id="state"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435488" name="onStop" parent="windsApp" startPc="268435484">
+<param id="state"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435652" name="getInitialView" parent="windsApp" startPc="268435489">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="protected" endPc="268440665" name="&lt;init&gt;" parent="windsApp" startPc="268440647">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435681" name="getApp" startPc="268435653">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435993" name="initialize" parent="windsView" startPc="268435682">
+<param id="codeBalise"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435998" name="onLayout" parent="windsView" startPc="268435994">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436003" name="onShow" parent="windsView" startPc="268435999">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436606" name="onUpdate" parent="windsView" startPc="268436004">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436611" name="onHide" parent="windsView" startPc="268436607">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436724" name="requestWindInformationByCode" parent="windsView" startPc="268436612">
+<param id="code"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436869" name="requestWindsNearestStationsFromPositionAndDistance" parent="windsView" startPc="268436725">
+<param id="lat"/>
+<param id="lon"/>
+<param id="distance"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436900" name="setStationInfo" parent="windsView" startPc="268436870">
+<param id="responseCode"/>
+<param id="data"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437077" name="setNearestStations" parent="windsView" startPc="268436901">
+<param id="responseCode"/>
+<param id="data"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437237" name="onPosition" parent="windsView" startPc="268437078">
+<param id="info"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437804" name="drawStatus" parent="windsView" startPc="268437238">
+<param id="dc"/>
+<param id="status"/>
+<param id="info"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438011" name="drawGpsStatus" parent="windsView" startPc="268437805">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438104" name="drawWaitingSignalGPS" parent="windsView" startPc="268438012">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439217" name="drawRequestedData" parent="windsView" startPc="268438105">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439663" name="retrieveStationStatus" parent="windsView" startPc="268439218">
+<param id="station"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="protected" endPc="268440709" name="&lt;init&gt;" parent="windsView" startPc="268440666">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439696" name="initialize" parent="WindsViewDelegate" startPc="268439664">
+<param id="selectedItem"/>
+<documentation><![CDATA[<div class="description"> Constructor<br/></div>]]></documentation>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439873" name="onNextPage" parent="WindsViewDelegate" startPc="268439697">
+<documentation><![CDATA[<div class="description"> Handle going to the next view<br/> <div class="returns">Returns  true if handled, false otherwise</div><br/></div>]]></documentation>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439923" name="onKey" parent="WindsViewDelegate" startPc="268439874">
+<param id="evt"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439940" name="onTap" parent="WindsViewDelegate" startPc="268439924">
+<param id="clickEvent"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="protected" endPc="268440728" name="&lt;init&gt;" parent="WindsViewDelegate" startPc="268440710">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440199" name="orientation" parent="Utils" startPc="268439941">
+<param id="degres"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440233" name="convertKmhToKts" parent="Utils" startPc="268440200">
+<param id="speed"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440276" name="convertMetersToFeet" parent="Utils" startPc="268440234">
+<param id="meters"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="protected" endPc="268440646" name="&lt;init&gt;" parent="globals/Utils" startPc="268440646">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="protected" endPc="268440645" name="&lt;init&gt;" parent="Utils" startPc="268440645">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440279" name="initialize" parent="Utils" startPc="268440277">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440302" name="initialize" parent="notConnectedView" startPc="268440280">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440344" name="onLayout" parent="notConnectedView" startPc="268440303">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440349" name="onShow" parent="notConnectedView" startPc="268440345">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440374" name="onUpdate" parent="notConnectedView" startPc="268440350">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440379" name="onHide" parent="notConnectedView" startPc="268440375">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="protected" endPc="268440644" name="&lt;init&gt;" parent="notConnectedView" startPc="268440626">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="protected" endPc="268440620" name="&lt;init&gt;" parent="Drawables" startPc="268440620">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="protected" endPc="268440622" name="&lt;init&gt;" parent="Fonts" startPc="268440622">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="protected" endPc="268440624" name="&lt;init&gt;" parent="JsonData" startPc="268440624">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440580" name="NotConnectedLayout" parent="Layouts" startPc="268440380">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="protected" endPc="268440623" name="&lt;init&gt;" parent="Layouts" startPc="268440623">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="protected" endPc="268440621" name="&lt;init&gt;" parent="Menus" startPc="268440621">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="protected" endPc="268440625" name="&lt;init&gt;" parent="Strings" startPc="268440625">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="protected" endPc="268440619" name="&lt;init&gt;" parent="Rez" startPc="268440596">
+<documentation/>
+</functionEntry>
+</functions>
+</debugInfo>

@@ -190,13 +190,26 @@ class windsView extends WatchUi.View {
 			var windMinHist as Float = 999;
 			var windAvgHist as Float = 0;	
 			var lastTime as Number = 0;
-										
+			var altiValue as Number = 0;
+
 			var fontH = dc.getFontHeight(Gfx.FONT_SMALL);
 			var currentHeight = (dc.getHeight() / 2) - ((fontH + 5) * 2);
 						
 			windAvg = windAPIResult["last"]["w-avg"];
 			windMax = windAPIResult["last"]["w-max"];
 			lastTime = windAPIResult["last"]["_id"];
+			altiValue = windAPIResult["alt"];
+			var speedLabel = "km/h";
+			var altiLabel = "m";
+
+			if(app.getProperty("mesure_unit") == 1) {
+				windAvg = Utils.convertKmhToKts(windAvg);
+				windAvg = Utils.convertKmhToKts(windAvg);
+				altiValue = Utils.convertMetersToFeet(altiValue);
+				speedLabel = "Kts";
+				altiLabel = "ft";
+			}
+
 			
 			var sector as String = Utils.orientation(windAPIResult["last"]["w-dir"]);
 								
@@ -206,16 +219,16 @@ class windsView extends WatchUi.View {
 				baliseName = baliseName.substring(0, 15) + "...";
 			}
 			
-			var altitude = "Alt " + windAPIResult["alt"] + " m";
+			var altitude = "Alt " +  altiValue + " " + altiLabel;
 						
 				
 			dc.drawText(dc.getWidth() / 2, currentHeight, Gfx.FONT_SMALL, baliseName, (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
 			currentHeight = currentHeight + fontH;
 			dc.drawText(dc.getWidth() / 2,  currentHeight, Gfx.FONT_XTINY, altitude, (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
 			currentHeight = currentHeight + fontH + 5;
-			dc.drawText(dc.getWidth() / 2, currentHeight, Gfx.FONT_SMALL, windAvg.format("%.1f") + " km/h", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));		
+			dc.drawText(dc.getWidth() / 2, currentHeight, Gfx.FONT_SMALL, windAvg.format("%.1f") + " " + speedLabel, (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));		
 			currentHeight = currentHeight + fontH + 5;
-			dc.drawText(dc.getWidth() / 2, currentHeight, Gfx.FONT_SMALL, windMax.format("%.1f") + " km/h (max)", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));	
+			dc.drawText(dc.getWidth() / 2, currentHeight, Gfx.FONT_SMALL, windMax.format("%.1f") + " " + speedLabel + " (max)", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));	
 			currentHeight = currentHeight + fontH + 5;
 			dc.drawText(dc.getWidth() / 2, currentHeight, Gfx.FONT_SMALL, sector + " " + windAPIResult["last"]["w-dir"] + "°", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));		
 			
