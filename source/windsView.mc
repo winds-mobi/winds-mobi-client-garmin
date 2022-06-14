@@ -173,12 +173,7 @@ class windsView extends WatchUi.View {
 		}
 		
 	}
-	
-	function drawWaitingSignalGPS(dc) as Void {
-		dc.drawText(dc.getWidth() / 2, dc.getHeight() / 2, Gfx.FONT_MEDIUM, "Waiting GPS ...", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));	
-	}
-	
-	
+		
 	//Drawing UI element
 	function drawRequestedData(dc) as Void {
 				
@@ -193,7 +188,9 @@ class windsView extends WatchUi.View {
 			var altiValue as Number = 0;
 
 			var fontH = dc.getFontHeight(Gfx.FONT_SMALL);
-			var currentHeight = (dc.getHeight() / 2) - ((fontH + 5) * 2);
+			var fontXTinyH = dc.getFontHeight(Gfx.FONT_XTINY);
+
+			var currentHeight = (dc.getHeight() / 2) - ((fontH + 7) * 2);
 						
 			windAvg = windAPIResult["last"]["w-avg"];
 			windMax = windAPIResult["last"]["w-max"];
@@ -212,24 +209,27 @@ class windsView extends WatchUi.View {
 
 			
 			var sector as String = Utils.orientation(windAPIResult["last"]["w-dir"]);
-								
+			var provider as String = windAPIResult["pv-name"];
+
+
 			baliseName = windAPIResult["name"];
 			
-			if(baliseName.length() > 15) {
-				baliseName = baliseName.substring(0, 15) + "...";
+			if(baliseName.length() > 18) {
+				baliseName = baliseName.substring(0, 18) + "...";
 			}
 			
 			var altitude = "Alt " +  altiValue + " " + altiLabel;
 						
-				
+			dc.drawText(dc.getWidth() / 2, currentHeight, Gfx.FONT_XTINY, provider, (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
+			currentHeight = currentHeight + fontXTinyH + 4;
 			dc.drawText(dc.getWidth() / 2, currentHeight, Gfx.FONT_SMALL, baliseName, (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
-			currentHeight = currentHeight + fontH;
+			currentHeight = currentHeight + fontXTinyH + 3;
 			dc.drawText(dc.getWidth() / 2,  currentHeight, Gfx.FONT_XTINY, altitude, (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
-			currentHeight = currentHeight + fontH + 5;
+			currentHeight = currentHeight + fontXTinyH + 3;
 			dc.drawText(dc.getWidth() / 2, currentHeight, Gfx.FONT_SMALL, windAvg.format("%.1f") + " " + speedLabel, (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));		
-			currentHeight = currentHeight + fontH + 5;
+			currentHeight = currentHeight + fontH + 3;
 			dc.drawText(dc.getWidth() / 2, currentHeight, Gfx.FONT_SMALL, windMax.format("%.1f") + " " + speedLabel + " (max)", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));	
-			currentHeight = currentHeight + fontH + 5;
+			currentHeight = currentHeight + fontH + 2;
 			dc.drawText(dc.getWidth() / 2, currentHeight, Gfx.FONT_SMALL, sector + " " + windAPIResult["last"]["w-dir"] + "°", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));		
 			
 			try {
@@ -238,10 +238,14 @@ class windsView extends WatchUi.View {
 				var info = Gregorian.info(time, Time.FORMAT_SHORT);	
 				drawStatus(dc, retrieveStationStatus(windAPIResult), info);	
 			} catch (e) {
-        		
+        		//@todo
         	}
-						
-			drawGpsStatus(dc);			
+			
+			try {			
+				drawGpsStatus(dc);		
+			} catch (e) {
+        		//@todo
+        	}	
 	}	
 	
 	
