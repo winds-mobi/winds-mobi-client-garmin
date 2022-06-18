@@ -264,18 +264,19 @@ class windsView extends WatchUi.View {
         		
 		var lastValue as Number;
         if (station["last"]) {
-            var last = new Toybox.Time.Moment(station["last"]["_id"]);
-            var now = new Toybox.Time.Moment(Time.now().value());
+			var stationTimeStamp = station["last"]["_id"];
+			var currentTimeStamp = Time.now().value();
+			var diffTimeStamp = currentTimeStamp - stationTimeStamp;
             
-            var nowSub2h = now.subtract(new Time.Duration(7200));
-            var nowLess1h = now.subtract(new Time.Duration(3600));
-            var nowAdd5min = now.add(new Time.Duration(300));
+            var nowSub2h = 7200;
+            var nowLess1h = 3600;
+            var nowAdd5min = currentTimeStamp + 300;
             
-            if (last.lessThan(nowSub2h)) {
+            if (diffTimeStamp > nowSub2h) {
                 lastValue = 0;
-            } else if (last.lessThan(nowLess1h)) {
+            } else if (diffTimeStamp > nowLess1h) {
                 lastValue = 1;
-            } else if (last.greaterThan(nowAdd5min)) {
+            } else if (stationTimeStamp > nowAdd5min) {
                 lastValue = 0;
             } else {
                 lastValue = 2;
@@ -283,7 +284,6 @@ class windsView extends WatchUi.View {
         } else {
             lastValue = 0;
         }
-
 		
         return lastValue < stationValue ? lastValue : stationValue;
 	}	
