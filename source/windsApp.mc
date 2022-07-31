@@ -5,6 +5,10 @@ import Toybox.WatchUi;
 
 class windsApp extends Application.AppBase {
 
+    function getGlanceView() {
+        
+    }
+
     function initialize() {
         AppBase.initialize();
     }
