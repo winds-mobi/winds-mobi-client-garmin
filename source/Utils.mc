@@ -4,7 +4,8 @@ class Utils {
 
 	static function orientation(degres as Float) {
 		
-		var sector = ["N","NNE","NE","ENE","E","ESE","SE","SSE","S","SSO","SO","OSO","O","ONO","NO","NNO","N"];
+		
+		var sector = [Rez.Strings.N,Rez.Strings.NNE,Rez.Strings.NE,Rez.Strings.ENE,Rez.Strings.E,Rez.Strings.ESE,Rez.Strings.SE,Rez.Strings.SSE,Rez.Strings.S,Rez.Strings.SSO,Rez.Strings.SO,Rez.Strings.OSO,Rez.Strings.O,Rez.Strings.ONO,Rez.Strings.NO,Rez.Strings.NNO,Rez.Strings.N];
 		var index = (degres / 22.5).toNumber();
 				
 		return sector[index];

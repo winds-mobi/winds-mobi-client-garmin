@@ -207,8 +207,7 @@ class windsView extends WatchUi.View {
 				altiLabel = "ft";
 			}
 
-			
-			var sector as String = Utils.orientation(windAPIResult["last"]["w-dir"]);
+			var sector as String =  WatchUi.loadResource(Utils.orientation(windAPIResult["last"]["w-dir"]));
 			var provider as String = windAPIResult["pv-name"];
 
 
@@ -308,7 +307,7 @@ class WindsViewDelegate extends WatchUi.BehaviorDelegate {
 
     //! Handle going to the next view
     //! @return true if handled, false otherwise
-    public function onNextPage() as Boolean {    	
+    public function onNextPage() as Boolean { 
     	if(selectedItem < itemMemu.size() - 1) {
     		selectedItem = selectedItem + 1;
     	}else{

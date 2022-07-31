@@ -4,13 +4,13 @@
     <string id="kts">Kts + Imperial</string>
 
     <string id="N">N</string>
-    <string id="NNE">NNE</string>
-    <string id="NE">NE</string>
-    <string id="ENE">ENE</string>
-    <string id="E">E</string>
-    <string id="ESE">ESE</string>
-    <string id="SE">SE</string>
-    <string id="SSE">SSE</string>
+    <string id="NNE">NNO</string>
+    <string id="NE">NO</string>
+    <string id="ENE">ONO</string>
+    <string id="E">O</string>
+    <string id="ESE">OSO</string>
+    <string id="SE">SO</string>
+    <string id="SSE">SSO</string>
     <string id="S">S</string>
     <string id="SSO">SSW</string>
     <string id="SO">SW</string>
@@ -19,5 +19,4 @@
     <string id="ONO">WNW</string>
     <string id="NO">NW</string>
     <string id="NNO">NNW</string>  
-
 </strings>

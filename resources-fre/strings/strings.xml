@@ -1,0 +1,36 @@
+<strings>
+    <string id="AppName">winds.mobi</string>
+    <string id="kmh">Km/h + Metric</string>
+    <string id="kts">Kts + Imperial</string>
+
+    <string id="N">N</string>
+    <string id="NNE">NNE</string>
+    <string id="NE">NE</string>
+    <string id="ENE">ENE</string>
+    <string id="E">E</string>
+    <string id="ESE">ESE</string>
+    <string id="SE">SE</string>
+    <string id="SSE">SSE</string>
+    <string id="S">S</string>
+    <string id="SSO">SSO</string>
+    <string id="SO">SO</string>
+    <string id="OSO">OSO</string>
+    <string id="O">O</string>
+    <string id="ONO">ONO</string>
+    <string id="NO">NO</string>
+    <string id="NNO">NNO</string>
+
+    <string id="balise_1">Balise 1</string>
+       <string id="balise_2">Balise 2</string>
+       <string id="balise_3">Balise 3</string>
+       <string id="balise_4">Balise 4</string>
+       <string id="balise_5">Balise 5</string>
+       <string id="balise_6">Balise 6</string>
+       <string id="balise_7">Balise 7</string>
+       <string id="balise_8">Balise 8</string>
+       
+       <string id="mesure_unit">Unité de mesure</string>
+        
+       <string id="enable_gps">Afficher les balises proches (GPS)</string>
+       <string id="gps_distance">Distance (km)</string>  
+</strings>
