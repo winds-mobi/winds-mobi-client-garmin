@@ -85,7 +85,7 @@ class windsView extends WatchUi.View {
 		
 	function requestWindInformationByCode(code) as Void {
 		Communications.makeWebRequest(
-			Utils.WINDS_API_ENDPOINT + "/stations/" + code,
+			Utils.WINDS_API_ENDPOINT + "/stations/" + code + "/?keys=",
 			null,
 			{
           		:method => Communications.HTTP_REQUEST_METHOD_GET,
@@ -198,10 +198,10 @@ class windsView extends WatchUi.View {
 			altiValue = windAPIResult["alt"];
 			var speedLabel = "km/h";
 			var altiLabel = "m";
-
+			
 			if(app.getProperty("mesure_unit") == 1) {
 				windAvg = Utils.convertKmhToKts(windAvg);
-				windAvg = Utils.convertKmhToKts(windAvg);
+				windMax = Utils.convertKmhToKts(windMax);
 				altiValue = Utils.convertMetersToFeet(altiValue);
 				speedLabel = "Kts";
 				altiLabel = "ft";
