@@ -6,18 +6,22 @@
             <iq:product id="approachs60"/>
             <iq:product id="approachs62"/>
             <iq:product id="d2air"/>
+            <iq:product id="d2airx10"/>
             <iq:product id="d2bravo"/>
             <iq:product id="d2bravo_titanium"/>
             <iq:product id="d2charlie"/>
             <iq:product id="d2delta"/>
             <iq:product id="d2deltapx"/>
             <iq:product id="d2deltas"/>
+            <iq:product id="d2mach1"/>
+            <iq:product id="descentg1"/>
             <iq:product id="descentmk1"/>
             <iq:product id="descentmk2"/>
             <iq:product id="descentmk2s"/>
             <iq:product id="edge1030"/>
             <iq:product id="edge1030bontrager"/>
             <iq:product id="edge1030plus"/>
+            <iq:product id="edge1040"/>
             <iq:product id="edge520plus"/>
             <iq:product id="edge530"/>
             <iq:product id="edge820"/>
@@ -26,6 +30,7 @@
             <iq:product id="edge_520"/>
             <iq:product id="edgeexplore"/>
             <iq:product id="enduro"/>
+            <iq:product id="epix"/>
             <iq:product id="epix2"/>
             <iq:product id="fenix3"/>
             <iq:product id="fenix3_hr"/>
@@ -37,6 +42,7 @@
             <iq:product id="fenix5xplus"/>
             <iq:product id="fenix6"/>
             <iq:product id="fenix6pro"/>
+            <iq:product id="fenix6prosystem5preview"/>
             <iq:product id="fenix6s"/>
             <iq:product id="fenix6spro"/>
             <iq:product id="fenix6xpro"/>
@@ -49,6 +55,7 @@
             <iq:product id="fr245"/>
             <iq:product id="fr245m"/>
             <iq:product id="fr55"/>
+            <iq:product id="fr630"/>
             <iq:product id="fr645"/>
             <iq:product id="fr645m"/>
             <iq:product id="fr735xt"/>
@@ -57,6 +64,7 @@
             <iq:product id="fr935"/>
             <iq:product id="fr945"/>
             <iq:product id="fr945lte"/>
+            <iq:product id="fr955"/>
             <iq:product id="gpsmap66"/>
             <iq:product id="gpsmap86"/>
             <iq:product id="instinct2"/>
@@ -80,6 +88,7 @@
             <iq:product id="venu2"/>
             <iq:product id="venu2plus"/>
             <iq:product id="venu2s"/>
+            <iq:product id="venu2system5preview"/>
             <iq:product id="venud"/>
             <iq:product id="venusq"/>
             <iq:product id="venusqm"/>
