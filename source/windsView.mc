@@ -4,6 +4,8 @@ using Toybox.Graphics as Gfx;
 import Toybox.Position;
 using Toybox.Time.Gregorian as Gregorian;
 import Toybox.Time;
+import Toybox.Lang;
+
 
 var itemMemu = [];
 var nearestStationsFound as Boolean = false;
@@ -173,20 +175,23 @@ class windsView extends WatchUi.View {
 		}
 		
 	}
-		
+	
+	var sector as String;
+	var provider as String;
+	var windAvg as Float;
+	var windMax as Float;
+	var baliseName as String;
+	
+	var windMaxHist as Float = 0;
+	var windMinHist as Float = 999;
+	var windAvgHist as Float = 0;	
+	var lastTime as Number = 0;
+	var altiValue as Number = 0;
+
 	//Drawing UI element
 	function drawRequestedData(dc) as Void {
 				
-			var windAvg as Float;
-			var windMax as Float;
-			var baliseName as String;
 			
-			var windMaxHist as Float = 0;
-			var windMinHist as Float = 999;
-			var windAvgHist as Float = 0;	
-			var lastTime as Number = 0;
-			var altiValue as Number = 0;
-
 			var fontH = dc.getFontHeight(Gfx.FONT_SMALL);
 			var fontXTinyH = dc.getFontHeight(Gfx.FONT_XTINY);
 
@@ -207,8 +212,8 @@ class windsView extends WatchUi.View {
 				altiLabel = "ft";
 			}
 
-			var sector as String =  WatchUi.loadResource(Utils.orientation(windAPIResult["last"]["w-dir"]));
-			var provider as String = windAPIResult["pv-name"];
+			sector =  WatchUi.loadResource(Utils.orientation(windAPIResult["last"]["w-dir"]));
+			provider = windAPIResult["pv-name"];
 
 
 			baliseName = windAPIResult["name"];
@@ -247,10 +252,11 @@ class windsView extends WatchUi.View {
         	}	
 	}	
 	
-	
+	var stationValue as Number;
+	var lastValue as Number;
 	function retrieveStationStatus(station) as Number {
 	
-		var stationValue as Number;
+		
         if (station["status"].equals("green")) {
             stationValue = 2;
         } else {
@@ -261,7 +267,7 @@ class windsView extends WatchUi.View {
             }
         }
         		
-		var lastValue as Number;
+		
         if (station["last"]) {
 			var stationTimeStamp = station["last"]["_id"];
 			var currentTimeStamp = Time.now().value();

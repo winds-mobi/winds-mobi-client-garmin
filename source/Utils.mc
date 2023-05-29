@@ -1,3 +1,5 @@
+import Toybox.Lang;
+
 class Utils {
 
 	static const WINDS_API_ENDPOINT = "https://winds.mobi/api/2";
