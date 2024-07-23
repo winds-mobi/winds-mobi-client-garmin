@@ -87,7 +87,7 @@ class windsView extends WatchUi.View {
 		
 	function requestWindInformationByCode(code) as Void {
 		Communications.makeWebRequest(
-			Utils.WINDS_API_ENDPOINT + "/stations/" + code + "/?keys=",
+			Utils.WINDS_API_ENDPOINT + "/stations/" + code,
 			null,
 			{
           		:method => Communications.HTTP_REQUEST_METHOD_GET,
