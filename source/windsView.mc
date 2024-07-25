@@ -63,7 +63,13 @@ class windsView extends WatchUi.View {
 	    }
 	    else if (windAPIResult != null && windAPIResult["last"] == null) {
 	    	dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_BLACK);
-    		dc.drawText(dc.getWidth() / 2, dc.getHeight() / 2, Gfx.FONT_MEDIUM, "STATION ERROR ...", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
+
+			if(windAPIResult["detail"] != null) {
+        		dc.drawText(dc.getWidth() / 2, dc.getHeight() / 2, Gfx.FONT_SYSTEM_XTINY, windAPIResult["detail"], (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
+			}else {
+         		dc.drawText(dc.getWidth() / 2, dc.getHeight() / 2, Gfx.FONT_MEDIUM, "STATION ERROR ...", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
+			}
+
 	    }
 	    else{
 	    	if(itemMemu.size() > 0){	    
