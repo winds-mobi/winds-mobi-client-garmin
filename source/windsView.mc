@@ -5,6 +5,7 @@ import Toybox.Position;
 using Toybox.Time.Gregorian as Gregorian;
 import Toybox.Time;
 import Toybox.Lang;
+import Toybox.System;
 
 
 var itemMemu = [];
@@ -40,6 +41,7 @@ class windsView extends WatchUi.View {
         
         if(itemMemu.size() > 0){
 	 		requestWindInformationByCode(itemMemu[codeBalise]);
+			requestWindHistByCode(itemMemu[codeBalise]);
 	 	}
     }
 	
@@ -53,7 +55,7 @@ class windsView extends WatchUi.View {
     // loading resources into memory.
     function onShow() as Void {
     }
-
+	hidden var centerY = 109;
     // Update the view
     function onUpdate(dc as Dc) as Void {
 	    dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
@@ -61,6 +63,11 @@ class windsView extends WatchUi.View {
 	    if(windAPIResult != null && windAPIResult["last"] != null){	    	
 	    	drawRequestedData(dc);
 	    }
+
+		if(windAPIResultHist != null){	    	
+	    	drawHrChart(dc, 10, centerY-51, 50);
+	    }
+
 	    else if (windAPIResult != null && windAPIResult["last"] == null) {
 	    	dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_BLACK);
     		dc.drawText(dc.getWidth() / 2, dc.getHeight() / 2, Gfx.FONT_MEDIUM, "STATION ERROR ...", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
@@ -96,7 +103,20 @@ class windsView extends WatchUi.View {
 			method(:setStationInfo)
 		);		
 	}
-	
+
+	function requestWindHistByCode(code) as Void {
+		Communications.makeWebRequest(
+			Utils.WINDS_API_ENDPOINT + "/stations/" + code + "/historic/?duration=7200",
+			null,
+			{
+          		:method => Communications.HTTP_REQUEST_METHOD_GET,
+           		:responseType => Communications.HTTP_RESPONSE_CONTENT_TYPE_JSON
+			},
+			method(:setStationHist)
+		);		
+	}
+
+
 	function requestWindsNearestStationsFromPositionAndDistance(lat, lon, distance) as Void {			
 		Communications.makeWebRequest(
 			Utils.WINDS_API_ENDPOINT + "/stations/",
@@ -112,7 +132,18 @@ class windsView extends WatchUi.View {
 			method(:setNearestStations)
 		);		
 	}
+
+	function setStationHist(responseCode, data) {
+		self.windAPIResultHist = data;	
+		if(data != null) {
+		System.println(getMax(data));
+		System.println(getMin(data));
+		System.println(getAverage(data));
 		
+		}
+		WatchUi.requestUpdate();	
+	}
+
 	function setStationInfo(responseCode, data) {
 		self.windAPIResult = data;	
 		WatchUi.requestUpdate();	
@@ -182,9 +213,6 @@ class windsView extends WatchUi.View {
 	var windMax as Float;
 	var baliseName as String;
 	
-	var windMaxHist as Float = 0;
-	var windMinHist as Float = 999;
-	var windAvgHist as Float = 0;	
 	var lastTime as Number = 0;
 	var altiValue as Number = 0;
 
@@ -291,7 +319,143 @@ class windsView extends WatchUi.View {
         }
 		
         return lastValue < stationValue ? lastValue : stationValue;
-	}	
+	}
+
+
+	function getMax(hist) {
+		var max = null;
+		if(hist == null) {
+			return 0;
+		}
+        for(var i = 0; i < hist.size(); i++){
+            if(hist[i] != null){
+                if(max == null || hist[i]["w-avg"]>max){ 
+                    max = hist[i]["w-avg"];
+                }
+            }
+        }
+        return max;
+	}
+
+	function getMin(hist){
+        var min = null;
+		if(hist == null) {
+			return 0;
+		}
+        for(var i = 0; i < hist.size(); i++){
+            if(hist[i] != null){
+                if(min == null || hist[i]["w-avg"]<min){ 
+                    min = hist[i]["w-avg"];
+                }
+            }
+        }
+        return min;
+    }
+
+	function getAverage(hist){
+        var sum = 0;
+        var size = 0;
+        for(var i = 0; i < hist.size(); i++){
+            if(hist[i] != null){
+                sum = sum + hist[i]["w-avg"];
+                size++;
+            }
+        }
+        if(size == 0) {
+            return null;
+        } else {
+            return (sum.toFloat()/size.toFloat());
+        }
+    }
+
+	hidden var lightColor = Graphics.COLOR_LT_GRAY;
+	
+    function drawHrChart(dc, x, y, height){  
+        // chart alignment and crop
+        var maxHr = getMax(windAPIResultHist); 
+        if(maxHr != null){  // no data, no chart
+            var h; var offset=50; var last = null;
+            y += height; // y should be at top
+
+            var minHr = getMin(windAPIResultHist); 
+            h = getAverage(windAPIResultHist); 
+            
+            if(h==null){h=0;} 
+            if(h<minHr){ minHr = h;}
+            if(h>maxHr){ maxHr = h;}
+
+            // scale
+            maxHr = maxHr.toNumber() >> 1;
+            minHr = minHr.toNumber() >> 1;
+            h = h.toNumber() >> 1;
+        
+            // cut offset which will not fit into an area
+            if(maxHr-minHr>height){
+                offset = maxHr-height; // put max to the top of the chart
+                if(h<offset && h>0){
+                    offset = h-10; // make sure current hr is shown
+                }
+            } else {
+                offset = (((minHr+maxHr)-height)/2).toNumber(); // put it in the middle of the chart
+            }          
+            dc.setColor(Graphics.COLOR_DK_RED, Graphics.COLOR_TRANSPARENT);
+            dc.setPenWidth(2);
+
+            // draw hr history
+            var data = windAPIResultHist;
+            var position = data.size() - 1; var size = data.size();
+            var colorLineStart; var colorLineEnd; var midPoint = null;
+
+            // set current hr to be drawn and draw it            
+            if(h > 0){
+                dc.drawPoint(x+size*2, y-h+offset);
+                last = h;
+            }
+
+            for(var i = size-1; i>=0; i--){
+                h = data[position]["w-avg"];
+                if(h != null){
+                    h = h.toNumber() >> 1;
+
+                    // line can have two colors if it crossses a chart boundary
+                    colorLineStart = (h>=offset && h<= offset+height) ? Graphics.COLOR_DK_RED : lightColor; 
+                    dc.setColor(colorLineStart, Graphics.COLOR_TRANSPARENT);
+                    if(last != null){
+                        colorLineEnd = (last >= offset && last <= offset+height) ? Graphics.COLOR_DK_RED : lightColor;  
+                        
+                        // when line crosses boundary
+                        if(colorLineStart != colorLineEnd){
+                            if(colorLineStart == Graphics.COLOR_DK_RED){   // h (left value) is within boundaries
+                                midPoint = (last<offset) ? y : y-height;  
+                                dc.setColor(colorLineEnd, Graphics.COLOR_TRANSPARENT);
+                                dc.drawLine(x+i*2+1, midPoint, x+i*2+2, y-last+offset); 
+                                dc.setColor(colorLineStart, Graphics.COLOR_TRANSPARENT);
+                                dc.drawLine(x+i*2, y-h+offset, x+i*2+1, midPoint);  
+                            } else {    // h (left value) is out of boundaries
+                                midPoint = (h<offset) ? y : y-height;
+                                dc.setColor(colorLineStart, Graphics.COLOR_TRANSPARENT);
+                                dc.drawLine(x+i*2, y-h+offset, x+i*2+1, midPoint); 
+                                dc.setColor(colorLineEnd, Graphics.COLOR_TRANSPARENT);
+                                dc.drawLine(x+i*2+1, midPoint, x+i*2+2, y-last+offset);  
+                            }
+                        } else {
+                            dc.drawLine(x+i*2, y-h+offset, x+i*2+2, y-last+offset);    
+                        }
+                    } else {
+                        dc.drawPoint(x+i*2, y-h+offset);
+                    }
+                }
+                last = h; // value to continue from in the next iteration
+                position--;
+                if(position<0){
+                    position = size-1;
+                }
+            }
+        }
+	}
+
+
+
 }	
 	
 
