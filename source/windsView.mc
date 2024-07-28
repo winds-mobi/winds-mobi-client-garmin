@@ -17,6 +17,7 @@ class windsView extends WatchUi.View {
 	private var lon as String;
 	private var distance as String;
 	var app = Application.getApp();
+	private var deltaSpeed = null;
 	
 	var windAPIResult = null;
 	var windAPIResultHist = null;
@@ -40,6 +41,7 @@ class windsView extends WatchUi.View {
         
         if(itemMemu.size() > 0){
 	 		requestWindInformationByCode(itemMemu[codeBalise]);
+			requestWindHistByCode(itemMemu[codeBalise]);
 	 	}
     }
 	
@@ -60,6 +62,7 @@ class windsView extends WatchUi.View {
         dc.clear();
 	    if(windAPIResult != null && windAPIResult["last"] != null){	    	
 	    	drawRequestedData(dc);
+
 	    }
 	    else if (windAPIResult != null && windAPIResult["last"] == null) {
 	    	dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_BLACK);
@@ -90,7 +93,18 @@ class windsView extends WatchUi.View {
     function onHide() as Void {
     }
 
-		
+	function requestWindHistByCode(code) as Void {
+		Communications.makeWebRequest(
+			Utils.WINDS_API_ENDPOINT + "/stations/" + code + "/historic/?duration=3600",
+			null,
+			{
+          		:method => Communications.HTTP_REQUEST_METHOD_GET,
+           		:responseType => Communications.HTTP_RESPONSE_CONTENT_TYPE_JSON
+			},
+			method(:setStationHist)
+		);		
+	}
+
 	function requestWindInformationByCode(code) as Void {
 		Communications.makeWebRequest(
 			Utils.WINDS_API_ENDPOINT + "/stations/" + code,
@@ -118,7 +132,13 @@ class windsView extends WatchUi.View {
 			method(:setNearestStations)
 		);		
 	}
-		
+	
+	function setStationHist(responseCode, data) {
+		self.windAPIResultHist = data;
+		windstrend(data);
+		WatchUi.requestUpdate();	
+	}
+
 	function setStationInfo(responseCode, data) {
 		self.windAPIResult = data;	
 		WatchUi.requestUpdate();	
@@ -145,7 +165,31 @@ class windsView extends WatchUi.View {
 	    
 	    requestWindsNearestStationsFromPositionAndDistance(lat, lon, distance * 1000);
 	}
-			
+	
+    function windstrend(hist) {
+        if (hist.size() < 2) {
+            return 0; // Pas assez de données pour déterminer une tendance
+        }
+
+        var lastSpeed = hist[0]["w-avg"];
+		var oneHourSpeed = hist[hist.size() - 1]["w-avg"];
+		deltaSpeed = lastSpeed - oneHourSpeed;
+		
+		if(app.getProperty("mesure_unit") == 1) {
+			var negatif = false;
+			if(deltaSpeed < 0) {
+				negatif = true;
+			}
+			deltaSpeed = Utils.convertKmhToKts(deltaSpeed.abs());
+			if(negatif){
+				deltaSpeed = -deltaSpeed;
+			}
+		}
+
+
+
+    }
+	
 	function drawStatus(dc, status, info) as Void {
 	
 		
@@ -200,6 +244,7 @@ class windsView extends WatchUi.View {
 			
 			var fontH = dc.getFontHeight(Gfx.FONT_SMALL);
 			var fontXTinyH = dc.getFontHeight(Gfx.FONT_XTINY);
+			var fontTinyH = dc.getFontHeight(Gfx.FONT_TINY);
 
 			var currentHeight = (dc.getHeight() / 2) - ((fontH + 7) * 2);
 						
@@ -221,7 +266,6 @@ class windsView extends WatchUi.View {
 			sector =  WatchUi.loadResource(Utils.orientation(windAPIResult["last"]["w-dir"]));
 			provider = windAPIResult["pv-name"];
 
-
 			baliseName = windAPIResult["name"];
 			
 			if(baliseName.length() > 18) {
@@ -231,19 +275,26 @@ class windsView extends WatchUi.View {
 			var altitude = "Alt " +  altiValue + " " + altiLabel;
 						
 			dc.drawText(dc.getWidth() / 2, currentHeight, Gfx.FONT_XTINY, provider, (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
-			currentHeight = currentHeight + fontXTinyH + 4;
-			dc.drawText(dc.getWidth() / 2, currentHeight, Gfx.FONT_SMALL, baliseName, (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
+			currentHeight = currentHeight + fontXTinyH + 2;
+			dc.drawText(dc.getWidth() / 2, currentHeight, Gfx.FONT_TINY, baliseName, (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
 			currentHeight = currentHeight + fontXTinyH + 3;
 			dc.drawText(dc.getWidth() / 2,  currentHeight, Gfx.FONT_XTINY, altitude, (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
 			currentHeight = currentHeight + fontXTinyH + 3;
-			dc.drawText(dc.getWidth() / 2, currentHeight, Gfx.FONT_SMALL, windAvg.format("%.1f") + " " + speedLabel, (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));		
-			currentHeight = currentHeight + fontH + 3;
-			dc.drawText(dc.getWidth() / 2, currentHeight, Gfx.FONT_SMALL, windMax.format("%.1f") + " " + speedLabel + " (max)", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));	
-			currentHeight = currentHeight + fontH + 2;
-			dc.drawText(dc.getWidth() / 2, currentHeight, Gfx.FONT_SMALL, sector + " " + windAPIResult["last"]["w-dir"] + "°", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));		
+			dc.drawText(dc.getWidth() / 2, currentHeight, Gfx.FONT_XTINY, windAvg.format("%.1f") + " " + speedLabel, (Gfx.TEXT_JUSTIFY_RIGHT| Gfx.TEXT_JUSTIFY_VCENTER));		
 			
 			try {
-				var now = new Toybox.Time.Moment(Time.now().value());
+				dc.drawText(dc.getWidth() / 2, currentHeight, Gfx.FONT_XTINY, " | Δ h-1: " + Utils.getSign(deltaSpeed) + deltaSpeed.format("%.1f"), (Gfx.TEXT_JUSTIFY_LEFT| Gfx.TEXT_JUSTIFY_VCENTER));
+			} catch (e) {
+        		//@todo
+        	}
+			
+			currentHeight = currentHeight + fontTinyH;
+			dc.drawText(dc.getWidth() / 2, currentHeight, Gfx.FONT_XTINY, windMax.format("%.1f") + " " + speedLabel + " (max)", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));	
+			currentHeight = currentHeight + fontTinyH + 20;
+			
+			dc.drawText(dc.getWidth() / 2, currentHeight, Gfx.FONT_TINY, sector + " " + windAPIResult["last"]["w-dir"] + "°", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));		
+			
+			try {
 				var time = new Toybox.Time.Moment(lastTime);	
 				var info = Gregorian.info(time, Time.FORMAT_SHORT);	
 				drawStatus(dc, retrieveStationStatus(windAPIResult), info);	

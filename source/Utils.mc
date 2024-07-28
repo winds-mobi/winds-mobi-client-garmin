@@ -29,4 +29,12 @@ class Utils {
 		}
 	}
 
+	static function getSign(number as Float) {
+		if(number > 0){
+			return "+";
+		}else{
+			return "";
+		}
+	}
+
 }

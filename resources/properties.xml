@@ -6,8 +6,8 @@
         <property id="balise_3" type="string">windline-4108</property>
         <property id="balise_4" type="string">holfuy-690</property>
         <property id="balise_5" type="string">slf-ILI1</property>
-        <property id="balise_6" type="string">iweathar-542</property>
-        <property id="balise_7" type="string">ffvl-134</property>
+        <property id="balise_6" type="string">ffvl-134</property>
+        <property id="balise_7" type="string"></property>
         <property id="balise_8" type="string"></property>
 
         <property id="mesure_unit" type="Number">0</property>
