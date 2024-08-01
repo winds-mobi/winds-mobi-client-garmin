@@ -259,7 +259,7 @@ class windsView extends WatchUi.View {
 				windAvg = Utils.convertKmhToKts(windAvg);
 				windMax = Utils.convertKmhToKts(windMax);
 				altiValue = Utils.convertMetersToFeet(altiValue);
-				speedLabel = "Kts";
+				speedLabel = "kts";
 				altiLabel = "ft";
 			}
 
@@ -276,7 +276,7 @@ class windsView extends WatchUi.View {
 			var textavg = windAvg.format("%.1f") + " " + speedLabel;
 						
 			dc.drawText(dc.getWidth() / 2, currentHeight, Gfx.FONT_XTINY, provider, (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
-			currentHeight = currentHeight + fontXTinyH + 2;
+			currentHeight = currentHeight + fontXTinyH + 5;
 			dc.drawText(dc.getWidth() / 2, currentHeight, Gfx.FONT_TINY, baliseName, (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
 			currentHeight = currentHeight + fontXTinyH + 3;
 			dc.drawText(dc.getWidth() / 2,  currentHeight, Gfx.FONT_XTINY, altitude, (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
