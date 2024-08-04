@@ -1,6 +1,9 @@
 import Toybox.Application;
 import Toybox.Lang;
 import Toybox.WatchUi;
+import Toybox.Background;
+import Toybox.System;
+import Toybox.Time;
 
 
 class windsApp extends Application.AppBase {
@@ -10,8 +13,25 @@ class windsApp extends Application.AppBase {
     }
 
     function initialize() {
+
+        Background.registerForTemporalEvent(new Time.Duration(5 * 60));
+
         AppBase.initialize();
     }
+
+    public function getServiceDelegate() as Array<ServiceDelegate>{
+        return [new $.WindsSpeedDelegate()] as Array<ServiceDelegate>;
+    }
+
+   	function onBackgroundData(data) {
+		//$.p(data);
+		// Process only if no BLE error
+		if (data != null) {
+			Application.Storage.setValue("weather", data);
+            System.println(data);
+		}
+	}
+
 
     // onStart() is called on application start up
     function onStart(state as Dictionary?) as Void {

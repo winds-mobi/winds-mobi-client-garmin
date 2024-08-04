@@ -125,6 +125,7 @@
             <iq:product id="vivoactive_hr"/>
         </iq:products>
         <iq:permissions>
+            <iq:uses-permission id="Background"/>
             <iq:uses-permission id="Communications"/>
             <iq:uses-permission id="Positioning"/>
         </iq:permissions>
