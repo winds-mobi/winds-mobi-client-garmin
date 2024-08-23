@@ -19,9 +19,11 @@ class WindsSpeedDelegate extends System.ServiceDelegate {
         // Do fun stuff here
         System.println("onTemporalEvent");
 
-        var station = "ffvl-134";
-        requestWindInformationByCode(station);
-        
+        var app = Application.getApp();
+        var balise = app.getProperty("balise_1");
+        if(balise != null && !balise.equals("")){
+            requestWindInformationByCode(balise);
+        }
     }
 
     (:background)

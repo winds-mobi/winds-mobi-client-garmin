@@ -13,8 +13,12 @@ class windsApp extends Application.AppBase {
     }
 
     function initialize() {
-
-        Background.registerForTemporalEvent(new Time.Duration(5 * 60));
+ 
+        if(Toybox.System has :ServiceDelegate) {
+            Background.registerForTemporalEvent(new Time.Duration(5 * 60));
+        } else {
+            System.println("****background not available on this device****");
+        }
 
         AppBase.initialize();
     }

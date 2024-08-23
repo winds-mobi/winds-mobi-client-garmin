@@ -17,7 +17,7 @@
     </properties>
 	
     <strings>
-       <string id="balise_1">Station 1</string>
+       <string id="balise_1">Station 1 (Display in widget)</string>
        <string id="balise_2">Station 2</string>
        <string id="balise_3">Station 3</string>
        <string id="balise_4">Station 4</string>
