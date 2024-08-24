@@ -191,25 +191,21 @@ class windsView extends WatchUi.View {
     }
 	
 	function drawStatus(dc, status, info) as Void {
-	
-		
+			
 		var cx = dc.getWidth() / 2;
 		var cy = dc.getHeight() / 2;
 		
 		if(status == 2) {
-			dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_BLACK);
-			//dc.fillCircle(cx, 20, 12);	
+			dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_BLACK);	
 			var hourLast = Lang.format("$1$:$2$",[info.hour, info.min.format("%02d")]);
-			dc.drawText(dc.getWidth() / 2, 20, Gfx.FONT_TINY, hourLast, (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
+			dc.drawText(dc.getWidth() / 2, 0, Gfx.FONT_TINY, hourLast, Gfx.TEXT_JUSTIFY_CENTER);
 		}else if (status == 1){
 			dc.setColor(Gfx.COLOR_ORANGE, Gfx.COLOR_BLACK);
-			//dc.fillCircle(cx, 20, 12);
 			var hourLast = Lang.format("$1$:$2$",[info.hour, info.min.format("%02d")]);
-			dc.drawText(dc.getWidth() / 2, 20, Gfx.FONT_TINY, hourLast, (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
+			dc.drawText(dc.getWidth() / 2, 0, Gfx.FONT_TINY, hourLast, Gfx.TEXT_JUSTIFY_CENTER);
 		} else if (status == 0){
-			dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_BLACK);
-			//dc.fillCircle(cx, 20, 12);			
-			dc.drawText(dc.getWidth() / 2, 20, Gfx.FONT_TINY, "!!!!", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
+			dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_BLACK);			
+			dc.drawText(dc.getWidth() / 2, 0, Gfx.FONT_TINY, "!!!!", Gfx.TEXT_JUSTIFY_CENTER);
 		}		
 	}
 	
@@ -221,7 +217,8 @@ class windsView extends WatchUi.View {
 			}else{
 				dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_BLACK);
 			}
-			dc.drawText(dc.getWidth() / 2, dc.getHeight() - 15, Gfx.FONT_XTINY, "GPS", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
+			var fontXTinyH = dc.getFontHeight(Gfx.FONT_XTINY);
+			dc.drawText(dc.getWidth() / 2, dc.getHeight() - fontXTinyH, Gfx.FONT_XTINY, "GPS", Gfx.TEXT_JUSTIFY_CENTER);
 		}
 		
 	}
@@ -246,7 +243,7 @@ class windsView extends WatchUi.View {
 			var fontXTinyH = dc.getFontHeight(Gfx.FONT_XTINY);
 			var fontTinyH = dc.getFontHeight(Gfx.FONT_TINY);
 
-			var currentHeight = (dc.getHeight() / 2) - ((fontH + 7) * 2);
+			var currentHeight = fontTinyH;
 						
 			windAvg = windAPIResult["last"]["w-avg"];
 			windMax = windAPIResult["last"]["w-max"];
@@ -269,32 +266,54 @@ class windsView extends WatchUi.View {
 			baliseName = windAPIResult["name"];
 			
 			if(baliseName.length() > 18) {
-				baliseName = baliseName.substring(0, 18) + "...";
+				baliseName = baliseName.substring(0, 22) + "...";
 			}
 			
-			var altitude = "Alt " +  altiValue + " " + altiLabel;
-			var textavg = windAvg.format("%.1f") + " " + speedLabel;
-						
-			dc.drawText(dc.getWidth() / 2, currentHeight, Gfx.FONT_XTINY, provider, (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
-			currentHeight = currentHeight + fontXTinyH + 5;
-			dc.drawText(dc.getWidth() / 2, currentHeight, Gfx.FONT_TINY, baliseName, (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
-			currentHeight = currentHeight + fontXTinyH + 3;
-			dc.drawText(dc.getWidth() / 2,  currentHeight, Gfx.FONT_XTINY, altitude, (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
-			currentHeight = currentHeight + fontXTinyH + 6;
+			var altitude = altiValue + " " + altiLabel;						
+			dc.drawText(dc.getWidth() / 2, currentHeight, Gfx.FONT_XTINY, provider, Gfx.TEXT_JUSTIFY_CENTER);
+			currentHeight = currentHeight + fontXTinyH;
 			
+			dc.drawText(dc.getWidth() / 2,  currentHeight, Gfx.FONT_XTINY, altitude, Gfx.TEXT_JUSTIFY_CENTER);
+			currentHeight = currentHeight + fontXTinyH;
+			dc.drawText(dc.getWidth() / 2, currentHeight, Gfx.FONT_TINY, baliseName, Gfx.TEXT_JUSTIFY_CENTER );
+			
+			currentHeight = currentHeight + fontXTinyH + 8;
+			
+			var deltatext = "";
 			try {
-				textavg += " Δ h-1: " + Utils.getSign(deltaSpeed) + deltaSpeed.format("%.1f");
+				deltatext += Utils.getSign(deltaSpeed) + deltaSpeed.format("%.1f");
 			} catch (e) {
         		//@todo
         	}
 
-			dc.drawText(dc.getWidth() / 2, currentHeight, Gfx.FONT_SMALL, textavg, (Gfx.TEXT_JUSTIFY_CENTER| Gfx.TEXT_JUSTIFY_VCENTER));		
+			var positionY = dc.getHeight() / 2;
+			var positionX = 0;
+			var margin = 2;
+			var tabHeigh = fontTinyH;
+			var tabWidth = dc.getWidth() / 3;
 
-			currentHeight = currentHeight + fontTinyH;
-			dc.drawText(dc.getWidth() / 2, currentHeight, Gfx.FONT_SMALL, windMax.format("%.1f") + " " + speedLabel + " (max)", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));	
-			currentHeight = currentHeight + fontTinyH + 5;
+			dc.drawLine(positionX, positionY, dc.getWidth(), positionY);
+
+			dc.drawText(tabWidth / 2, positionY + (tabHeigh / 2), Gfx.FONT_TINY, "Avg", (Gfx.TEXT_JUSTIFY_CENTER| Gfx.TEXT_JUSTIFY_VCENTER));		
+			dc.drawText(tabWidth + (tabWidth / 2), positionY + (tabHeigh / 2), Gfx.FONT_TINY, "Max", (Gfx.TEXT_JUSTIFY_CENTER| Gfx.TEXT_JUSTIFY_VCENTER));		
+			dc.drawText(tabWidth + tabWidth + (tabWidth / 2), positionY + (tabHeigh / 2), Gfx.FONT_TINY, "Δ h-1", (Gfx.TEXT_JUSTIFY_CENTER| Gfx.TEXT_JUSTIFY_VCENTER));		
+
+			dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_BLACK);
+			dc.drawText(tabWidth / 2, positionY + tabHeigh + (tabHeigh / 2), Gfx.FONT_TINY, windAvg.format("%.1f"), (Gfx.TEXT_JUSTIFY_CENTER| Gfx.TEXT_JUSTIFY_VCENTER));		
+			dc.drawText(tabWidth + (tabWidth / 2), positionY + tabHeigh + (tabHeigh / 2), Gfx.FONT_TINY, windMax.format("%.1f"), (Gfx.TEXT_JUSTIFY_CENTER| Gfx.TEXT_JUSTIFY_VCENTER));		
+			dc.drawText(tabWidth + tabWidth + (tabWidth / 2), positionY + tabHeigh + (tabHeigh / 2), Gfx.FONT_TINY, deltatext, (Gfx.TEXT_JUSTIFY_CENTER| Gfx.TEXT_JUSTIFY_VCENTER));		
+
+			dc.drawLine(positionX + tabWidth, dc.getHeight() / 2, positionX + tabWidth, dc.getHeight() / 2 + tabHeigh + tabHeigh);		
+			positionY = positionY + tabHeigh;
+			dc.drawLine(positionX, positionY, dc.getWidth(), positionY);
 			
-			dc.drawText(dc.getWidth() / 2, currentHeight, Gfx.FONT_SMALL, sector + " " + windAPIResult["last"]["w-dir"] + "°", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));		
+			dc.drawLine(positionX + tabWidth + tabWidth, dc.getHeight() / 2, positionX + tabWidth + tabWidth, positionY + tabHeigh);
+
+			positionY = positionY + tabHeigh;
+			dc.drawLine(positionX, positionY, dc.getWidth(), positionY);
+
+			var positionSectorY = positionY + margin;
+			dc.drawText(dc.getWidth() / 2, positionSectorY, Gfx.FONT_SMALL, sector + " " + windAPIResult["last"]["w-dir"] + "°", Gfx.TEXT_JUSTIFY_CENTER);		
 			
 			try {
 				var time = new Toybox.Time.Moment(lastTime);	
