@@ -12,9 +12,11 @@ class WidgetGlanceView extends Ui.GlanceView {
     function onUpdate(dc) {
         var app = Application.getApp();
 
-    	 dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_BLACK);
-         
+      var positionY = 0;
+      var heightFont = dc.getFontHeight(Gfx.FONT_TINY);
+      var heightFontXT = dc.getFontHeight(Gfx.FONT_XTINY);
 
+    	 dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_BLACK);
         var cache = Application.Storage.getValue("weather");
 
         if(cache != null) {
@@ -31,24 +33,23 @@ class WidgetGlanceView extends Ui.GlanceView {
           }
 
           var orientation = cache["last"]["w-dir"];
-          dc.drawText(0, 0, Graphics.FONT_XTINY , cache["name"], Graphics.TEXT_JUSTIFY_LEFT);
-          dc.drawText(0, 20, Graphics.FONT_XTINY, avg.format("%.1f") + " / " + max.format("%.1f") + " " + sign, Graphics.TEXT_JUSTIFY_LEFT);
-          dc.drawText(0, 40, Graphics.FONT_XTINY, orientation + "°", Graphics.TEXT_JUSTIFY_LEFT);
+          dc.drawText(0, positionY, Graphics.FONT_XTINY , cache["name"], Graphics.TEXT_JUSTIFY_LEFT);
+          dc.drawText(0, positionY + heightFontXT, Graphics.FONT_XTINY, avg.format("%.1f") + " / " + max.format("%.1f") + " " + sign, Graphics.TEXT_JUSTIFY_LEFT);
+          //dc.drawText(0, positionY + heightFont + heightFont, Graphics.FONT_XTINY, orientation + "°", Graphics.TEXT_JUSTIFY_LEFT);
           
-
           try {
             var time = new Toybox.Time.Moment(lastTime);	
             var info = Gregorian.info(time, Time.FORMAT_SHORT);	
             var hourLast = Lang.format("$1$:$2$",[info.hour, info.min.format("%02d")]);
             dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_BLACK);
-            dc.drawText(dc.getWidth(), 40, Gfx.FONT_XTINY, hourLast, Gfx.TEXT_JUSTIFY_RIGHT);
+            dc.drawText(0, positionY + heightFontXT + heightFontXT, Gfx.FONT_XTINY, orientation + "° " + hourLast, Gfx.TEXT_JUSTIFY_LEFT);
           } catch (e) {
         		//@todo
         	}
 
         }else{
-          dc.drawText(0, 0, Graphics.FONT_XTINY, "WINDS.MOBI", Graphics.TEXT_JUSTIFY_LEFT);
-          dc.drawText(10, 20, Graphics.FONT_XTINY, "--", Graphics.TEXT_JUSTIFY_LEFT);
+          dc.drawText(0, 0, Graphics.FONT_TINY, "WINDS.MOBI", Graphics.TEXT_JUSTIFY_LEFT);
+          dc.drawText(0, positionY + heightFont, Graphics.FONT_TINY, "--", Graphics.TEXT_JUSTIFY_LEFT);
         }
     }    
 

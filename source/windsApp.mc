@@ -32,7 +32,6 @@ class windsApp extends Application.AppBase {
 		// Process only if no BLE error
 		if (data != null) {
 			Application.Storage.setValue("weather", data);
-            System.println(data);
 		}
 	}
 
