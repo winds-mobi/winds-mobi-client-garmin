@@ -19,9 +19,21 @@ To manually install Windx in your device, do the following:
 
 The app should appear in the list of Connect IQ apps or activities menu. If you can't find your device in the releases, you can either compile it yourself using the Garmin IQ SDK or submit an issue.
 
+# Navigation
+
+* **Up / Down (or swipe)**: switch between the pages of the selected beacon — Data, History chart, Compass, 1-hour Stats.
+* **Select / Menu button (or tap)**: open the beacon picker to choose a station.
+
+# Features
+
+* Real-time data page (Avg / Max / Δ 1h / direction / freshness).
+* History chart of average wind and gusts over the last hour.
+* Compass rose pointing to the wind origin.
+* 1-hour statistics: min / max / average / strongest gust.
+* Gust factor (peak gust / mean wind), colour-coded by turbulence — a direction-independent measure of air roughness.
+
 # To Do
-Display last hour information (min, max, average).
 
 Manage your favorite weather station.
 
-Locate and display the closest weather stations.
+Orient the compass on the take-off direction (front / cross / tail wind).

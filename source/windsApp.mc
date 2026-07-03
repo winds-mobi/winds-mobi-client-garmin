@@ -23,8 +23,8 @@ class windsApp extends Application.AppBase {
         AppBase.initialize();
     }
 
-    public function getServiceDelegate() as Array<ServiceDelegate>{
-        return [new $.WindsSpeedDelegate()] as Array<ServiceDelegate>;
+    public function getServiceDelegate() {
+        return [new $.WindsSpeedDelegate()];
     }
 
    	function onBackgroundData(data) {
@@ -46,13 +46,15 @@ class windsApp extends Application.AppBase {
     }
 
     // Return the initial view of your application here
-    function getInitialView() as Array<Views or InputDelegates>? {
-    
+    function getInitialView() {
+
     	var isBTConnected= System.getDeviceSettings().phoneConnected;
     	if(isBTConnected) {
-        	return [new $.windsView(0), new $.WindsViewDelegate(0)] as Array<Views or InputDelegates>;
+    		$.ctrl = new WindsController();
+    		$.ctrl.initialize();
+        	return [$.ctrl.buildView(), new $.WindsPagerDelegate()];
         } else{
-        	return [new $.notConnectedView()] as Array<Views or InputDelegates>;
+        	return [new $.notConnectedView()];
         }
     }
 

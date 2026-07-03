@@ -21,9 +21,10 @@ class WidgetGlanceView extends Ui.GlanceView {
 
         if(cache != null) {
 
-          var avg = cache["last"]["w-avg"];
-          var max = cache["last"]["w-max"];
-          var lastTime = cache["last"]["_id"];
+          var last = cache["last"];
+          var avg = last["w-avg"];
+          var max = last["w-max"];
+          var lastTime = last["_id"];
           var sign = "kmh";
 
           if(app.getProperty("mesure_unit") == 1) {
@@ -32,7 +33,7 @@ class WidgetGlanceView extends Ui.GlanceView {
               sign = "kts";
           }
 
-          var orientation = cache["last"]["w-dir"];
+          var orientation = last["w-dir"];
           dc.drawText(0, positionY, Graphics.FONT_XTINY , cache["name"], Graphics.TEXT_JUSTIFY_LEFT);
           dc.drawText(0, positionY + heightFontXT, Graphics.FONT_XTINY, avg.format("%.1f") + " / " + max.format("%.1f") + " " + sign, Graphics.TEXT_JUSTIFY_LEFT);
           //dc.drawText(0, positionY + heightFont + heightFont, Graphics.FONT_XTINY, orientation + "°", Graphics.TEXT_JUSTIFY_LEFT);
