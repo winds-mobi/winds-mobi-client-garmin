@@ -83,6 +83,11 @@ class WindsController {
 	function onInfo(responseCode, data) {
 		if(data != null) {
 			info = data;
+			// Keep the glance cache fresh: the glance shows the first beacon,
+			// which is selectedBalise 0 here.
+			if(selectedBalise == 0) {
+				Application.Storage.setValue("weather", data);
+			}
 		}
 		WatchUi.requestUpdate();
 	}

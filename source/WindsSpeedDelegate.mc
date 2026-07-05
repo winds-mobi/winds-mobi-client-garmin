@@ -20,8 +20,18 @@ class WindsSpeedDelegate extends System.ServiceDelegate {
         System.println("onTemporalEvent");
 
         var app = Application.getApp();
-        var balise = app.getProperty("balise_1");
-        if(balise != null && !balise.equals("")){
+        // First non-empty beacon, matching the widget's first page
+        // (WindsController builds itemMemu the same way). Using balise_1 in a
+        // hard-coded way showed nothing in the glance when it was left empty.
+        var balise = null;
+        for(var i = 1; i <= 8; i++) {
+            var b = app.getProperty("balise_" + i);
+            if(b != null && !b.equals("")) {
+                balise = b;
+                break;
+            }
+        }
+        if(balise != null){
             requestWindInformationByCode(balise);
         }
     }

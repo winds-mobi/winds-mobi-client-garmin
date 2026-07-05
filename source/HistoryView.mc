@@ -18,6 +18,7 @@ class HistoryView extends WatchUi.View {
 		var hist = $.ctrl.hist;
 		if(hist == null || !(hist instanceof Lang.Array) || hist.size() < 2) {
 			dc.drawText(dc.getWidth() / 2, dc.getHeight() / 2, Gfx.FONT_SMALL, "No history", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
+			Utils.drawPageIndicator(dc);
 			return;
 		}
 
@@ -66,6 +67,8 @@ class HistoryView extends WatchUi.View {
 		// Gust line first (behind), then average.
 		drawSerie(dc, hist, "w-max", left, right, top, bottom, maxV, Gfx.COLOR_LT_GRAY);
 		drawSerie(dc, hist, "w-avg", left, right, top, bottom, maxV, Gfx.COLOR_GREEN);
+
+		Utils.drawPageIndicator(dc);
 	}
 
 	// hist[0] is the newest sample -> plotted at the right edge.

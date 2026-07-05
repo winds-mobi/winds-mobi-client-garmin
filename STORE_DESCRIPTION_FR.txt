@@ -1,0 +1,28 @@
+winds.mobi — Le vent en temps réel sur votre Garmin, gratuit
+
+Les relevés de vent en temps réel de milliers de stations météo, directement sur votre montre Garmin ou votre compteur Edge. Conçu pour les parapentistes, marins, windsurfers, kitesurfers et tous ceux qui vivent au rythme du vent. Propulsé par le réseau winds.mobi — gratuit, sans pub.
+
+
+FONCTIONNALITÉS
+
+- Vitesse et direction du vent en temps réel, depuis des stations du monde entier
+- Stations proches détectées automatiquement via le GPS
+- Plusieurs vues par station : données en direct, graphique de tendance sur 1 h, boussole et statistiques
+- Facteur de rafales pour visualiser la turbulence de l'air
+- Épinglez vos spots favoris et passez de l'un à l'autre
+- km/h ou nœuds
+- Compatible avec un large éventail de montres Garmin et de compteurs Edge
+
+
+POUR COMMENCER
+
+Ouvrez les paramètres de l'application, saisissez l'identifiant de la station (le code à la fin de l'URL de la page de la station sur winds.mobi), et c'est prêt. Ou activez le GPS pour afficher automatiquement les stations les plus proches.
+
+
+CONÇU POUR LES SPORTS DE VENT
+
+Parapente, deltaplane, speed flying, planeur, ULM & aviation légère (préparation de vol), windsurf, kitesurf, wing foil, voile & navigation.
+
+
+L'application vous plaît ? Offrez-moi une bière pour soutenir les prochaines mises à jour :
+https://www.paypal.me/srp13400

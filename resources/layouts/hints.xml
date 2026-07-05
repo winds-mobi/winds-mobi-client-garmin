@@ -1,6 +1,6 @@
-<!-- Native Garmin input hint: an arc drawn at the START / right-top button,
-     positioned automatically per device and excluded on devices without it. -->
+<!-- Base StartHint layout: kept EMPTY so it compiles on every device.
+     Devices that expose the 'system_..._hint_button_right_top' personality get
+     the native hint arc via resources-hints/ (added to their resourcePath in
+     monkey.jungle). DataView tolerates a missing 'startHint' drawable. -->
 <layout id="StartHint">
-    <bitmap id="startHint" personality="system_icon_dark__hint_button_right_top
-                                        system_loc__hint_button_right_top" />
 </layout>

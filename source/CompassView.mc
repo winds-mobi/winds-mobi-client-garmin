@@ -18,6 +18,7 @@ class CompassView extends WatchUi.View {
 
 		if(!$.ctrl.hasData()) {
 			dc.drawText(dc.getWidth() / 2, dc.getHeight() / 2, Gfx.FONT_SMALL, "No data", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
+			Utils.drawPageIndicator(dc);
 			return;
 		}
 
@@ -63,6 +64,8 @@ class CompassView extends WatchUi.View {
 		dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_BLACK);
 		dc.drawText(cx, cy - fontTinyH, Gfx.FONT_TINY, sector + " " + dir + "°", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
 		dc.drawText(cx, cy + fontTinyH / 2, Gfx.FONT_XTINY, avg.format("%.0f") + " / " + max.format("%.0f") + " " + Utils.speedLabel(), (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
+
+		Utils.drawPageIndicator(dc);
 	}
 
 	// Point on a circle of given radius at a compass bearing (0 = North, clockwise).

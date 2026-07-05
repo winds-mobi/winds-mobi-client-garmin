@@ -1,0 +1,20 @@
+Nouveautés de la v2 — une refonte complète
+
+winds.mobi a été entièrement repensée. Les mêmes données de vent gratuites, une expérience bien meilleure.
+
+- Nouvelle navigation multi-vues : faites défiler plusieurs écrans pour chaque station
+   • En direct : vent moyen & max, direction, facteur de rafales et fraîcheur des données
+   • Historique 1 h : graphique de tendance du vent et des rafales
+   • Boussole : direction du vent sur une rose des vents
+   • Statistiques : min / moyenne / max et rafale maximale sur la dernière heure
+
+- Menu des stations : épinglez plusieurs spots et passez de l'un à l'autre en un geste
+- Indicateur de facteur de rafales (turbulence), coloré du plus calme au plus agité
+- Fraîcheur des données en un coup d'œil : la couleur indique l'ancienneté du relevé
+- Glance redessinée : flèche de direction + vitesse + fraîcheur, plus claire et lisible
+- Indicateur de page à l'écran pour toujours savoir où vous êtes
+- Compatibilité élargie : beaucoup plus de montres Garmin et de compteurs Edge
+- Unités nœuds / km/h et mètres / pieds
+- Corrections diverses et améliorations de performance
+
+Merci d'utiliser winds.mobi — bons vols et bon vent !

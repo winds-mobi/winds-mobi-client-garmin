@@ -1,0 +1,28 @@
+winds.mobi — Live Wind on Your Garmin, Free
+
+Real-time wind from thousands of weather stations, right on your Garmin watch or Edge computer. Built for paraglider pilots, sailors, windsurfers, kitesurfers and anyone who lives by the wind. Powered by the winds.mobi network — free, no ads.
+
+
+FEATURES
+
+- Real-time wind speed & direction from stations worldwide
+- Nearby stations found automatically via GPS
+- Multiple views per station: live data, 1-hour trend chart, compass, and stats
+- Gust factor to show how turbulent the air is
+- Pin your favourite spots and switch between them
+- km/h or knots
+- Works on a wide range of Garmin watches and Edge computers
+
+
+GETTING STARTED
+
+Open the app settings, enter the station ID (the code at the end of the station's page URL on winds.mobi), and you're done. Or enable GPS to show the nearest stations automatically.
+
+
+BUILT FOR WIND SPORTS
+
+Paragliding, hang gliding, speed flying, glider, ULM & light aircraft (preflight), windsurf, kitesurf, wing foil, sailing & boating.
+
+
+Enjoying the app? Buy me a beer to support future updates:
+https://www.paypal.me/srp13400

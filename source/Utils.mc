@@ -77,4 +77,30 @@ class Utils {
 		}
 	}
 
+	// ---- Page indicator -----------------------------------------------------
+	// Vertical column of dots on the right edge, one per page, the current page
+	// highlighted. Invites the user to scroll up/down through the pages, the way
+	// the Menu2 draws its own scroll hint for the beacon list.
+	static function drawPageIndicator(dc) as Void {
+		var count = $.ctrl.PAGE_COUNT;
+		var current = $.ctrl.currentPage;
+
+		var spacing = 10;                 // vertical gap between dots
+		var r = 2;                        // dot radius
+		var x = dc.getWidth() - 6;        // hug the right edge
+		var totalH = (count - 1) * spacing;
+		var y = dc.getHeight() / 2 - totalH / 2;
+
+		for(var i = 0; i < count; i++) {
+			if(i == current) {
+				dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
+				dc.fillCircle(x, y + i * spacing, r + 1);
+			} else {
+				dc.setColor(Gfx.COLOR_DK_GRAY, Gfx.COLOR_TRANSPARENT);
+				dc.fillCircle(x, y + i * spacing, r);
+			}
+		}
+		dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_BLACK);
+	}
+
 }

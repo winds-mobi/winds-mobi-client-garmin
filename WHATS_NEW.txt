@@ -1,0 +1,20 @@
+What's New in v2 — a complete overhaul
+
+winds.mobi has been fully redesigned. Same free wind data, a much better experience.
+
+- New multi-view layout: swipe through several screens for each station
+   • Now: average & max wind, direction, gust factor and data freshness
+   • 1-hour history: wind & gust trend chart
+   • Compass: wind direction on a compass rose
+   • Stats: min / average / max and peak gust over the last hour
+
+- Station menu: pin several spots and switch between them in one tap
+- Gust factor (turbulence) indicator, colour-coded from smooth to rough
+- Data freshness at a glance: colour shows how recent the reading is
+- Redesigned glance: direction arrow + speed + freshness, cleaner and easier to read
+- On-screen page indicator so you always know where you are
+- Much wider device support: many more Garmin watches and Edge computers
+- Knots / km/h and metres / feet units
+- Various fixes and performance improvements
+
+Thanks for using winds.mobi — safe flights and fair winds!

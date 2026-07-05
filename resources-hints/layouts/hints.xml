@@ -1,0 +1,7 @@
+<!-- Native input-hint arc, overrides the empty base StartHint layout for the
+     devices that expose the system hint personality (wired per-device in
+     monkey.jungle via resourcePath). -->
+<layout id="StartHint">
+    <bitmap id="startHint" personality="system_icon_dark__hint_button_right_top
+                                        system_loc__hint_button_right_top" />
+</layout>

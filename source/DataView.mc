@@ -47,6 +47,8 @@ class DataView extends WatchUi.View {
 				hint.draw(dc);
 			}
 		}
+
+		Utils.drawPageIndicator(dc);
 	}
 
 	function drawLoading(dc) as Void {

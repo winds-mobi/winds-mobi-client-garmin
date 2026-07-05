@@ -18,6 +18,7 @@ class StatsView extends WatchUi.View {
 		var hist = $.ctrl.hist;
 		if(hist == null || !(hist instanceof Lang.Array) || hist.size() < 1) {
 			dc.drawText(dc.getWidth() / 2, dc.getHeight() / 2, Gfx.FONT_SMALL, "No history", (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
+			Utils.drawPageIndicator(dc);
 			return;
 		}
 
@@ -69,6 +70,8 @@ class StatsView extends WatchUi.View {
 			dc.setColor(Utils.gustColor(gfAvg), Gfx.COLOR_BLACK);
 			dc.drawText((w * 3) / 4, y, Gfx.FONT_TINY, "x" + gfAvg.format("%.1f"), (Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER));
 		}
+
+		Utils.drawPageIndicator(dc);
 	}
 
 	function drawRow(dc, w, y, lineH, label, value, unit, color) {
